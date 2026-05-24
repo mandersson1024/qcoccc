@@ -3,7 +3,7 @@
   "$id": "character_sheet.schema.json",
   "title": "Call of Cthulhu 7e Investigator Sheet",
   "type": "object",
-  "required": ["era", "identity", "characteristics", "derived_attributes", "skills", "backstory", "finances"],
+  "required": ["era", "identity"],
   "additionalProperties": false,
   "properties": {
     "era": {

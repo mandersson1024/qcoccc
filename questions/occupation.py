@@ -1,5 +1,6 @@
 import json
 import os
+import random
 import questionary
 from engine.question import Question
 
@@ -27,13 +28,16 @@ def _load_occupations(era: str) -> list[str]:
 
 
 class OccupationQuestion(Question):
+    allow_any = True
+
     @property
     def key(self) -> str:
         return "occupation"
 
     def ask(self, context: dict) -> str:
         occupations = _load_occupations(context["era"])
-        return questionary.select(
+        choice = questionary.select(
             "Occupation",
-            choices=occupations,
+            choices=["ANY"] + occupations,
         ).ask()
+        return random.choice(occupations) if choice == "ANY" else choice

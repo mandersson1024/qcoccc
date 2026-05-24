@@ -2,6 +2,8 @@ from abc import ABC, abstractmethod
 
 
 class Question(ABC):
+    allow_any: bool = False
+
     @property
     @abstractmethod
     def key(self) -> str:

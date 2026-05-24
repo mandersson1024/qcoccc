@@ -31,7 +31,8 @@ def main():
     try:
         jsonschema.validate(sheet, schema)
     except jsonschema.ValidationError as e:
-        print(f"\nSchema validation failed: {e.message}")
+        path = " -> ".join(str(p) for p in e.absolute_path) or "(root)"
+        print(f"\nSchema validation failed at '{path}': {e.message}")
         return
 
     output = context["output"]

@@ -220,5 +220,8 @@ __marimo__/
 # Rules PDF
 CoC-7e-rules.pdf
 
+# Generated output
+output.json
+
 # IDE
 .idea/

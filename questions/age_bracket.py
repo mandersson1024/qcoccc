@@ -1,3 +1,4 @@
+import random
 import questionary
 from engine.question import Question
 
@@ -15,13 +16,17 @@ BRACKETS = [
 
 
 class AgeBracketQuestion(Question):
+    allow_any = True
+
     @property
     def key(self) -> str:
         return "age_bracket"
 
     def ask(self, context: dict) -> tuple:
-        label = questionary.select(
+        choice = questionary.select(
             "Age bracket",
-            choices=[b[0] for b in BRACKETS],
+            choices=["ANY"] + [b[0] for b in BRACKETS],
         ).ask()
-        return next(b for b in BRACKETS if b[0] == label)
+        if choice == "ANY":
+            return random.choice(BRACKETS)
+        return next(b for b in BRACKETS if b[0] == choice)
