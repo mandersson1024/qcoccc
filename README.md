@@ -1,5 +1,5 @@
 # qcoccc
-Quick Call of Cthulhu Character Creation
+Quick Call of Cthulhu Character Creator
 
 ## Setup
 
