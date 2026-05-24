@@ -1,0 +1,240 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "character_sheet.schema.json",
+  "title": "Call of Cthulhu 7e Investigator Sheet",
+  "type": "object",
+  "required": ["era", "identity", "characteristics", "derived_attributes", "skills", "backstory", "finances"],
+  "additionalProperties": false,
+  "properties": {
+    "era": {
+      "description": "The historical era this investigator sheet was created for.",
+      "type": "string"
+    },
+
+    "identity": {
+      "type": "object",
+      "required": ["occupation", "age"],
+      "additionalProperties": false,
+      "properties": {
+        "name":       { "type": "string" },
+        "occupation": { "type": "string" },
+        "age":        { "type": "integer", "minimum": 15 },
+        "sex":        { "type": "string" },
+        "birthplace": { "type": "string" },
+        "residence":  { "type": "string" }
+      }
+    },
+
+    "characteristics": {
+      "description": "The eight core characteristics. Each has a full value, half value, and fifth value used for Hard and Extreme difficulty rolls.",
+      "type": "object",
+      "required": ["STR", "CON", "SIZ", "DEX", "APP", "INT", "POW", "EDU"],
+      "additionalProperties": false,
+      "properties": {
+        "STR": { "$ref": "#/$defs/characteristic" },
+        "CON": { "$ref": "#/$defs/characteristic" },
+        "SIZ": { "$ref": "#/$defs/characteristic" },
+        "DEX": { "$ref": "#/$defs/characteristic" },
+        "APP": { "$ref": "#/$defs/characteristic" },
+        "INT": { "$ref": "#/$defs/characteristic" },
+        "POW": { "$ref": "#/$defs/characteristic" },
+        "EDU": { "$ref": "#/$defs/characteristic" }
+      }
+    },
+
+    "derived_attributes": {
+      "type": "object",
+      "required": ["luck", "sanity_points", "max_sanity", "hit_points", "magic_points", "move_rate", "damage_bonus", "build"],
+      "additionalProperties": false,
+      "properties": {
+        "luck": {
+          "description": "3D6x5. Not a characteristic; used for Luck rolls.",
+          "type": "integer", "minimum": 15, "maximum": 90
+        },
+        "sanity_points": {
+          "description": "Starting value equals POW. Lost during play.",
+          "type": "integer", "minimum": 0, "maximum": 99
+        },
+        "max_sanity": {
+          "description": "99 minus the investigator's Cthulhu Mythos skill.",
+          "type": "integer", "minimum": 0, "maximum": 99
+        },
+        "hit_points": {
+          "description": "floor((CON + SIZ) / 10).",
+          "type": "integer", "minimum": 1
+        },
+        "magic_points": {
+          "description": "floor(POW / 5). Spent to cast spells and regenerated with rest.",
+          "type": "integer", "minimum": 0
+        },
+        "move_rate": {
+          "description": "7, 8, or 9 based on STR/DEX/SIZ comparison, then reduced by age.",
+          "type": "integer", "minimum": 1, "maximum": 9
+        },
+        "damage_bonus": {
+          "description": "Added to melee damage rolls. Derived from STR + SIZ.",
+          "type": "string",
+          "enum": ["-2", "-1", "None", "+1D4", "+1D6", "+2D6", "+3D6", "+4D6", "+5D6"]
+        },
+        "build": {
+          "description": "Derived from STR + SIZ. Used in fighting maneuvers and chases.",
+          "type": "integer", "minimum": -2, "maximum": 6
+        }
+      }
+    },
+
+    "skills": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "accounting":             { "$ref": "#/$defs/skill" },
+        "animal_handling":        { "$ref": "#/$defs/skill" },
+        "anthropology":           { "$ref": "#/$defs/skill" },
+        "appraise":               { "$ref": "#/$defs/skill" },
+        "archaeology":            { "$ref": "#/$defs/skill" },
+        "art_and_craft":          { "type": "array", "items": { "$ref": "#/$defs/named_skill" } },
+        "charm":                  { "$ref": "#/$defs/skill" },
+        "climb":                  { "$ref": "#/$defs/skill" },
+        "computer_use":           { "$ref": "#/$defs/skill" },
+        "credit_rating":          { "$ref": "#/$defs/skill" },
+        "cthulhu_mythos":         { "$ref": "#/$defs/skill" },
+        "disguise":               { "$ref": "#/$defs/skill" },
+        "dodge":                  { "$ref": "#/$defs/skill" },
+        "drive_auto":             { "$ref": "#/$defs/skill" },
+        "electrical_repair":      { "$ref": "#/$defs/skill" },
+        "electronics":            { "$ref": "#/$defs/skill" },
+        "fast_talk":              { "$ref": "#/$defs/skill" },
+        "fighting":               { "type": "array", "items": { "$ref": "#/$defs/named_skill" } },
+        "firearms":               { "type": "array", "items": { "$ref": "#/$defs/named_skill" } },
+        "first_aid":              { "$ref": "#/$defs/skill" },
+        "history":                { "$ref": "#/$defs/skill" },
+        "intimidate":             { "$ref": "#/$defs/skill" },
+        "jump":                   { "$ref": "#/$defs/skill" },
+        "language_own":           { "$ref": "#/$defs/skill" },
+        "language_other":         { "type": "array", "items": { "$ref": "#/$defs/named_skill" } },
+        "law":                    { "$ref": "#/$defs/skill" },
+        "library_use":            { "$ref": "#/$defs/skill" },
+        "listen":                 { "$ref": "#/$defs/skill" },
+        "locksmith":              { "$ref": "#/$defs/skill" },
+        "mechanical_repair":      { "$ref": "#/$defs/skill" },
+        "medicine":               { "$ref": "#/$defs/skill" },
+        "natural_world":          { "$ref": "#/$defs/skill" },
+        "navigate":               { "$ref": "#/$defs/skill" },
+        "occult":                 { "$ref": "#/$defs/skill" },
+        "operate_heavy_machinery":{ "$ref": "#/$defs/skill" },
+        "persuade":               { "$ref": "#/$defs/skill" },
+        "pilot":                  { "type": "array", "items": { "$ref": "#/$defs/named_skill" } },
+        "psychoanalysis":         { "$ref": "#/$defs/skill" },
+        "psychology":             { "$ref": "#/$defs/skill" },
+        "ride":                   { "$ref": "#/$defs/skill" },
+        "science":                { "type": "array", "items": { "$ref": "#/$defs/named_skill" } },
+        "sleight_of_hand":        { "$ref": "#/$defs/skill" },
+        "spot_hidden":            { "$ref": "#/$defs/skill" },
+        "stealth":                { "$ref": "#/$defs/skill" },
+        "survival":               { "type": "array", "items": { "$ref": "#/$defs/named_skill" } },
+        "swim":                   { "$ref": "#/$defs/skill" },
+        "throw":                  { "$ref": "#/$defs/skill" },
+        "track":                  { "$ref": "#/$defs/skill" }
+      }
+    },
+
+    "backstory": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "personal_description":           { "type": "string" },
+        "ideology_beliefs":               { "type": "string" },
+        "significant_people":             { "type": "string" },
+        "meaningful_locations":           { "type": "string" },
+        "treasured_possessions":          { "type": "string" },
+        "traits":                         { "type": "string" },
+        "key_connection": {
+          "description": "The one backstory entry starred as the investigator's key connection, which cannot be removed without the player's involvement.",
+          "type": "string"
+        },
+        "injuries_scars":                 { "type": "string" },
+        "phobias_manias":                 { "type": "string" },
+        "arcane_tomes_spells_artifacts":  { "type": "string" },
+        "encounters_with_strange_entities":{ "type": "string" }
+      }
+    },
+
+    "finances": {
+      "type": "object",
+      "required": ["spending_level", "cash", "assets"],
+      "additionalProperties": false,
+      "properties": {
+        "spending_level": {
+          "description": "Daily lifestyle afforded by the investigator's Credit Rating.",
+          "type": "string",
+          "enum": ["penniless", "poor", "average", "wealthy", "rich", "super_rich"]
+        },
+        "cash":   { "type": "number", "minimum": 0 },
+        "assets": { "type": "number", "minimum": 0 }
+      }
+    },
+
+    "gear": {
+      "description": "Notable items and equipment the investigator carries.",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "weapons": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/weapon" }
+    }
+  },
+
+  "$defs": {
+    "characteristic": {
+      "type": "object",
+      "required": ["value", "half", "fifth"],
+      "additionalProperties": false,
+      "properties": {
+        "value": { "type": "integer", "minimum": 1,  "maximum": 99 },
+        "half":  { "type": "integer", "minimum": 0,  "maximum": 49 },
+        "fifth": { "type": "integer", "minimum": 0,  "maximum": 19 }
+      }
+    },
+
+    "skill": {
+      "type": "object",
+      "required": ["value"],
+      "additionalProperties": false,
+      "properties": {
+        "value": { "type": "integer", "minimum": 0, "maximum": 99 },
+        "half":  { "type": "integer", "minimum": 0 },
+        "fifth": { "type": "integer", "minimum": 0 }
+      }
+    },
+
+    "named_skill": {
+      "description": "A specialization of a skill that requires a specific name (e.g. Fighting (Brawl), Science (Biology)).",
+      "type": "object",
+      "required": ["name", "value"],
+      "additionalProperties": false,
+      "properties": {
+        "name":  { "type": "string" },
+        "value": { "type": "integer", "minimum": 0, "maximum": 99 },
+        "half":  { "type": "integer", "minimum": 0 },
+        "fifth": { "type": "integer", "minimum": 0 }
+      }
+    },
+
+    "weapon": {
+      "type": "object",
+      "required": ["name", "skill_value", "damage"],
+      "additionalProperties": false,
+      "properties": {
+        "name":              { "type": "string" },
+        "skill_value":       { "type": "integer", "minimum": 0, "maximum": 99 },
+        "damage":            { "type": "string", "examples": ["1D3+DB", "1D10", "2D6+4"] },
+        "range":             { "type": "string", "examples": ["touch", "10 yards", "50 yards"] },
+        "attacks_per_round": { "type": "integer", "minimum": 1 },
+        "ammo":              { "type": "integer", "minimum": 0 },
+        "malfunction":       { "type": "integer", "minimum": 96, "maximum": 100 }
+      }
+    }
+  }
+}
