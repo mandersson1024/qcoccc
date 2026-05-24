@@ -54,6 +54,17 @@ tests/
     test_occupations.py      — validates all occupation JSON files against json-schemas/occupation.schema.json
 ```
 
+## Current status
+
+Roadmap item 1 (full occupation list) is **complete**:
+- All occupation JSON files created and validated against `occupation.schema.json`
+- 19 era-neutral occupations in `occupations/era-neutral/`
+- 8 1920s-exclusive occupations in `occupations/1920s/` (antiquarian, author, dilettante, doctor_of_medicine, journalist, librarian, parapsychologist, police_detective, professor — period-flavoured)
+- 1 modern-exclusive occupation in `occupations/modern/` (hacker)
+- `tests/test_occupations.py` validates all 28 occupation files — all passing
+
+**Next up:** Roadmap item 2 — characteristic rolling.
+
 ## Roadmap
 
 Planned order of implementation:
