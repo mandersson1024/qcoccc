@@ -15,7 +15,10 @@ def _load_occupations(era: str) -> list[str]:
             if os.path.isdir(os.path.join(OCCUPATIONS_DIR, d))
         ]
     else:
-        folders = [os.path.join(OCCUPATIONS_DIR, era)]
+        folders = [
+            os.path.join(OCCUPATIONS_DIR, era),
+            os.path.join(OCCUPATIONS_DIR, "era-neutral"),
+        ]
 
     names = set()
     for folder in folders:

@@ -1,19 +1,19 @@
 {
-  "name": "Author",
+  "name": "Clergy",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 9, "max": 30 },
+  "credit_rating_range": { "min": 9, "max": 60 },
   "characteristic_ranges": {
-    "INT": { "min": 50 },
+    "POW": { "min": 40 },
     "EDU": { "min": 50 }
   },
   "skills": [
-    "Art/Craft (Literature)",
+    "Accounting",
     "History",
     "Library Use",
-    { "choice": ["Natural World", "Occult"] },
     "Other Language (any)",
-    "Own Language",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
     "Psychology",
+    { "choice": "any" },
     { "choice": "any" },
     "Credit Rating"
   ]

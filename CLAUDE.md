@@ -22,7 +22,7 @@ The developer owns all decisions about how the project works. Work in small step
 
 **Era-specific skills:** The schema defines all skills as a superset across all eras. Era logic (which skills are available) lives in the Python script. The schema has a top-level `era` field as a meta property of the sheet.
 
-**Occupation folders:** Occupations are defined as JSON files under `occupations/<era>/`. One file = one occupation. "Other" era loads all folders combined. Era determines which subfolder to load from — no separate era config file.
+**Occupation folders:** Occupations are defined as JSON files under `occupations/`. One file = one occupation. Era-specific occupations go in `occupations/1920s/` or `occupations/modern/`. Occupations available in all eras go in `occupations/era-neutral/`. "Other" era loads all folders combined. Era determines which subfolders to load from (era folder + era-neutral) — no separate era config file.
 
 **Schema required fields:** Fields are optional in the schema by default and promoted to `required` as they get implemented. This allows the script to produce valid output at every stage of development, with validation tightening over time.
 
@@ -33,8 +33,10 @@ The developer owns all decisions about how the project works. Work in small step
 ```
 qcoccc.py                    — main entry point
 character_sheet_builder.py   — assembles the character sheet dict from context
-character_sheet.schema.json  — JSON Schema for the investigator sheet
 requirements.txt
+json-schemas/
+    character_sheet.schema.json  — JSON Schema for the investigator sheet
+    occupation.schema.json       — JSON Schema for occupation files
 engine/
     question.py              — abstract Question base class (allow_any flag)
     flow.py                  — QuestionFlow runner
@@ -45,8 +47,11 @@ questions/
     age.py
     output.py
 occupations/
-    1920s/                   — occupation JSON files for the 1920s era
-    modern/                  — occupation JSON files for the modern era
+    era-neutral/             — occupation JSON files available in all eras
+    1920s/                   — occupation JSON files exclusive to the 1920s era
+    modern/                  — occupation JSON files exclusive to the modern era
+tests/
+    test_occupations.py      — validates all occupation JSON files against json-schemas/occupation.schema.json
 ```
 
 ## Roadmap

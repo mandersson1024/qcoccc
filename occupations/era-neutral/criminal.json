@@ -1,0 +1,19 @@
+{
+  "name": "Criminal",
+  "skill_points": "EDU * 2 + DEX * 2 or STR * 2",
+  "credit_rating_range": { "min": 5, "max": 65 },
+  "characteristic_ranges": {
+    "DEX": { "min": 40 }
+  },
+  "skills": [
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
+    "Psychology",
+    "Spot Hidden",
+    "Stealth",
+    { "choice": ["Appraise", "Disguise", "Fighting (any)", "Firearms (any)", "Locksmith", "Mechanical Repair", "Sleight of Hand"] },
+    { "choice": ["Appraise", "Disguise", "Fighting (any)", "Firearms (any)", "Locksmith", "Mechanical Repair", "Sleight of Hand"] },
+    { "choice": ["Appraise", "Disguise", "Fighting (any)", "Firearms (any)", "Locksmith", "Mechanical Repair", "Sleight of Hand"] },
+    { "choice": ["Appraise", "Disguise", "Fighting (any)", "Firearms (any)", "Locksmith", "Mechanical Repair", "Sleight of Hand"] },
+    "Credit Rating"
+  ]
+}

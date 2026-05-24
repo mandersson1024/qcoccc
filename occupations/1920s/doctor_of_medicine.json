@@ -1,1 +1,20 @@
-{"name": "Doctor of Medicine"}
+{
+  "name": "Doctor of Medicine",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 30, "max": 80 },
+  "characteristic_ranges": {
+    "INT": { "min": 60 },
+    "EDU": { "min": 70 }
+  },
+  "skills": [
+    "First Aid",
+    "Other Language (Latin)",
+    "Medicine",
+    "Psychology",
+    "Science (Biology)",
+    "Science (Pharmacy)",
+    { "choice": "any" },
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

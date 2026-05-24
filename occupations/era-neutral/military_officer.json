@@ -1,20 +1,20 @@
 {
-  "name": "Police Detective",
+  "name": "Military Officer",
   "skill_points": "EDU * 2 + DEX * 2 or STR * 2",
-  "credit_rating_range": { "min": 20, "max": 50 },
+  "credit_rating_range": { "min": 20, "max": 70 },
   "characteristic_ranges": {
     "STR": { "min": 40 },
     "CON": { "min": 40 },
-    "INT": { "min": 50 }
+    "EDU": { "min": 50 }
   },
   "skills": [
-    { "choice": ["Art/Craft (Acting)", "Disguise"] },
+    "Accounting",
     "Firearms (any)",
-    "Law",
-    "Listen",
+    "Navigate",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
     { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
     "Psychology",
-    "Spot Hidden",
+    "Survival (any)",
     { "choice": "any" },
     "Credit Rating"
   ]

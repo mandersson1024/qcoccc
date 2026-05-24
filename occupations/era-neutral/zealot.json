@@ -1,0 +1,19 @@
+{
+  "name": "Zealot",
+  "skill_points": "EDU * 2 + APP * 2 or POW * 2",
+  "credit_rating_range": { "min": 0, "max": 30 },
+  "characteristic_ranges": {
+    "POW": { "min": 50 }
+  },
+  "skills": [
+    "History",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
+    "Psychology",
+    "Stealth",
+    { "choice": "any" },
+    { "choice": "any" },
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

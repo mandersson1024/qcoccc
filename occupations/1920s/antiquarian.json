@@ -1,1 +1,20 @@
-{"name": "Antiquarian"}
+{
+  "name": "Antiquarian",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 30, "max": 70 },
+  "characteristic_ranges": {
+    "INT": { "min": 50 },
+    "EDU": { "min": 60 }
+  },
+  "skills": [
+    "Appraise",
+    "Art/Craft (any)",
+    "History",
+    "Library Use",
+    "Other Language (any)",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
+    "Spot Hidden",
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Drifter",
+  "skill_points": "EDU * 2 + APP * 2 or DEX * 2 or STR * 2",
+  "credit_rating_range": { "min": 0, "max": 5 },
+  "characteristic_ranges": {},
+  "skills": [
+    "Climb",
+    "Jump",
+    "Listen",
+    "Navigate",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
+    "Stealth",
+    { "choice": "any" },
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

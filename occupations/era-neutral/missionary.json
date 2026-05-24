@@ -1,16 +1,16 @@
 {
-  "name": "Hacker",
+  "name": "Missionary",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 10, "max": 70 },
+  "credit_rating_range": { "min": 0, "max": 30 },
   "characteristic_ranges": {
-    "INT": { "min": 60 }
+    "POW": { "min": 40 }
   },
   "skills": [
-    "Computer Use",
-    "Electrical Repair",
-    "Electronics",
-    "Library Use",
-    "Spot Hidden",
+    "Art/Craft (any)",
+    "First Aid",
+    "Mechanical Repair",
+    "Medicine",
+    "Natural World",
     { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
     { "choice": "any" },
     { "choice": "any" },

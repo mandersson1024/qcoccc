@@ -1,0 +1,19 @@
+{
+  "name": "Tribe Member",
+  "skill_points": "EDU * 2 + DEX * 2 or STR * 2",
+  "credit_rating_range": { "min": 0, "max": 15 },
+  "characteristic_ranges": {
+    "CON": { "min": 40 }
+  },
+  "skills": [
+    "Climb",
+    { "choice": ["Fighting (any)", "Throw"] },
+    "Natural World",
+    "Listen",
+    "Occult",
+    "Spot Hidden",
+    "Swim",
+    "Survival (any)",
+    "Credit Rating"
+  ]
+}

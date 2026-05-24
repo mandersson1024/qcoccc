@@ -1,1 +1,19 @@
-{"name": "Dilettante"}
+{
+  "name": "Dilettante",
+  "skill_points": "EDU * 2 + APP * 2",
+  "credit_rating_range": { "min": 50, "max": 99 },
+  "characteristic_ranges": {
+    "APP": { "min": 40 }
+  },
+  "skills": [
+    "Art/Craft (any)",
+    "Firearms (any)",
+    "Other Language (any)",
+    "Ride",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
+    { "choice": "any" },
+    { "choice": "any" },
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

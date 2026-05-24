@@ -1,17 +1,18 @@
 {
-  "name": "Hacker",
+  "name": "Lawyer",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 10, "max": 70 },
+  "credit_rating_range": { "min": 30, "max": 80 },
   "characteristic_ranges": {
-    "INT": { "min": 60 }
+    "INT": { "min": 60 },
+    "EDU": { "min": 65 }
   },
   "skills": [
-    "Computer Use",
-    "Electrical Repair",
-    "Electronics",
+    "Accounting",
+    "Law",
     "Library Use",
-    "Spot Hidden",
     { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
+    "Psychology",
     { "choice": "any" },
     { "choice": "any" },
     "Credit Rating"

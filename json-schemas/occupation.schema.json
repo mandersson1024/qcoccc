@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "occupation.schema.json",
+  "title": "Call of Cthulhu 7e Occupation",
+  "type": "object",
+  "required": ["name", "skill_points", "credit_rating_range", "skills"],
+  "additionalProperties": false,
+  "properties": {
+    "name": { "type": "string" },
+    "skill_points": {
+      "type": "string",
+      "description": "Formula for occupational skill points, e.g. 'EDU * 4' or 'EDU * 2 + DEX * 2 or STR * 2'"
+    },
+    "credit_rating_range": {
+      "type": "object",
+      "required": ["min", "max"],
+      "additionalProperties": false,
+      "properties": {
+        "min": { "type": "integer", "minimum": 0, "maximum": 99 },
+        "max": { "type": "integer", "minimum": 0, "maximum": 99 }
+      }
+    },
+    "characteristic_ranges": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "STR": { "$ref": "#/$defs/characteristic_range" },
+        "CON": { "$ref": "#/$defs/characteristic_range" },
+        "SIZ": { "$ref": "#/$defs/characteristic_range" },
+        "DEX": { "$ref": "#/$defs/characteristic_range" },
+        "APP": { "$ref": "#/$defs/characteristic_range" },
+        "INT": { "$ref": "#/$defs/characteristic_range" },
+        "POW": { "$ref": "#/$defs/characteristic_range" },
+        "EDU": { "$ref": "#/$defs/characteristic_range" }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          { "type": "string" },
+          {
+            "type": "object",
+            "required": ["choice"],
+            "additionalProperties": false,
+            "properties": {
+              "choice": {
+                "oneOf": [
+                  { "type": "string", "const": "any" },
+                  { "type": "array", "items": { "type": "string" }, "minItems": 2 }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "characteristic_range": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "min": { "type": "integer", "minimum": 1, "maximum": 99 },
+        "max": { "type": "integer", "minimum": 1, "maximum": 99 }
+      }
+    }
+  }
+}

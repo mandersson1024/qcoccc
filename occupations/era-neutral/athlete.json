@@ -1,0 +1,21 @@
+{
+  "name": "Athlete",
+  "skill_points": "EDU * 2 + DEX * 2 or STR * 2",
+  "credit_rating_range": { "min": 9, "max": 70 },
+  "characteristic_ranges": {
+    "STR": { "min": 50 },
+    "CON": { "min": 50 },
+    "DEX": { "min": 50 }
+  },
+  "skills": [
+    "Climb",
+    "Jump",
+    "Fighting (Brawl)",
+    "Ride",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
+    "Swim",
+    "Throw",
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

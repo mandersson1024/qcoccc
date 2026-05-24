@@ -9,7 +9,7 @@ from questions.age import AgeQuestion
 from questions.output import OutputQuestion
 from character_sheet_builder import build
 
-SCHEMA_PATH = os.path.join(os.path.dirname(__file__), "character_sheet.schema.json")
+SCHEMA_PATH = os.path.join(os.path.dirname(__file__), "json-schemas", "character_sheet.schema.json")
 OUTPUT_PATH = os.path.join(os.path.dirname(__file__), "output.json")
 
 
