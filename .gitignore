@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Rules PDF
+CoC-7e-rules.pdf
+
+# IDE
+.idea/
