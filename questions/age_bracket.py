@@ -28,5 +28,7 @@ class AgeBracketQuestion(Question):
             choices=["ANY"] + [b[0] for b in BRACKETS],
         ).ask()
         if choice == "ANY":
-            return random.choice(BRACKETS)
+            result = random.choice(BRACKETS)
+            print(f"  → {result[0]}")
+            return result
         return next(b for b in BRACKETS if b[0] == choice)

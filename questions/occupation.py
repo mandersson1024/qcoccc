@@ -40,4 +40,8 @@ class OccupationQuestion(Question):
             "Occupation",
             choices=["ANY"] + occupations,
         ).ask()
-        return random.choice(occupations) if choice == "ANY" else choice
+        if choice == "ANY":
+            result = random.choice(occupations)
+            print(f"  → {result}")
+            return result
+        return choice

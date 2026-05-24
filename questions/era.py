@@ -17,4 +17,8 @@ class EraQuestion(Question):
             "Era",
             choices=["ANY"] + _ERAS,
         ).ask()
-        return random.choice(_ERAS) if choice == "ANY" else choice
+        if choice == "ANY":
+            result = random.choice(_ERAS)
+            print(f"  → {result}")
+            return result
+        return choice

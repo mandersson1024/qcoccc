@@ -26,14 +26,17 @@ The developer owns all decisions about how the project works. Work in small step
 
 **Schema required fields:** Fields are optional in the schema by default and promoted to `required` as they get implemented. This allows the script to produce valid output at every stage of development, with validation tightening over time.
 
+**ANY option:** Select questions can offer "ANY" as the first choice, which resolves to a random value from the remaining options. The resolved value is printed on the next line (`→ value`). Free-text questions (like age) use empty input to trigger the same behaviour. The `allow_any` flag on the `Question` base class controls whether a question supports this. The `Output` question does not offer ANY.
+
 ## Project structure
 
 ```
 qcoccc.py                    — main entry point
 character_sheet_builder.py   — assembles the character sheet dict from context
 character_sheet.schema.json  — JSON Schema for the investigator sheet
+requirements.txt
 engine/
-    question.py              — abstract Question base class
+    question.py              — abstract Question base class (allow_any flag)
     flow.py                  — QuestionFlow runner
 questions/
     era.py
@@ -52,4 +55,4 @@ occupations/
 2. **Occupation** — loaded from era subfolder(s), sorted alphabetically
 3. **Age bracket** — rulebook brackets: 15–19, 20s, 30s, 40s, 50s, 60s, 70s, 80s+
 4. **Age** — free-text integer, validated against the chosen bracket
-5. **Output** — To Terminal / To File / Both
+5. **Output** — To Terminal / To File / Both (no ANY)

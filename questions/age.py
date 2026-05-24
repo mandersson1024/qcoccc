@@ -35,5 +35,7 @@ class AgeQuestion(Question):
         ).ask()
 
         if answer == "":
-            return random.randint(min_age, effective_max)
+            result = random.randint(min_age, effective_max)
+            print(f"  → {result}")
+            return result
         return int(answer)
