@@ -16,6 +16,7 @@ The developer owns all decisions about how the project works. Work in small step
 - Present the plan and wait for explicit approval before writing any code.
 - Ask first, then do.
 - Never commit to git. All commits are done manually by the developer.
+- Do not use memory files for project-specific information. Everything goes in CLAUDE.md.
 
 ## Design decisions
 
