@@ -1,6 +1,6 @@
 # qcoccc — Quick Call of Cthulhu Character Creator
 
-A Python script that lets the user quickly roll a new Call of Cthulhu (7th edition) character.
+A Python script that lets the user quickly roll a new Call of Cthulhu (7th edition) character. The main use case is generating a quick NPC on the spot, or a quick replacement character to be fleshed out later. Speed is the priority — not completeness.
 
 ## Rules reference
 
@@ -48,6 +48,20 @@ occupations/
     1920s/                   — occupation JSON files for the 1920s era
     modern/                  — occupation JSON files for the modern era
 ```
+
+## Roadmap
+
+- **Full occupation list** for both eras, each with occupational skills and reasonable characteristic ranges (soft guidance, not hard rules — e.g. a soldier is unlikely to have very low STR)
+- **Characteristic rolling** — roll all 8 characteristics according to the rules, applying occupation characteristic ranges and age modifiers
+- **Derived attributes** — calculate HP, MP, move rate, damage bonus, build, Luck, Sanity
+- **Occupational skill points** — allocate EDU × multiplier across occupational skills
+- **Personal interest skill points** — allocate INT × 2 across a selectable list of interests/hobbies representing groups of skills
+- **Specialization skills** — let the user pick which specialization for Fighting, Firearms, Science, Language, etc.
+- **Full skill list** with base values for all skills
+- **Pretty-print output** — human-readable character sheet to terminal, not just formatted JSON
+- **Custom occupation** — allow the user to define an occupation not in the list
+
+Out of scope: backstory generation, partial sheet saving/loading, re-rolling individual values.
 
 ## Question flow
 
