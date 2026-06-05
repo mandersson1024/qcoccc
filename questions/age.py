@@ -16,9 +16,17 @@ class AgeQuestion(Question):
         label, min_age, max_age = context["age_bracket"]
         effective_max = max_age if max_age is not None else _MAX_AGE_OPEN_BRACKET
 
+        choice = questionary.select(
+            "Age",
+            choices=["ANY", "Enter specific age"],
+        ).ask()
+
+        if choice == "ANY":
+            result = random.randint(min_age, effective_max)
+            print(f"  → {result}")
+            return result
+
         def validate(value: str) -> bool | str:
-            if value == "":
-                return True
             if not value.isdigit():
                 return "Please enter a number."
             age = int(value)
@@ -31,11 +39,6 @@ class AgeQuestion(Question):
         answer = questionary.text(
             "Age",
             validate=validate,
-            instruction="(or leave empty for random)",
         ).ask()
 
-        if answer == "":
-            result = random.randint(min_age, effective_max)
-            print(f"  → {result}")
-            return result
         return int(answer)
