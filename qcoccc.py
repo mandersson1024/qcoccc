@@ -10,7 +10,6 @@ from questions.output import OutputQuestion
 from character_sheet_builder import build
 
 SCHEMA_PATH = os.path.join(os.path.dirname(__file__), "json-schemas", "character_sheet.schema.json")
-OUTPUT_PATH = os.path.join(os.path.dirname(__file__), "output.json")
 
 
 def main():
@@ -36,15 +35,17 @@ def main():
         return
 
     output = context["output"]
+    destination = output["destination"]
     formatted = json.dumps(sheet, indent=2)
 
-    if output in ("To Terminal", "Both"):
+    if destination in ("To Terminal", "Both"):
         print(formatted)
 
-    if output in ("To File", "Both"):
-        with open(OUTPUT_PATH, "w") as f:
+    if destination in ("To File", "Both"):
+        filename = output["filename"]
+        with open(filename, "w") as f:
             f.write(formatted)
-        print(f"Written to {OUTPUT_PATH}")
+        print(f"Written to {filename}")
 
 
 if __name__ == "__main__":
