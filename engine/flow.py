@@ -1,3 +1,4 @@
+import sys
 from engine.question import Question
 
 
@@ -8,5 +9,9 @@ class QuestionFlow:
     def run(self) -> dict:
         context = {}
         for question in self._questions:
-            context[question.key] = question.ask(context)
+            answer = question.ask(context)
+            if answer is None:
+                print("\nAborted.")
+                sys.exit(0)
+            context[question.key] = answer
         return context
