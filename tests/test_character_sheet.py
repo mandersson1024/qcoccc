@@ -67,7 +67,7 @@ def _resolve_randomly(skills_list: list, context: dict) -> list[tuple[str, int]]
 
 def _random_age(bracket: tuple) -> int:
     _, lo, hi = bracket
-    return random.randint(lo, hi if hi is not None else lo + 9)
+    return random.randint(lo, hi if hi is not None else 90)
 
 
 @pytest.mark.parametrize("occupation_name,era", _all_occupations())

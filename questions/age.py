@@ -2,7 +2,7 @@ import random
 import questionary
 from engine.question import Question
 
-_MAX_AGE_OPEN_BRACKET = 99
+_MAX_AGE_OPEN_BRACKET = 90
 
 
 class AgeQuestion(Question):

@@ -36,6 +36,8 @@ The developer owns all decisions about how the project works. Work in small step
 
 **Occupational skill point distribution:** Points are distributed randomly. Uniform mode assigns each point uniformly at random across the skill pool (generalist). Bell curve mode uses `random.betavariate(2, 2)` weights so one or two skills dominate (specialist). Credit Rating is set to a random value within the occupation's range and its cost is deducted from the pool before distribution. Manual point allocation is not implemented (backlog).
 
+**Age range:** The rules explicitly state investigators must be between 15 and 90 years old (rulebook p. 32). The 80s+ bracket covers 80–90. Ages outside this range require Keeper approval and are not supported by the tool.
+
 **Characteristic rolling — standard method only:** STR/CON/DEX/APP/POW roll 3D6×5; SIZ/INT/EDU roll 2D6+6×5. Occupation `characteristic_ranges.min` values are enforced (stat bumped up if below minimum). `max` values are soft guidance — not enforced. Age deductions to STR/CON/DEX are distributed randomly across the three stats. Other rolling methods (Quick Fire, point buy, allocate-freely) are not implemented yet.
 
 **Specialization weights:** Each entry in `SPECIALIZATIONS` is a `(name, base_value, weight)` tuple. Weight is used when resolving ANY — higher weight means more likely. Base values come from the rulebook; weights are curated by feel to make unusual specializations possible but rare (e.g. Brawl weight 50 vs Chainsaw weight 4, Boat weight 50 vs Submarine weight 5).
