@@ -9,6 +9,7 @@ from questions.age import AgeQuestion
 from questions.skill_distribution import SkillDistributionQuestion
 from questions.output import OutputQuestion
 from character_sheet_builder import build
+from pretty_print import format_sheet
 from characteristics import roll_characteristics
 from skill_resolver import resolve_occupation_skills, allocate_skills, allocate_personal_interest
 
@@ -62,7 +63,7 @@ def main():
     formatted = json.dumps(sheet, indent=2)
 
     if destination in ("To Terminal", "Both"):
-        print(formatted)
+        print(format_sheet(sheet))
 
     if destination in ("To File", "Both"):
         filename = output["filename"]

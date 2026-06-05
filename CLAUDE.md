@@ -44,6 +44,7 @@ character_sheet_builder.py   — assembles the character sheet dict from context
 characteristics.py           — rolls all 8 characteristics, applies age modifiers, derives attributes
 skills_data.py               — base values, specialization lists, display→schema key mappings
 skill_resolver.py            — resolves occupation skill entries interactively, evaluates formulas, distributes points
+pretty_print.py              — formats the character sheet as human-readable text for terminal output
 requirements.txt
 json-schemas/
     character_sheet.schema.json  — JSON Schema for the investigator sheet
@@ -82,6 +83,11 @@ Item 2 (characteristic rolling):
 - Occupation minimums enforced, age modifiers applied, all derived attributes computed
 - Output sheet now includes `characteristics` and `derived_attributes`
 
+Item 5 (pretty-print output):
+- `pretty_print.py` formats the sheet as a readable character sheet for terminal output
+- Terminal destination now shows the formatted sheet; file destination still writes JSON
+- Skills sorted alphabetically, specializations shown as "Group (Name)"
+
 Item 4 (personal interest skill points):
 - 4 skills chosen at random from the full skill list; "Other Language (any)" auto-resolved silently
 - INT × 2 points distributed using the same mode (uniform/bell curve) chosen for occupation
@@ -95,7 +101,7 @@ Item 3 (occupational skill points):
 - Skill choices (`{"choice": [...]}`, `{"choice": "any"}`) and `(any)` specializations presented as interactive questions with ANY option
 - Output sheet now includes `skills`
 
-**Next up:** Roadmap item 5 — pretty-print output.
+**All roadmap items complete.**
 
 ## Roadmap
 
@@ -105,7 +111,7 @@ Planned order of implementation:
 2. ✅ **Characteristic rolling** — roll all 8 characteristics per the rules, apply occupation characteristic ranges and age modifiers, derive HP, MP, move rate, damage bonus, build, Luck and Sanity
 3. ✅ **Occupational skill points** — allocate EDU × multiplier across the occupation's skills
 4. ✅ **Personal interest skill points** — allocate INT × 2 freely across any skills, independent of occupation
-5. **Pretty-print output** — human-readable character sheet to terminal, not just formatted JSON
+5. ✅ **Pretty-print output** — human-readable character sheet to terminal, not just formatted JSON
 
 Out of scope: backstory generation, partial sheet saving/loading, re-rolling individual values.
 
