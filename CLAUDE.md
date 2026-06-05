@@ -89,7 +89,7 @@ Item 3 (occupational skill points):
 - Skill choices (`{"choice": [...]}`, `{"choice": "any"}`) and `(any)` specializations presented as interactive questions with ANY option
 - Output sheet now includes `skills`
 
-**Next up:** Roadmap item 4 — personal interest skill points.
+**Next up:** Roadmap item 4 — personal interest skill points (INT × 2 distributed freely).
 
 ## Roadmap
 
@@ -98,13 +98,8 @@ Planned order of implementation:
 1. ✅ **Full occupation list** — foundation for everything else; each occupation gets occupational skills and reasonable characteristic ranges (soft guidance, not hard rules — e.g. a soldier is unlikely to have very low STR)
 2. ✅ **Characteristic rolling** — roll all 8 characteristics per the rules, apply occupation characteristic ranges and age modifiers, derive HP, MP, move rate, damage bonus, build, Luck and Sanity
 3. ✅ **Occupational skill points** — allocate EDU × multiplier across the occupation's skills
-
-Later:
-- **Personal interest skill points** — allocate INT × 2 across a selectable list of interests/hobbies representing groups of skills
-- **Specialization skills** — let the user pick which specialization for Fighting, Firearms, Science, Language, etc.
-- **Full skill list** with base values for all skills
-- **Pretty-print output** — human-readable character sheet to terminal, not just formatted JSON
-- **Custom occupation** — allow the user to define an occupation not in the list
+4. **Personal interest skill points** — allocate INT × 2 freely across any skills, independent of occupation
+5. **Pretty-print output** — human-readable character sheet to terminal, not just formatted JSON
 
 Out of scope: backstory generation, partial sheet saving/loading, re-rolling individual values.
 
