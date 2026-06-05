@@ -82,6 +82,12 @@ Item 2 (characteristic rolling):
 - Occupation minimums enforced, age modifiers applied, all derived attributes computed
 - Output sheet now includes `characteristics` and `derived_attributes`
 
+Item 4 (personal interest skill points):
+- 4 skills chosen at random from the full skill list; "Other Language (any)" auto-resolved silently
+- INT × 2 points distributed using the same mode (uniform/bell curve) chosen for occupation
+- Results merged into the skills dict; occupation-improved skills continue from their occupation value
+- Chosen skills printed for visibility before output
+
 Item 3 (occupational skill points):
 - `skills_data.py` defines base values for all skills and specialization lists (Fighting, Firearms, Art/Craft, Science, Pilot, Survival, Other Language)
 - `skill_resolver.py` handles formula evaluation, interactive skill resolution (choices and specializations), and point distribution (linear or bell curve)
@@ -89,7 +95,7 @@ Item 3 (occupational skill points):
 - Skill choices (`{"choice": [...]}`, `{"choice": "any"}`) and `(any)` specializations presented as interactive questions with ANY option
 - Output sheet now includes `skills`
 
-**Next up:** Roadmap item 4 — personal interest skill points (INT × 2 distributed freely).
+**Next up:** Roadmap item 5 — pretty-print output.
 
 ## Roadmap
 
@@ -98,7 +104,7 @@ Planned order of implementation:
 1. ✅ **Full occupation list** — foundation for everything else; each occupation gets occupational skills and reasonable characteristic ranges (soft guidance, not hard rules — e.g. a soldier is unlikely to have very low STR)
 2. ✅ **Characteristic rolling** — roll all 8 characteristics per the rules, apply occupation characteristic ranges and age modifiers, derive HP, MP, move rate, damage bonus, build, Luck and Sanity
 3. ✅ **Occupational skill points** — allocate EDU × multiplier across the occupation's skills
-4. **Personal interest skill points** — allocate INT × 2 freely across any skills, independent of occupation
+4. ✅ **Personal interest skill points** — allocate INT × 2 freely across any skills, independent of occupation
 5. **Pretty-print output** — human-readable character sheet to terminal, not just formatted JSON
 
 Out of scope: backstory generation, partial sheet saving/loading, re-rolling individual values.

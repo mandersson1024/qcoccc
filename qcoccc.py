@@ -10,7 +10,7 @@ from questions.skill_distribution import SkillDistributionQuestion
 from questions.output import OutputQuestion
 from character_sheet_builder import build
 from characteristics import roll_characteristics
-from skill_resolver import resolve_occupation_skills, allocate_skills
+from skill_resolver import resolve_occupation_skills, allocate_skills, allocate_personal_interest
 
 SCHEMA_PATH = os.path.join(os.path.dirname(__file__), "json-schemas", "character_sheet.schema.json")
 
@@ -41,6 +41,9 @@ def main():
     context["skills"] = allocate_skills(
         occ_data, resolved, context, context["distribution_mode"]
     )
+    context["skills"].update(allocate_personal_interest(
+        context["skills"], context, context["distribution_mode"]
+    ))
 
     sheet = build(context)
 

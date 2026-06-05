@@ -178,6 +178,39 @@ def allocate_skills(
     return result
 
 
+def allocate_personal_interest(
+    occupation_skills: dict[str, int],
+    context: dict,
+    mode: str,
+    n_skills: int = 4,
+) -> dict[str, int]:
+    total = context["INT"] * 2
+    full_list = _get_full_skill_list()
+    chosen_raw = random.sample(full_list, min(n_skills, len(full_list)))
+
+    chosen = []
+    for name in chosen_raw:
+        if name == "Other Language (any)":
+            name = f"Other Language ({random.choice(COMMON_LANGUAGES)})"
+        chosen.append(name)
+
+    print("Personal interest skills:")
+    for name in chosen:
+        print(f"  → {name}")
+
+    skill_bases = {
+        name: occupation_skills.get(name, _skill_base(name, context))
+        for name in chosen
+    }
+
+    if "bell" in mode.lower():
+        allocation = _distribute_bell(skill_bases, total)
+    else:
+        allocation = _distribute_linear(skill_bases, total)
+
+    return {name: min(99, base + allocation.get(name, 0)) for name, base in skill_bases.items()}
+
+
 def _distribute_linear(skill_bases: dict, points: int) -> dict:
     allocated = {s: 0 for s in skill_bases}
     eligible = [s for s in skill_bases if skill_bases[s] < 99]
