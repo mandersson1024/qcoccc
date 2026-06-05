@@ -8,6 +8,7 @@ from questions.age_bracket import AgeBracketQuestion
 from questions.age import AgeQuestion
 from questions.output import OutputQuestion
 from character_sheet_builder import build
+from characteristics import roll_characteristics
 
 SCHEMA_PATH = os.path.join(os.path.dirname(__file__), "json-schemas", "character_sheet.schema.json")
 
@@ -21,6 +22,12 @@ def main():
         OutputQuestion(),
     ])
     context = flow.run()
+    context.update(roll_characteristics(
+        context["era"],
+        context["occupation"],
+        context["age_bracket"],
+        context["age"],
+    ))
 
     sheet = build(context)
 

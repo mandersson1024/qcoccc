@@ -28,11 +28,16 @@ The developer owns all decisions about how the project works. Work in small step
 
 **ANY option:** Select questions can offer "ANY" as the first choice, which resolves to a random value from the remaining options. The resolved value is printed on the next line (`→ value`). Free-text questions (like age) use empty input to trigger the same behaviour. The `allow_any` flag on the `Question` base class controls whether a question supports this. The `Output` question does not offer ANY.
 
+**Characteristics are plain integers:** The output sheet stores characteristics as plain integers (e.g. `"STR": 45`). Half and fifth values are not stored — players calculate those at the table.
+
+**Characteristic rolling — standard method only:** STR/CON/DEX/APP/POW roll 3D6×5; SIZ/INT/EDU roll 2D6+6×5. Occupation `characteristic_ranges.min` values are enforced (stat bumped up if below minimum). `max` values are soft guidance — not enforced. Age deductions to STR/CON/DEX are distributed randomly across the three stats. Other rolling methods (Quick Fire, point buy, allocate-freely) are not implemented yet.
+
 ## Project structure
 
 ```
 qcoccc.py                    — main entry point
 character_sheet_builder.py   — assembles the character sheet dict from context
+characteristics.py           — rolls all 8 characteristics, applies age modifiers, derives attributes
 requirements.txt
 json-schemas/
     character_sheet.schema.json  — JSON Schema for the investigator sheet
@@ -42,7 +47,7 @@ engine/
     flow.py                  — QuestionFlow runner
 questions/
     era.py
-    occupation.py
+    occupation.py            — also exposes load_occupation_data(name, era)
     age_bracket.py
     age.py
     output.py
@@ -56,21 +61,28 @@ tests/
 
 ## Current status
 
-Roadmap item 1 (full occupation list) is **complete**:
+Roadmap items 1 and 2 are **complete**.
+
+Item 1 (full occupation list):
 - All occupation JSON files created and validated against `occupation.schema.json`
 - 19 era-neutral occupations in `occupations/era-neutral/`
-- 8 1920s-exclusive occupations in `occupations/1920s/` (antiquarian, author, dilettante, doctor_of_medicine, journalist, librarian, parapsychologist, police_detective, professor — period-flavoured)
+- 8 1920s-exclusive occupations in `occupations/1920s/`
 - 1 modern-exclusive occupation in `occupations/modern/` (hacker)
 - `tests/test_occupations.py` validates all 28 occupation files — all passing
 
-**Next up:** Roadmap item 2 — characteristic rolling.
+Item 2 (characteristic rolling):
+- Standard rolling method implemented in `characteristics.py`
+- Occupation minimums enforced, age modifiers applied, all derived attributes computed
+- Output sheet now includes `characteristics` and `derived_attributes`
+
+**Next up:** Roadmap item 3 — occupational skill points.
 
 ## Roadmap
 
 Planned order of implementation:
 
-1. **Full occupation list** — foundation for everything else; each occupation gets occupational skills and reasonable characteristic ranges (soft guidance, not hard rules — e.g. a soldier is unlikely to have very low STR)
-2. **Characteristic rolling** — roll all 8 characteristics per the rules, apply occupation characteristic ranges and age modifiers, derive HP, MP, move rate, damage bonus, build, Luck and Sanity
+1. ✅ **Full occupation list** — foundation for everything else; each occupation gets occupational skills and reasonable characteristic ranges (soft guidance, not hard rules — e.g. a soldier is unlikely to have very low STR)
+2. ✅ **Characteristic rolling** — roll all 8 characteristics per the rules, apply occupation characteristic ranges and age modifiers, derive HP, MP, move rate, damage bonus, build, Luck and Sanity
 3. **Occupational skill points** — allocate EDU × multiplier across the occupation's skills
 
 Later:

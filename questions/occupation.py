@@ -7,27 +7,41 @@ from engine.question import Question
 OCCUPATIONS_DIR = os.path.join(os.path.dirname(__file__), "..", "occupations")
 
 
-def _load_occupations(era: str) -> list[str]:
+def _era_folders(era: str) -> list[str]:
     if era == "Other":
-        folders = [
+        return [
             os.path.join(OCCUPATIONS_DIR, d)
             for d in os.listdir(OCCUPATIONS_DIR)
             if os.path.isdir(os.path.join(OCCUPATIONS_DIR, d))
         ]
-    else:
-        folders = [
-            os.path.join(OCCUPATIONS_DIR, era),
-            os.path.join(OCCUPATIONS_DIR, "era-neutral"),
-        ]
+    return [
+        os.path.join(OCCUPATIONS_DIR, era),
+        os.path.join(OCCUPATIONS_DIR, "era-neutral"),
+    ]
 
+
+def _load_occupations(era: str) -> list[str]:
     names = set()
-    for folder in folders:
+    for folder in _era_folders(era):
         for filename in os.listdir(folder):
             if filename.endswith(".json"):
                 with open(os.path.join(folder, filename)) as f:
                     names.add(json.load(f)["name"])
-
     return sorted(names)
+
+
+def load_occupation_data(name: str, era: str) -> dict:
+    for folder in _era_folders(era):
+        if not os.path.isdir(folder):
+            continue
+        for filename in os.listdir(folder):
+            if filename.endswith(".json"):
+                filepath = os.path.join(folder, filename)
+                with open(filepath) as f:
+                    data = json.load(f)
+                if data["name"] == name:
+                    return data
+    raise ValueError(f"Occupation '{name}' not found for era '{era}'")
 
 
 class OccupationQuestion(Question):
