@@ -41,14 +41,15 @@ def _skill_base(name: str, context: dict) -> int:
     if "(" in name:
         group = name[:name.index("(")].strip()
         spec = name[name.index("(") + 1 : name.index(")")]
-        return dict(SPECIALIZATIONS.get(group, [])).get(spec, 1)
+        return {n: base for n, base, _ in SPECIALIZATIONS.get(group, [])}.get(spec, 1)
     return BASE_VALUES.get(name, 1)
 
 
 def _resolve_any_suffix(name: str, context: dict) -> str:
     group = name[: name.index("(")].strip()
     specs = SPECIALIZATIONS.get(group, [])
-    spec_names = [s for s, _ in specs]
+    spec_names = [s for s, _, _ in specs]
+    spec_weights = [w for _, _, w in specs]
 
     if not spec_names:
         # Other Language — free text
@@ -67,7 +68,7 @@ def _resolve_any_suffix(name: str, context: dict) -> str:
         f"{group} specialization", choices=choices
     ).ask())
     if spec == "ANY":
-        spec = random.choice(spec_names)
+        spec = random.choices(spec_names, weights=spec_weights)[0]
         print(f"  → {spec}")
     elif spec == "Enter custom...":
         spec = _ask(lambda: questionary.text(f"{group} specialization:").ask())
@@ -88,7 +89,7 @@ def _get_full_skill_list() -> list[str]:
         for group in sorted(SPECIALIZATIONS):
             specs = SPECIALIZATIONS[group]
             if specs:
-                for spec_name, _ in specs:
+                for spec_name, _, _ in specs:
                     skills.append(f"{group} ({spec_name})")
             else:
                 skills.append(f"{group} (any)")

@@ -43,32 +43,37 @@ BASE_VALUES = {
 }
 
 SPECIALIZATIONS = {
+    # Tuples are (name, base_value, weight). Weight is used when resolving
+    # "ANY" — higher weight means more likely to be chosen.
     "Fighting": [
-        ("Brawl", 25), ("Axe", 15), ("Chainsaw", 10), ("Flail", 10),
-        ("Garrote", 15), ("Spear", 20), ("Sword", 20), ("Whip", 5),
+        ("Brawl", 25, 50), ("Axe", 15, 15), ("Chainsaw", 10, 4),
+        ("Flail", 10, 4), ("Garrote", 15, 8), ("Spear", 20, 8),
+        ("Sword", 20, 20), ("Whip", 5, 4),
     ],
     "Firearms": [
-        ("Bow", 15), ("Handgun", 20), ("Heavy Weapons", 10),
-        ("Flamethrower", 10), ("Machine Gun", 10),
-        ("Rifle/Shotgun", 25), ("Submachine Gun", 15),
+        ("Bow", 15, 10), ("Handgun", 20, 40), ("Heavy Weapons", 10, 5),
+        ("Flamethrower", 10, 2), ("Machine Gun", 10, 5),
+        ("Rifle/Shotgun", 25, 35), ("Submachine Gun", 15, 15),
     ],
     "Art/Craft": [
-        ("Acting", 5), ("Calligraphy", 5), ("Carpentry", 5), ("Cooking", 5),
-        ("Dancing", 5), ("Fine Art", 5), ("Forgery", 5), ("Literature", 5),
-        ("Morris Dancing", 5), ("Opera Singing", 5), ("Painting", 5),
-        ("Photography", 5), ("Pottery", 5), ("Sculpting", 5), ("Writing", 5),
+        ("Acting", 5, 15), ("Calligraphy", 5, 5), ("Carpentry", 5, 10),
+        ("Cooking", 5, 10), ("Dancing", 5, 10), ("Fine Art", 5, 15),
+        ("Forgery", 5, 8), ("Literature", 5, 12), ("Morris Dancing", 5, 2),
+        ("Opera Singing", 5, 5), ("Painting", 5, 15), ("Photography", 5, 12),
+        ("Pottery", 5, 8), ("Sculpting", 5, 8), ("Writing", 5, 12),
     ],
     "Pilot": [
-        ("Aircraft", 1), ("Boat", 1), ("Submarine", 1),
+        ("Aircraft", 1, 30), ("Boat", 1, 50), ("Submarine", 1, 5),
     ],
     "Science": [
-        ("Astronomy", 1), ("Biology", 1), ("Botany", 1), ("Chemistry", 1),
-        ("Cryptography", 1), ("Engineering", 1), ("Forensics", 1),
-        ("Geology", 1), ("Mathematics", 10), ("Meteorology", 1),
-        ("Pharmacy", 1), ("Physics", 1), ("Zoology", 1),
+        ("Astronomy", 1, 10), ("Biology", 1, 15), ("Botany", 1, 10),
+        ("Chemistry", 1, 15), ("Cryptography", 1, 5), ("Engineering", 1, 10),
+        ("Forensics", 1, 8), ("Geology", 1, 8), ("Mathematics", 10, 12),
+        ("Meteorology", 1, 5), ("Pharmacy", 1, 10), ("Physics", 1, 10),
+        ("Zoology", 1, 8),
     ],
     "Survival": [
-        ("Arctic", 10), ("Desert", 10), ("Sea", 10),
+        ("Arctic", 10, 15), ("Desert", 10, 20), ("Sea", 10, 25),
     ],
     "Other Language": [],  # free text; base always 1
 }

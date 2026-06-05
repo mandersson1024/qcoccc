@@ -43,7 +43,7 @@ def _resolve_spec_randomly(name: str) -> str:
     group = name[: name.index("(")].strip()
     specs = SPECIALIZATIONS.get(group, [])
     if specs:
-        spec = random.choice([s for s, _ in specs])
+        spec = random.choices([s for s, _, _ in specs], weights=[w for _, _, w in specs])[0]
     else:
         spec = random.choice(COMMON_LANGUAGES)
     return f"{group} ({spec})"
