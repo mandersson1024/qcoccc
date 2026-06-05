@@ -28,7 +28,11 @@ The developer owns all decisions about how the project works. Work in small step
 
 **ANY option:** Select questions can offer "ANY" as the first choice, which resolves to a random value from the remaining options. The resolved value is printed on the next line (`→ value`). Free-text questions (like age) use empty input to trigger the same behaviour. The `allow_any` flag on the `Question` base class controls whether a question supports this. The `Output` question does not offer ANY.
 
-**Characteristics are plain integers:** The output sheet stores characteristics as plain integers (e.g. `"STR": 45`). Half and fifth values are not stored — players calculate those at the table.
+**Characteristics and skills are plain integers:** The output sheet stores characteristics and skills as plain integers (e.g. `"STR": 45`, `"dodge": 21`). Half and fifth values are not stored — players calculate those at the table.
+
+**Ctrl+C exits cleanly:** questionary's `ask()` returns `None` on Ctrl+C. The `QuestionFlow` runner checks for `None` after each question and exits with `Aborted.` instead of crashing.
+
+**Occupational skill point distribution:** Points are distributed randomly. Uniform mode assigns each point uniformly at random across the skill pool (generalist). Bell curve mode uses `random.betavariate(2, 2)` weights so one or two skills dominate (specialist). Credit Rating is set to a random value within the occupation's range and its cost is deducted from the pool before distribution. Manual point allocation is not implemented (backlog).
 
 **Characteristic rolling — standard method only:** STR/CON/DEX/APP/POW roll 3D6×5; SIZ/INT/EDU roll 2D6+6×5. Occupation `characteristic_ranges.min` values are enforced (stat bumped up if below minimum). `max` values are soft guidance — not enforced. Age deductions to STR/CON/DEX are distributed randomly across the three stats. Other rolling methods (Quick Fire, point buy, allocate-freely) are not implemented yet.
 
@@ -38,6 +42,8 @@ The developer owns all decisions about how the project works. Work in small step
 qcoccc.py                    — main entry point
 character_sheet_builder.py   — assembles the character sheet dict from context
 characteristics.py           — rolls all 8 characteristics, applies age modifiers, derives attributes
+skills_data.py               — base values, specialization lists, display→schema key mappings
+skill_resolver.py            — resolves occupation skill entries interactively, evaluates formulas, distributes points
 requirements.txt
 json-schemas/
     character_sheet.schema.json  — JSON Schema for the investigator sheet
@@ -50,6 +56,7 @@ questions/
     occupation.py            — also exposes load_occupation_data(name, era)
     age_bracket.py
     age.py
+    skill_distribution.py
     output.py
 occupations/
     era-neutral/             — occupation JSON files available in all eras
@@ -61,7 +68,7 @@ tests/
 
 ## Current status
 
-Roadmap items 1 and 2 are **complete**.
+Roadmap items 1, 2, and 3 are **complete**.
 
 Item 1 (full occupation list):
 - All occupation JSON files created and validated against `occupation.schema.json`
@@ -75,7 +82,14 @@ Item 2 (characteristic rolling):
 - Occupation minimums enforced, age modifiers applied, all derived attributes computed
 - Output sheet now includes `characteristics` and `derived_attributes`
 
-**Next up:** Roadmap item 3 — occupational skill points.
+Item 3 (occupational skill points):
+- `skills_data.py` defines base values for all skills and specialization lists (Fighting, Firearms, Art/Craft, Science, Pilot, Survival, Other Language)
+- `skill_resolver.py` handles formula evaluation, interactive skill resolution (choices and specializations), and point distribution (linear or bell curve)
+- Occupation skill point formula parsed and evaluated; Credit Rating set randomly within occupation range
+- Skill choices (`{"choice": [...]}`, `{"choice": "any"}`) and `(any)` specializations presented as interactive questions with ANY option
+- Output sheet now includes `skills`
+
+**Next up:** Roadmap item 4 — personal interest skill points.
 
 ## Roadmap
 
@@ -83,7 +97,7 @@ Planned order of implementation:
 
 1. ✅ **Full occupation list** — foundation for everything else; each occupation gets occupational skills and reasonable characteristic ranges (soft guidance, not hard rules — e.g. a soldier is unlikely to have very low STR)
 2. ✅ **Characteristic rolling** — roll all 8 characteristics per the rules, apply occupation characteristic ranges and age modifiers, derive HP, MP, move rate, damage bonus, build, Luck and Sanity
-3. **Occupational skill points** — allocate EDU × multiplier across the occupation's skills
+3. ✅ **Occupational skill points** — allocate EDU × multiplier across the occupation's skills
 
 Later:
 - **Personal interest skill points** — allocate INT × 2 across a selectable list of interests/hobbies representing groups of skills
@@ -100,4 +114,6 @@ Out of scope: backstory generation, partial sheet saving/loading, re-rolling ind
 2. **Occupation** — loaded from era subfolder(s), sorted alphabetically
 3. **Age bracket** — rulebook brackets: 15–19, 20s, 30s, 40s, 50s, 60s, 70s, 80s+
 4. **Age** — free-text integer, validated against the chosen bracket
-5. **Output** — To Terminal / To File / Both (no ANY)
+5. **Skill choices** — one question per `{"choice": [...]}` or `{"choice": "any"}` entry in the occupation; `(any)` suffixes trigger a specialization sub-question
+6. **Skill distribution** — Uniform (generalist) / Bell curve (specialist)
+7. **Output** — To Terminal / To File / Both (no ANY)

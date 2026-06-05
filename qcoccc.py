@@ -3,31 +3,44 @@ import os
 import jsonschema
 from engine.flow import QuestionFlow
 from questions.era import EraQuestion
-from questions.occupation import OccupationQuestion
+from questions.occupation import OccupationQuestion, load_occupation_data
 from questions.age_bracket import AgeBracketQuestion
 from questions.age import AgeQuestion
+from questions.skill_distribution import SkillDistributionQuestion
 from questions.output import OutputQuestion
 from character_sheet_builder import build
 from characteristics import roll_characteristics
+from skill_resolver import resolve_occupation_skills, allocate_skills
 
 SCHEMA_PATH = os.path.join(os.path.dirname(__file__), "json-schemas", "character_sheet.schema.json")
 
 
 def main():
-    flow = QuestionFlow(questions=[
+    context = QuestionFlow([
         EraQuestion(),
         OccupationQuestion(),
         AgeBracketQuestion(),
         AgeQuestion(),
-        OutputQuestion(),
-    ])
-    context = flow.run()
+    ]).run()
+
     context.update(roll_characteristics(
         context["era"],
         context["occupation"],
         context["age_bracket"],
         context["age"],
     ))
+
+    occ_data = load_occupation_data(context["occupation"], context["era"])
+    resolved = resolve_occupation_skills(occ_data["skills"], context)
+
+    context.update(QuestionFlow([
+        SkillDistributionQuestion(),
+        OutputQuestion(),
+    ]).run())
+
+    context["skills"] = allocate_skills(
+        occ_data, resolved, context, context["distribution_mode"]
+    )
 
     sheet = build(context)
 
