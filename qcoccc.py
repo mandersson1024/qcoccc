@@ -56,7 +56,6 @@ def main():
     except jsonschema.ValidationError as e:
         path = " -> ".join(str(p) for p in e.absolute_path) or "(root)"
         print(f"\nSchema validation failed at '{path}': {e.message}")
-        return
 
     output = context["output"]
     destination = output["destination"]
