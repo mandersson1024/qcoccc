@@ -32,6 +32,8 @@ The developer owns all decisions about how the project works. Work in small step
 
 **Ctrl+C exits cleanly:** questionary's `ask()` returns `None` on Ctrl+C. The `QuestionFlow` runner checks for `None` after each question and exits with `Aborted.` instead of crashing.
 
+**Skill cap at character creation:** No skill may exceed 75% through point allocation during character creation. This is the cap recommended in the Investigator's Handbook (no PDF available). Skills whose base value already equals or exceeds 75 receive no additional points. Credit Rating is exempt — it is set directly from the occupation's range, not via the distribution pool.
+
 **Occupational skill point distribution:** Points are distributed randomly. Uniform mode assigns each point uniformly at random across the skill pool (generalist). Bell curve mode uses `random.betavariate(2, 2)` weights so one or two skills dominate (specialist). Credit Rating is set to a random value within the occupation's range and its cost is deducted from the pool before distribution. Manual point allocation is not implemented (backlog).
 
 **Characteristic rolling — standard method only:** STR/CON/DEX/APP/POW roll 3D6×5; SIZ/INT/EDU roll 2D6+6×5. Occupation `characteristic_ranges.min` values are enforced (stat bumped up if below minimum). `max` values are soft guidance — not enforced. Age deductions to STR/CON/DEX are distributed randomly across the three stats. Other rolling methods (Quick Fire, point buy, allocate-freely) are not implemented yet.

@@ -174,7 +174,7 @@ def allocate_skills(
 
     result = {"Credit Rating": cr}
     for name, base in skill_bases.items():
-        result[name] = min(99, base + allocation.get(name, 0))
+        result[name] = base + min(allocation.get(name, 0), max(0, _SKILL_CAP - base))
     return result
 
 
@@ -208,18 +208,21 @@ def allocate_personal_interest(
     else:
         allocation = _distribute_linear(skill_bases, total)
 
-    return {name: min(99, base + allocation.get(name, 0)) for name, base in skill_bases.items()}
+    return {name: min(_SKILL_CAP, base + allocation.get(name, 0)) for name, base in skill_bases.items()}
+
+
+_SKILL_CAP = 75
 
 
 def _distribute_linear(skill_bases: dict, points: int) -> dict:
     allocated = {s: 0 for s in skill_bases}
-    eligible = [s for s in skill_bases if skill_bases[s] < 99]
+    eligible = [s for s in skill_bases if skill_bases[s] < _SKILL_CAP]
     for _ in range(points):
         if not eligible:
             break
         s = random.choice(eligible)
         allocated[s] += 1
-        if skill_bases[s] + allocated[s] >= 99:
+        if skill_bases[s] + allocated[s] >= _SKILL_CAP:
             eligible = [e for e in eligible if e != s]
     return allocated
 
@@ -232,7 +235,7 @@ def _distribute_bell(skill_bases: dict, points: int) -> dict:
     for s in sorted(skill_bases, key=lambda x: -weights[x]):
         if remaining <= 0:
             break
-        max_add = 99 - skill_bases[s]
+        max_add = max(0, _SKILL_CAP - skill_bases[s])
         share = round(points * weights[s] / total_w)
         add = min(share, max_add, remaining)
         allocated[s] = add
@@ -240,7 +243,7 @@ def _distribute_bell(skill_bases: dict, points: int) -> dict:
     for s in random.sample(list(skill_bases), len(skill_bases)):
         if remaining <= 0:
             break
-        can_add = 99 - skill_bases[s] - allocated[s]
+        can_add = max(0, _SKILL_CAP - skill_bases[s] - allocated[s])
         add = min(can_add, remaining)
         allocated[s] += add
         remaining -= add
