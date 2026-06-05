@@ -38,6 +38,10 @@ The developer owns all decisions about how the project works. Work in small step
 
 **Characteristic rolling — standard method only:** STR/CON/DEX/APP/POW roll 3D6×5; SIZ/INT/EDU roll 2D6+6×5. Occupation `characteristic_ranges.min` values are enforced (stat bumped up if below minimum). `max` values are soft guidance — not enforced. Age deductions to STR/CON/DEX are distributed randomly across the three stats. Other rolling methods (Quick Fire, point buy, allocate-freely) are not implemented yet.
 
+**Specialization weights:** Each entry in `SPECIALIZATIONS` is a `(name, base_value, weight)` tuple. Weight is used when resolving ANY — higher weight means more likely. Base values come from the rulebook; weights are curated by feel to make unusual specializations possible but rare (e.g. Brawl weight 50 vs Chainsaw weight 4, Boat weight 50 vs Submarine weight 5).
+
+**Schema validation is permissive at runtime:** After building the sheet, `qcoccc.py` validates it against `character_sheet.schema.json` and prints any error, but continues to render and write the sheet regardless.
+
 ## Project structure
 
 ```
@@ -67,6 +71,8 @@ occupations/
     modern/                  — occupation JSON files exclusive to the modern era
 tests/
     test_occupations.py      — validates all occupation JSON files against json-schemas/occupation.schema.json
+    test_skills.py           — unit tests for skill base values, formula evaluation, and point allocation
+    test_character_sheet.py  — generates a random character for each occupation and validates against character_sheet.schema.json
 ```
 
 ## Current status
