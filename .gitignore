@@ -225,3 +225,6 @@ output.json
 
 # IDE
 .idea/
+
+# macOS
+.DS_Store

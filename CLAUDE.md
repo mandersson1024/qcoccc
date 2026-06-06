@@ -34,7 +34,7 @@ The developer owns all decisions about how the project works. Work in small step
 
 **Skill cap at character creation:** No skill may exceed 75% through point allocation during character creation. This is the cap recommended in the Investigator's Handbook (no PDF available). Skills whose base value already equals or exceeds 75 receive no additional points. Credit Rating is exempt — it is set directly from the occupation's range, not via the distribution pool.
 
-**Occupational skill point distribution:** Points are distributed randomly. Uniform mode assigns each point uniformly at random across the skill pool (generalist). Bell curve mode uses `random.betavariate(2, 2)` weights so one or two skills dominate (specialist). Credit Rating is set to a random value within the occupation's range and its cost is deducted from the pool before distribution. Manual point allocation is not implemented (backlog).
+**Occupational skill point distribution:** Points are distributed randomly. Generalist mode assigns each point uniformly at random across the skill pool. Specialist mode draws weights from `random.expovariate(1)` — a skewed distribution — so one or two skills attract most of the points. Credit Rating is set to a random value within the occupation's range and its cost is deducted from the pool before distribution. Manual point allocation is not implemented (backlog).
 
 **Age range:** The rules explicitly state investigators must be between 15 and 90 years old (rulebook p. 32). The 80s+ bracket covers 80–90. Ages outside this range require Keeper approval and are not supported by the tool.
 
@@ -136,5 +136,5 @@ Out of scope: backstory generation, partial sheet saving/loading, re-rolling ind
 3. **Age bracket** — rulebook brackets: 15–19, 20s, 30s, 40s, 50s, 60s, 70s, 80s+
 4. **Age** — free-text integer, validated against the chosen bracket
 5. **Skill choices** — one question per `{"choice": [...]}` or `{"choice": "any"}` entry in the occupation; `(any)` suffixes trigger a specialization sub-question
-6. **Skill distribution** — Uniform (generalist) / Bell curve (specialist)
+6. **Skill distribution** — Generalist / Specialist
 7. **Output** — To Terminal / To File / Both (no ANY)

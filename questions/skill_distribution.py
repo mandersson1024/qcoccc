@@ -12,5 +12,5 @@ class SkillDistributionQuestion(Question):
     def ask(self, context: dict) -> str:
         return questionary.select(
             "Skill distribution",
-            choices=["Uniform (generalist)", "Bell curve (specialist)"],
+            choices=["Generalist", "Specialist"],
         ).ask()

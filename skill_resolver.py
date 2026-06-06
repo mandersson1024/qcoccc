@@ -166,8 +166,8 @@ def allocate_skills(
             skill_bases[name] = base
 
     if remaining > 0 and skill_bases:
-        if "bell" in mode.lower():
-            allocation = _distribute_bell(skill_bases, remaining)
+        if mode == "Specialist":
+            allocation = _distribute_skewed(skill_bases, remaining)
         else:
             allocation = _distribute_linear(skill_bases, remaining)
     else:
@@ -204,8 +204,8 @@ def allocate_personal_interest(
         for name in chosen
     }
 
-    if "bell" in mode.lower():
-        allocation = _distribute_bell(skill_bases, total)
+    if mode == "Specialist":
+        allocation = _distribute_skewed(skill_bases, total)
     else:
         allocation = _distribute_linear(skill_bases, total)
 
@@ -228,8 +228,8 @@ def _distribute_linear(skill_bases: dict, points: int) -> dict:
     return allocated
 
 
-def _distribute_bell(skill_bases: dict, points: int) -> dict:
-    weights = {s: random.betavariate(2, 2) for s in skill_bases}
+def _distribute_skewed(skill_bases: dict, points: int) -> dict:
+    weights = {s: random.expovariate(1) for s in skill_bases}
     total_w = sum(weights.values())
     allocated = {s: 0 for s in skill_bases}
     remaining = points
