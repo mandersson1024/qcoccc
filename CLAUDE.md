@@ -6,6 +6,8 @@ A Python script that lets the user quickly roll a new Call of Cthulhu (7th editi
 
 The rulebook is `CoC-7e-rules.pdf` (gitignored). All mechanics must follow the 7th edition rules as written in that document. Character creation is covered in Chapter 3 (pages 32–51).
 
+The Investigator's Handbook is `CoC-7e-investigator-handbook.pdf` (gitignored). It covers investigator creation in more detail and is the source for the 75% skill cap at character creation.
+
 ## Development process
 
 The developer owns all decisions about how the project works. Work in small steps, one thing at a time.
@@ -32,7 +34,7 @@ The developer owns all decisions about how the project works. Work in small step
 
 **Ctrl+C exits cleanly:** questionary's `ask()` returns `None` on Ctrl+C. The `QuestionFlow` runner checks for `None` after each question and exits with `Aborted.` instead of crashing.
 
-**Skill cap at character creation:** No skill may exceed 75% through point allocation during character creation. This is the cap recommended in the Investigator's Handbook (no PDF available). Skills whose base value already equals or exceeds 75 receive no additional points. Credit Rating is exempt — it is set directly from the occupation's range, not via the distribution pool.
+**Skill cap at character creation:** No skill may exceed 75% through point allocation during character creation. This is the cap recommended in the Investigator's Handbook. Skills whose base value already equals or exceeds 75 receive no additional points. Credit Rating is exempt — it is set directly from the occupation's range, not via the distribution pool.
 
 **Occupational skill point distribution:** Points are distributed randomly. Generalist mode assigns each point uniformly at random across the skill pool. Specialist mode draws weights from `random.expovariate(1)` — a skewed distribution — so one or two skills attract most of the points. Credit Rating is set to a random value within the occupation's range and its cost is deducted from the pool before distribution. Manual point allocation is not implemented (backlog).
 

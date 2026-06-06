@@ -217,8 +217,9 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# Rules PDF
+# Rules PDFs
 CoC-7e-rules.pdf
+CoC-7e-investigator-handbook.pdf
 
 # Generated output
 output.json
