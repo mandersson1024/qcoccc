@@ -1,5 +1,7 @@
+import argparse
 import json
 import os
+import sys
 import jsonschema
 from engine.flow import QuestionFlow
 from questions.era import EraQuestion
@@ -16,7 +18,35 @@ from skill_resolver import resolve_occupation_skills, allocate_skills, allocate_
 SCHEMA_PATH = os.path.join(os.path.dirname(__file__), "json-schemas", "character_sheet.schema.json")
 
 
+def load_schema():
+    with open(SCHEMA_PATH) as f:
+        return json.load(f)
+
+
+def pretty_print_file(path):
+    with open(path) as f:
+        sheet = json.load(f)
+
+    schema = load_schema()
+    try:
+        jsonschema.validate(sheet, schema)
+    except jsonschema.ValidationError as e:
+        path_str = " -> ".join(str(p) for p in e.absolute_path) or "(root)"
+        print(f"Schema validation failed at '{path_str}': {e.message}")
+        sys.exit(1)
+
+    print(format_sheet(sheet))
+
+
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-p", "--pretty-print", metavar="FILE", help="Pretty-print a character sheet JSON file")
+    args = parser.parse_args()
+
+    if args.pretty_print:
+        pretty_print_file(args.pretty_print)
+        return
+
     context = QuestionFlow([
         EraQuestion(),
         OccupationQuestion(),
@@ -37,7 +67,7 @@ def main():
     context.update(QuestionFlow([
         SkillDistributionQuestion(),
         OutputQuestion(),
-    ]).run())
+    ]).run(context))
 
     context["skills"] = allocate_skills(
         occ_data, resolved, context, context["distribution_mode"]
@@ -48,8 +78,7 @@ def main():
 
     sheet = build(context)
 
-    with open(SCHEMA_PATH) as f:
-        schema = json.load(f)
+    schema = load_schema()
 
     try:
         jsonschema.validate(sheet, schema)

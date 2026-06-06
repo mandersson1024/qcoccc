@@ -6,8 +6,8 @@ class QuestionFlow:
     def __init__(self, questions: list[Question]):
         self._questions = questions
 
-    def run(self) -> dict:
-        context = {}
+    def run(self, context: dict | None = None) -> dict:
+        context = dict(context) if context else {}
         for question in self._questions:
             answer = question.ask(context)
             if answer is None:

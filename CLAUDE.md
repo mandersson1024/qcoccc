@@ -44,10 +44,14 @@ The developer owns all decisions about how the project works. Work in small step
 
 **Schema validation is permissive at runtime:** After building the sheet, `qcoccc.py` validates it against `character_sheet.schema.json` and prints any error, but continues to render and write the sheet regardless.
 
+**`-p` / `--pretty-print` flag:** `python qcoccc.py -p <file.json>` loads a character sheet JSON, validates it against the schema, and prints the formatted sheet. If validation fails, it prints the error and exits without printing the sheet.
+
+**`QuestionFlow.run()` accepts an initial context:** The second `QuestionFlow` call (for skill distribution and output questions) is seeded with the accumulated context so that `OutputQuestion` can read `occupation`, `era`, and `age` when generating the default filename.
+
 ## Project structure
 
 ```
-qcoccc.py                    — main entry point
+qcoccc.py                    — main entry point; -p/--pretty-print flag to render an existing JSON sheet
 character_sheet_builder.py   — assembles the character sheet dict from context
 characteristics.py           — rolls all 8 characteristics, applies age modifiers, derives attributes
 skills_data.py               — base values, specialization lists, display→schema key mappings
@@ -59,7 +63,7 @@ json-schemas/
     occupation.schema.json       — JSON Schema for occupation files
 engine/
     question.py              — abstract Question base class (allow_any flag)
-    flow.py                  — QuestionFlow runner
+    flow.py                  — QuestionFlow runner; run() accepts an optional seed context
 questions/
     era.py
     occupation.py            — also exposes load_occupation_data(name, era)

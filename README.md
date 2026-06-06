@@ -23,6 +23,12 @@ source .venv/bin/activate
 python qcoccc.py
 ```
 
+To pretty-print an existing character sheet JSON file:
+
+```
+python qcoccc.py -p character.json
+```
+
 ## Example output
 
 ```
