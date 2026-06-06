@@ -179,36 +179,36 @@ def allocate_skills(
     return result
 
 
+def resolve_personal_interest_skills(context: dict, n_skills: int = 4) -> list[str]:
+    full_list = _get_full_skill_list()
+    chosen = []
+    for i in range(n_skills):
+        label = f"Personal interest skill {i + 1}"
+        skill = _ask(lambda: questionary.select(label, choices=["ANY"] + full_list).ask())
+        if skill == "ANY":
+            skill = random.choice(full_list)
+            print(f"  → {skill}")
+        if skill.endswith("(any)"):
+            skill = _resolve_any_suffix(skill, context)
+        chosen.append(skill)
+    return chosen
+
+
 def allocate_personal_interest(
+    chosen: list[str],
     occupation_skills: dict[str, int],
     context: dict,
     mode: str,
-    n_skills: int = 4,
 ) -> dict[str, int]:
     total = context["INT"] * 2
-    full_list = _get_full_skill_list()
-    chosen_raw = random.sample(full_list, min(n_skills, len(full_list)))
-
-    chosen = []
-    for name in chosen_raw:
-        if name == "Other Language (any)":
-            name = f"Other Language ({random.choice(COMMON_LANGUAGES)})"
-        chosen.append(name)
-
-    print("Personal interest skills:")
-    for name in chosen:
-        print(f"  → {name}")
-
     skill_bases = {
         name: occupation_skills.get(name, _skill_base(name, context))
         for name in chosen
     }
-
     if mode == "Specialist":
         allocation = _distribute_skewed(skill_bases, total)
     else:
         allocation = _distribute_linear(skill_bases, total)
-
     return {name: min(_SKILL_CAP, base + allocation.get(name, 0)) for name, base in skill_bases.items()}
 
 

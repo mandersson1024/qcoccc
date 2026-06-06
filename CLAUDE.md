@@ -57,7 +57,7 @@ qcoccc/                      — Python package; run with: python -m qcoccc
     character_sheet_builder.py — assembles the character sheet dict from context
     characteristics.py       — rolls all 8 characteristics, applies age modifiers, derives attributes
     skills_data.py           — base values, specialization lists, display→schema key mappings
-    skill_resolver.py        — resolves occupation skill entries interactively, evaluates formulas, distributes points
+    skill_resolver.py        — resolves occupation and personal interest skill entries interactively, evaluates formulas, distributes points
     pretty_print.py          — formats the character sheet as human-readable text for terminal output
     engine/
         question.py          — abstract Question base class (allow_any flag)
@@ -105,10 +105,9 @@ Item 5 (pretty-print output):
 - Skills sorted alphabetically, specializations shown as "Group (Name)"
 
 Item 4 (personal interest skill points):
-- 4 skills chosen at random from the full skill list; "Other Language (any)" auto-resolved silently
-- INT × 2 points distributed using the same mode (uniform/bell curve) chosen for occupation
+- 4 skills chosen interactively (one question each, ANY supported); specialization suffixes trigger a sub-question
+- INT × 2 points distributed using the same mode (Generalist/Specialist) chosen for occupation
 - Results merged into the skills dict; occupation-improved skills continue from their occupation value
-- Chosen skills printed for visibility before output
 
 Item 3 (occupational skill points):
 - `skills_data.py` defines base values for all skills and specialization lists (Fighting, Firearms, Art/Craft, Science, Pilot, Survival, Other Language)
@@ -138,5 +137,6 @@ Out of scope: backstory generation, partial sheet saving/loading, re-rolling ind
 3. **Age bracket** — rulebook brackets: 15–19, 20s, 30s, 40s, 50s, 60s, 70s, 80s+
 4. **Age** — free-text integer, validated against the chosen bracket
 5. **Skill choices** — one question per `{"choice": [...]}` or `{"choice": "any"}` entry in the occupation; `(any)` suffixes trigger a specialization sub-question
-6. **Skill distribution** — Generalist / Specialist
-7. **Output** — To Terminal / To File / Both (no ANY)
+6. **Personal interest skills** — 4 questions, one per skill, full skill list available; ANY supported; `(any)` suffixes trigger a specialization sub-question
+7. **Skill distribution** — Generalist / Specialist
+8. **Output** — To Terminal / To File / Both (no ANY)

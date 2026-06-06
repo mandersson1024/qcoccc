@@ -13,7 +13,7 @@ from .questions.output import OutputQuestion
 from .character_sheet_builder import build
 from .pretty_print import format_sheet
 from .characteristics import roll_characteristics
-from .skill_resolver import resolve_occupation_skills, allocate_skills, allocate_personal_interest
+from .skill_resolver import resolve_occupation_skills, allocate_skills, resolve_personal_interest_skills, allocate_personal_interest
 
 SCHEMA_PATH = os.path.join(os.path.dirname(__file__), "..", "json-schemas", "character_sheet.schema.json")
 
@@ -63,18 +63,22 @@ def main():
 
     occ_data = load_occupation_data(context["occupation"], context["era"])
     resolved = resolve_occupation_skills(occ_data["skills"], context)
+    personal = resolve_personal_interest_skills(context)
 
     context.update(QuestionFlow([
         SkillDistributionQuestion(),
-        OutputQuestion(),
     ]).run(context))
 
     context["skills"] = allocate_skills(
         occ_data, resolved, context, context["distribution_mode"]
     )
     context["skills"].update(allocate_personal_interest(
-        context["skills"], context, context["distribution_mode"]
+        personal, context["skills"], context, context["distribution_mode"]
     ))
+
+    context.update(QuestionFlow([
+        OutputQuestion(),
+    ]).run(context))
 
     sheet = build(context)
 

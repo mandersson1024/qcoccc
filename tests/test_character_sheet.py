@@ -87,7 +87,9 @@ def test_character_validates_against_schema(occupation_name, era):
     resolved = _resolve_randomly(occ_data["skills"], context)
     mode = random.choice(["Generalist", "Specialist"])
     context["skills"] = allocate_skills(occ_data, resolved, context, mode)
-    context["skills"].update(allocate_personal_interest(context["skills"], context, mode))
+    full_list = [s for s in _get_full_skill_list() if not s.endswith("(any)")]
+    personal = random.sample(full_list, 4)
+    context["skills"].update(allocate_personal_interest(personal, context["skills"], context, mode))
 
     sheet = build(context)
     jsonschema.validate(sheet, schema)

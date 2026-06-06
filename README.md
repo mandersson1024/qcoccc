@@ -32,36 +32,57 @@ python -m qcoccc -p character.json
 ## Example output
 
 ```
+% python -m qcoccc
+? Era 1920s
+? Occupation ANY
+  → Journalist
+? Age bracket ANY
+  → 50s
+? Age ANY
+  → 59
+? Skill choice 1 ANY
+  → Charm
+? Free skill choice 1 ANY
+  → Operate Heavy Machinery
+? Free skill choice 2 ANY
+  → Law
+? Skill distribution Generalist
+? Output To Terminal
+Personal interest skills:
+  → Appraise
+  → Science (Physics)
+  → Pilot (Boat)
+  → Art/Craft (Dancing)
 ════════════════════════════════════════════════
   CALL OF CTHULHU INVESTIGATOR  ·  1920s
 ════════════════════════════════════════════════
 
-  Missionary  ·  Age 78
+  Journalist  ·  Age 59
 
   CHARACTERISTICS ──────────────────────────────
-  STR 12   CON 21   SIZ 80   DEX 32
-  APP 25   INT 50   POW 55   EDU 76
+  STR 40   CON 49   SIZ 70   DEX 26
+  APP 45   INT 85   POW 55   EDU 61
 
   DERIVED ──────────────────────────────────────
-  Hit Points    10     Sanity    55 / 99
-  Magic Points  11     Luck      55
-  Move Rate     3      Build     0
+  Hit Points    11     Sanity    55 / 99
+  Magic Points  11     Luck      60
+  Move Rate     5      Build     0
   Damage Bonus  None
 
   SKILLS ───────────────────────────────────────
-  Art/Craft (Cooking) ....................  43
-  Charm ..................................  53
-  Climb ..................................  42
-  Credit Rating ..........................  2
-  Electrical Repair ......................  38
-  Fighting (Axe) .........................  62
-  Firearms (Flamethrower) ................  35
-  First Aid ..............................  60
-  Mechanical Repair ......................  49
-  Medicine ...............................  41
-  Natural World ..........................  40
-  Ride ...................................  30
-  Science (Botany) .......................  41
+  Appraise ...............................  47
+  Art/Craft (Dancing) ....................  51
+  Art/Craft (Photography) ................  41
+  Charm ..................................  40
+  Credit Rating ..........................  27
+  History ................................  36
+  Law ....................................  32
+  Library Use ............................  42
+  Operate Heavy Machinery ................  28
+  Own Language ...........................  75
+  Pilot (Boat) ...........................  43
+  Psychology .............................  45
+  Science (Physics) ......................  41
 
 ════════════════════════════════════════════════
 ```
