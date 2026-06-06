@@ -13,7 +13,7 @@ from .questions.output import OutputQuestion
 from .character_sheet_builder import build
 from .pretty_print import format_sheet
 from .characteristics import roll_characteristics
-from .skill_resolver import resolve_occupation_skills, allocate_skills, resolve_personal_interest_skills, allocate_personal_interest
+from .skill_resolver import resolve_occupation_skills, allocate_skills, resolve_personal_interest_skills, allocate_personal_interest, skill_base
 
 SCHEMA_PATH = os.path.join(os.path.dirname(__file__), "..", "json-schemas", "character_sheet.schema.json")
 
@@ -69,12 +69,22 @@ def main():
         SkillDistributionQuestion(),
     ]).run(context))
 
-    context["skills"] = allocate_skills(
-        occ_data, resolved, context, context["distribution_mode"]
-    )
-    context["skills"].update(allocate_personal_interest(
-        personal, context["skills"], context, context["distribution_mode"]
-    ))
+    occ_skills = allocate_skills(occ_data, resolved, context, context["distribution_mode"])
+    personal_skills = allocate_personal_interest(personal, occ_skills, context, context["distribution_mode"])
+
+    resolved_bases = {name: base for name, base in resolved}
+    alloc_lines = [("Credit Rating", occ_skills["Credit Rating"])]
+    for name, base in resolved_bases.items():
+        alloc_lines.append((name, occ_skills[name] - base))
+    for name in personal:
+        pre = occ_skills.get(name, skill_base(name, context))
+        alloc_lines.append((name, personal_skills[name] - pre))
+    col = max(len(name) for name, _ in alloc_lines)
+    for name, pts in alloc_lines:
+        print(f"  → {name:<{col}}  {pts}")
+
+    context["skills"] = occ_skills
+    context["skills"].update(personal_skills)
 
     context.update(QuestionFlow([
         OutputQuestion(),

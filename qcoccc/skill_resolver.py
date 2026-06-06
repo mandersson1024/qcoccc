@@ -33,7 +33,7 @@ def _ask(prompt_fn):
     return result
 
 
-def _skill_base(name: str, context: dict) -> int:
+def skill_base(name: str, context: dict) -> int:
     if name == "Own Language":
         return context["EDU"]
     if name == "Dodge":
@@ -154,7 +154,7 @@ def resolve_occupation_skills(skills_list: list, context: dict) -> list[tuple[st
         name = _resolve_entry(entry, context, counters, chosen)
         if name is None:
             continue
-        resolved.append((name, _skill_base(name, context)))
+        resolved.append((name, skill_base(name, context)))
         chosen.add(name)
     return resolved
 
@@ -217,7 +217,7 @@ def allocate_personal_interest(
 ) -> dict[str, int]:
     total = context["INT"] * 2
     skill_bases = {
-        name: occupation_skills.get(name, _skill_base(name, context))
+        name: occupation_skills.get(name, skill_base(name, context))
         for name in chosen
     }
     if mode == "Specialist":

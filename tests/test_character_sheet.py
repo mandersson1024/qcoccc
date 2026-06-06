@@ -9,7 +9,7 @@ from qcoccc.character_sheet_builder import build
 from qcoccc.characteristics import roll_characteristics
 from qcoccc.questions.age_bracket import BRACKETS
 from qcoccc.questions.occupation import load_occupation_data
-from qcoccc.skill_resolver import _get_full_skill_list, _skill_base, allocate_personal_interest, allocate_skills
+from qcoccc.skill_resolver import _get_full_skill_list, skill_base as _skill_base, allocate_personal_interest, allocate_skills
 from qcoccc.skills_data import COMMON_LANGUAGES, SPECIALIZATIONS
 
 SCHEMA_PATH = os.path.join(os.path.dirname(__file__), "..", "json-schemas", "character_sheet.schema.json")

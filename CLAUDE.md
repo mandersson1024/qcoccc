@@ -4,7 +4,7 @@ A Python script that lets the user quickly roll a new Call of Cthulhu (7th editi
 
 ## Rules reference
 
-The rulebook is `CoC-7e-rules.pdf` (gitignored). All mechanics must follow the 7th edition rules as written in that document.
+The rulebook is `CoC-7e-rules.pdf` (gitignored). All mechanics must follow the 7th edition rules as written in that document. Character creation is covered in Chapter 3 (pages 32–51).
 
 ## Development process
 
@@ -35,6 +35,8 @@ The developer owns all decisions about how the project works. Work in small step
 **Skill cap at character creation:** No skill may exceed 75% through point allocation during character creation. This is the cap recommended in the Investigator's Handbook (no PDF available). Skills whose base value already equals or exceeds 75 receive no additional points. Credit Rating is exempt — it is set directly from the occupation's range, not via the distribution pool.
 
 **Occupational skill point distribution:** Points are distributed randomly. Generalist mode assigns each point uniformly at random across the skill pool. Specialist mode draws weights from `random.expovariate(1)` — a skewed distribution — so one or two skills attract most of the points. Credit Rating is set to a random value within the occupation's range and its cost is deducted from the pool before distribution. Manual point allocation is not implemented (backlog).
+
+**Credit Rating starts at zero and costs points:** Credit Rating has no base value — it starts at 0. The occupation's `credit_rating_range` defines the allowed range (e.g. 20–70 for Military Officer). The value chosen is spent from the occupation skill point pool, just like any other skill. The minimum of the range is a lower bound on the roll, not a free baseline. Confirmed by: rulebook p. 39 ("Your investigator's Credit Rating skill begins at zero... Any number of skill points can be invested in Credit Rating within the recommended limits for that profession") and community consensus on BRP Central forums and Roll20 compendium (web search performed June 2026).
 
 **Age range:** The rules explicitly state investigators must be between 15 and 90 years old (rulebook p. 32). The 80s+ bracket covers 80–90. Ages outside this range require Keeper approval and are not supported by the tool.
 

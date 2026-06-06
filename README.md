@@ -35,54 +35,74 @@ python -m qcoccc -p character.json
 % python -m qcoccc
 ? Era 1920s
 ? Occupation ANY
-  → Journalist
+  → Military Officer
 ? Age bracket ANY
-  → 50s
+  → 70s
 ? Age ANY
-  → 59
-? Skill choice 1 ANY
+  → 78
+? Firearms specialization ANY
+  → Handgun
+? Occupation skill 1 ANY
+  → Persuade
+? Occupation skill 2 ANY
   → Charm
-? Free skill choice 1 ANY
-  → Operate Heavy Machinery
-? Free skill choice 2 ANY
-  → Law
+? Survival specialization ANY
+  → Arctic
+? Any occupation skill 1 ANY
+  → Science (Engineering)
+? Personal interest 1 ANY
+  → Climb
+? Personal interest 2 ANY
+  → Science (Astronomy)
+? Personal interest 3 ANY
+  → Throw
+? Personal interest 4 ANY
+  → Art/Craft (Carpentry)
 ? Skill distribution Generalist
+  → Credit Rating          51
+  → Accounting             16
+  → Firearms (Handgun)     29
+  → Navigate               21
+  → Persuade               29
+  → Charm                  23
+  → Psychology             20
+  → Survival (Arctic)      26
+  → Science (Engineering)  15
+  → Climb                  24
+  → Science (Astronomy)    27
+  → Throw                  34
+  → Art/Craft (Carpentry)  35
 ? Output To Terminal
-Personal interest skills:
-  → Appraise
-  → Science (Physics)
-  → Pilot (Boat)
-  → Art/Craft (Dancing)
 ════════════════════════════════════════════════
   CALL OF CTHULHU INVESTIGATOR  ·  1920s
 ════════════════════════════════════════════════
 
-  Journalist  ·  Age 59
+  Military Officer  ·  Age 78
 
   CHARACTERISTICS ──────────────────────────────
-  STR 40   CON 49   SIZ 70   DEX 26
-  APP 45   INT 85   POW 55   EDU 61
+  STR 52   CON 46   SIZ 85   DEX 37
+  APP 10   INT 60   POW 60   EDU 63
 
   DERIVED ──────────────────────────────────────
-  Hit Points    11     Sanity    55 / 99
-  Magic Points  11     Luck      60
-  Move Rate     5      Build     0
-  Damage Bonus  None
+  Hit Points    13     Sanity    60 / 99
+  Magic Points  12     Luck      45
+  Move Rate     3      Build     1
+  Damage Bonus  +1D4
 
   SKILLS ───────────────────────────────────────
-  Appraise ...............................  47
-  Art/Craft (Dancing) ....................  51
-  Art/Craft (Photography) ................  41
-  Charm ..................................  40
-  Credit Rating ..........................  27
-  History ................................  36
-  Law ....................................  32
-  Library Use ............................  42
-  Operate Heavy Machinery ................  28
-  Own Language ...........................  75
-  Pilot (Boat) ...........................  43
-  Psychology .............................  45
-  Science (Physics) ......................  41
+  Accounting .............................  21
+  Art/Craft (Carpentry) ..................  40
+  Charm ..................................  38
+  Climb ..................................  44
+  Credit Rating ..........................  51
+  Firearms (Handgun) .....................  49
+  Navigate ...............................  31
+  Persuade ...............................  39
+  Psychology .............................  30
+  Science (Astronomy) ....................  28
+  Science (Engineering) ..................  16
+  Survival (Arctic) ......................  36
+  Throw ..................................  54
 
 ════════════════════════════════════════════════
 ```

@@ -1,7 +1,7 @@
 import pytest
 
 from qcoccc.skills_data import BASE_VALUES, SPECIALIZATIONS
-from qcoccc.skill_resolver import _skill_base, evaluate_formula, allocate_skills, _available_from_full_list, _available_from_choices, _get_full_skill_list
+from qcoccc.skill_resolver import skill_base as _skill_base, evaluate_formula, allocate_skills, _available_from_full_list, _available_from_choices, _get_full_skill_list
 
 
 CTX = {"EDU": 70, "DEX": 60, "INT": 65, "STR": 55, "POW": 50, "APP": 45}
