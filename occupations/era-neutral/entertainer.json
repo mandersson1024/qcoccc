@@ -5,6 +5,19 @@
   "characteristic_ranges": {
     "APP": { "min": 50 }
   },
+  "skill_weights": {
+    "Art/Craft": 4,
+    "Sleight of Hand": 3,
+    "Other Language": 2,
+    "History": 2,
+    "Stealth": 2,
+    "Appraise": 1.5,
+    "Fighting": 0.4,
+    "Firearms": 0.3,
+    "Science": 0.3,
+    "Navigate": 0.4,
+    "Survival": 0.4
+  },
   "skills": [
     "Art/Craft (Acting)",
     "Disguise",

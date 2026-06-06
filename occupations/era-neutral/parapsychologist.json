@@ -6,6 +6,20 @@
     "INT": { "min": 50 },
     "POW": { "min": 40 }
   },
+  "skill_weights": {
+    "Science": 4,
+    "Spot Hidden": 3,
+    "Stealth": 2,
+    "Disguise": 2,
+    "Electrical Repair": 2,
+    "Other Language": 2,
+    "Fighting": 0.3,
+    "Firearms": 0.2,
+    "Navigate": 0.4,
+    "Survival": 0.3,
+    "Pilot": 0.2,
+    "Operate Heavy Machinery": 0.2
+  },
   "skills": [
     "Anthropology",
     "Art/Craft (Photography)",

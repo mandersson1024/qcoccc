@@ -52,6 +52,8 @@ The developer owns all decisions about how the project works. Work in small step
 
 **No duplicate skills across any question:** A skill already chosen (whether fixed, occupation choice, or personal interest) is excluded from all subsequent skill selection lists. `skill_resolver.py` maintains a `chosen` set throughout occupation skill resolution and seeds personal interest resolution with it. The filtering is implemented in two pure functions — `_available_from_full_list(chosen)` and `_available_from_choices(choices_val, chosen)` — which are unit-tested directly.
 
+**Weighted ANY for free occupation skill choices:** When resolving `{"choice": "any"}` via ANY, skills are weighted by occupation relevance using `random.choices`. Each occupation JSON may carry a `skill_weights` map (skill or group name → weight multiplier). Keys use the group prefix for specializations (e.g. `"Art/Craft"` covers all Art/Craft variants) and the plain name for non-specializations (e.g. `"Listen"`). Skills absent from the map default to weight 1. The weights apply only to `{"choice": "any"}` entries resolved via ANY — curated `{"choice": [...]}` lists and personal interest questions are unaffected. All 24 occupations with free choices have been populated with weights.
+
 ## Project structure
 
 ```
@@ -136,7 +138,7 @@ Out of scope: backstory generation, partial sheet saving/loading, re-rolling ind
 
 **Backlog:**
 
-- **Weighted ANY for free occupation skill choices** — when resolving `{"choice": "any"}` via ANY, skills should be weighted by occupation relevance rather than chosen uniformly at random. Each occupation JSON would carry a `skill_weights` map (skill name → weight multiplier) so that e.g. a Musician is more likely to draw Art/Craft skills and less likely to draw Fighting skills. Skills not listed in the map default to weight 1.
+_(empty)_
 
 ## Question flow
 

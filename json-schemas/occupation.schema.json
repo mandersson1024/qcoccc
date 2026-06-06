@@ -34,6 +34,11 @@
         "EDU": { "$ref": "#/$defs/characteristic_range" }
       }
     },
+    "skill_weights": {
+      "type": "object",
+      "description": "Weight multipliers for free-choice ANY resolution. Keys are skill or group names (e.g. 'Art/Craft', 'Fighting', 'Listen'). Skills absent from the map default to weight 1.",
+      "additionalProperties": { "type": "number", "exclusiveMinimum": 0 }
+    },
     "skills": {
       "type": "array",
       "items": {

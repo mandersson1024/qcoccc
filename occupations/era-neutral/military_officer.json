@@ -7,6 +7,20 @@
     "CON": { "min": 40 },
     "EDU": { "min": 50 }
   },
+  "skill_weights": {
+    "Fighting": 3,
+    "First Aid": 3,
+    "Spot Hidden": 3,
+    "Ride": 3,
+    "Stealth": 2,
+    "Track": 2,
+    "Other Language": 2,
+    "Medicine": 2,
+    "Pilot": 1.5,
+    "Art/Craft": 0.3,
+    "Science": 0.4,
+    "Library Use": 0.5
+  },
   "skills": [
     "Accounting",
     "Firearms (any)",

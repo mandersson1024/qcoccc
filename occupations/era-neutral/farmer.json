@@ -6,6 +6,21 @@
     "STR": { "min": 40 },
     "CON": { "min": 50 }
   },
+  "skill_weights": {
+    "Survival": 4,
+    "Firearms": 3,
+    "First Aid": 3,
+    "Navigate": 2,
+    "Swim": 2,
+    "Fighting": 2,
+    "Stealth": 2,
+    "Science": 0.4,
+    "Law": 0.4,
+    "Art/Craft": 0.5,
+    "Pilot": 0.3,
+    "Library Use": 0.4,
+    "Occult": 0.3
+  },
   "skills": [
     "Art/Craft (Farming)",
     "Drive Auto",

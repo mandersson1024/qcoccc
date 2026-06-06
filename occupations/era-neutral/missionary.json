@@ -5,6 +5,20 @@
   "characteristic_ranges": {
     "POW": { "min": 40 }
   },
+  "skill_weights": {
+    "Other Language": 4,
+    "Anthropology": 4,
+    "Navigate": 3,
+    "Survival": 3,
+    "Occult": 2,
+    "History": 2,
+    "Track": 2,
+    "Fighting": 0.3,
+    "Firearms": 0.3,
+    "Pilot": 0.5,
+    "Science": 0.5,
+    "Electrical Repair": 0.3
+  },
   "skills": [
     "Art/Craft (any)",
     "First Aid",

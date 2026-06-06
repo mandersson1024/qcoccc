@@ -5,6 +5,19 @@
   "characteristic_ranges": {
     "APP": { "min": 40 }
   },
+  "skill_weights": {
+    "Art/Craft": 3,
+    "Other Language": 3,
+    "Appraise": 3,
+    "Navigate": 2,
+    "Pilot": 2,
+    "History": 2,
+    "Occult": 1.5,
+    "Mechanical Repair": 0.5,
+    "Electrical Repair": 0.5,
+    "Operate Heavy Machinery": 0.2,
+    "Survival": 0.5
+  },
   "skills": [
     "Art/Craft (any)",
     "Firearms (any)",

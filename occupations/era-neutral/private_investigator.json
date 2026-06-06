@@ -5,6 +5,20 @@
   "characteristic_ranges": {
     "INT": { "min": 50 }
   },
+  "skill_weights": {
+    "Stealth": 4,
+    "Track": 3,
+    "Locksmith": 3,
+    "Fighting": 3,
+    "Firearms": 3,
+    "Drive Auto": 3,
+    "Listen": 2,
+    "Science": 0.3,
+    "Art/Craft": 0.3,
+    "Occult": 0.5,
+    "Pilot": 0.3,
+    "Anthropology": 0.4
+  },
   "skills": [
     "Art/Craft (Photography)",
     "Disguise",

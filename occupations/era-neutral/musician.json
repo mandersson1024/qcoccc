@@ -6,6 +6,20 @@
     "DEX": { "min": 40 },
     "POW": { "min": 40 }
   },
+  "skill_weights": {
+    "Art/Craft": 5,
+    "Other Language": 3,
+    "Charm": 3,
+    "Fast Talk": 2,
+    "History": 2,
+    "Library Use": 2,
+    "Fighting": 0.3,
+    "Firearms": 0.2,
+    "Navigate": 0.3,
+    "Survival": 0.3,
+    "Pilot": 0.2,
+    "Science": 0.4
+  },
   "skills": [
     "Art/Craft (instrument)",
     { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },

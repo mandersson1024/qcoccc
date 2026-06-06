@@ -6,6 +6,18 @@
     "DEX": { "min": 40 },
     "POW": { "min": 40 }
   },
+  "skill_weights": {
+    "Art/Craft": 4,
+    "Other Language": 3,
+    "Library Use": 3,
+    "Appraise": 2,
+    "History": 2,
+    "Fighting": 0.3,
+    "Firearms": 0.2,
+    "Navigate": 0.4,
+    "Survival": 0.3,
+    "Pilot": 0.2
+  },
   "skills": [
     "Art/Craft (any)",
     { "choice": ["History", "Natural World"], "label": "specialism" },

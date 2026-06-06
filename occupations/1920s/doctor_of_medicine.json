@@ -6,6 +6,20 @@
     "INT": { "min": 60 },
     "EDU": { "min": 70 }
   },
+  "skill_weights": {
+    "Science": 4,
+    "Other Language": 3,
+    "Anthropology": 2,
+    "Occult": 2,
+    "Law": 2,
+    "Library Use": 2,
+    "Fighting": 0.3,
+    "Firearms": 0.3,
+    "Navigate": 0.4,
+    "Pilot": 0.2,
+    "Art/Craft": 0.4,
+    "Survival": 0.4
+  },
   "skills": [
     "First Aid",
     "Other Language (Latin)",

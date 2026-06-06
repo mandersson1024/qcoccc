@@ -6,6 +6,22 @@
     "INT": { "min": 50 },
     "EDU": { "min": 60 }
   },
+  "skill_weights": {
+    "History": 3,
+    "Science": 3,
+    "Anthropology": 3,
+    "Occult": 2,
+    "Other Language": 3,
+    "Art/Craft": 2,
+    "Natural World": 2,
+    "Psychology": 2,
+    "Fighting": 0.3,
+    "Firearms": 0.2,
+    "Navigate": 0.4,
+    "Survival": 0.3,
+    "Pilot": 0.2,
+    "Operate Heavy Machinery": 0.2
+  },
   "skills": [
     "Accounting",
     "Library Use",

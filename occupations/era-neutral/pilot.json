@@ -6,6 +6,20 @@
     "DEX": { "min": 50 },
     "INT": { "min": 50 }
   },
+  "skill_weights": {
+    "Pilot": 5,
+    "Survival": 3,
+    "Firearms": 3,
+    "Spot Hidden": 3,
+    "Drive Auto": 2,
+    "Fighting": 2,
+    "Science": 2,
+    "Other Language": 1.5,
+    "Occult": 0.3,
+    "Art/Craft": 0.3,
+    "Library Use": 0.5,
+    "History": 0.5
+  },
   "skills": [
     "Electrical Repair",
     "Mechanical Repair",

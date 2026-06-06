@@ -7,6 +7,20 @@
     "CON": { "min": 40 },
     "INT": { "min": 50 }
   },
+  "skill_weights": {
+    "Stealth": 3,
+    "Track": 3,
+    "Drive Auto": 3,
+    "Locksmith": 3,
+    "First Aid": 2,
+    "Navigate": 2,
+    "Fighting": 2,
+    "Science": 0.4,
+    "Art/Craft": 0.3,
+    "Library Use": 0.5,
+    "Occult": 0.5,
+    "Pilot": 0.3
+  },
   "skills": [
     { "choice": ["Art/Craft (Acting)", "Disguise"], "label": "undercover" },
     "Firearms (any)",

@@ -5,6 +5,21 @@
   "characteristic_ranges": {
     "INT": { "min": 60 }
   },
+  "skill_weights": {
+    "Science": 4,
+    "Stealth": 3,
+    "Locksmith": 3,
+    "Disguise": 2,
+    "Other Language": 2,
+    "Drive Auto": 2,
+    "Fighting": 0.4,
+    "Firearms": 0.3,
+    "Survival": 0.3,
+    "Navigate": 0.4,
+    "Pilot": 0.2,
+    "Art/Craft": 0.4,
+    "Occult": 0.5
+  },
   "skills": [
     "Computer Use",
     "Electrical Repair",

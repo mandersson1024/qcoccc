@@ -106,7 +106,12 @@ def _available_from_choices(choices_val: list, chosen: set) -> list[str]:
     return available if available else list(choices_val)
 
 
-def _resolve_entry(entry, context: dict, counters: dict, chosen: set) -> str | None:
+def _skill_weight(skill_name: str, weights: dict) -> float:
+    key = skill_name[:skill_name.index("(")].strip() if "(" in skill_name else skill_name
+    return weights.get(key, 1.0)
+
+
+def _resolve_entry(entry, context: dict, counters: dict, chosen: set, skill_weights: dict) -> str | None:
     if isinstance(entry, str):
         if entry == "Credit Rating":
             return None
@@ -125,7 +130,8 @@ def _resolve_entry(entry, context: dict, counters: dict, chosen: set) -> str | N
             label, choices=["ANY"] + available
         ).ask())
         if skill == "ANY":
-            skill = random.choice(available)
+            w = [_skill_weight(s, skill_weights) for s in available]
+            skill = random.choices(available, weights=w)[0]
             print(f"  → {skill}")
         if skill.endswith("(any)"):
             skill = _resolve_any_suffix(skill, context)
@@ -149,12 +155,13 @@ def _resolve_entry(entry, context: dict, counters: dict, chosen: set) -> str | N
     return skill
 
 
-def resolve_occupation_skills(skills_list: list, context: dict) -> list[tuple[str, int]]:
+def resolve_occupation_skills(skills_list: list, context: dict, skill_weights: dict | None = None) -> list[tuple[str, int]]:
     resolved = []
     chosen = set()
     counters = {"any": 0, "choice": 0}
+    _weights = skill_weights or {}
     for entry in skills_list:
-        name = _resolve_entry(entry, context, counters, chosen)
+        name = _resolve_entry(entry, context, counters, chosen, _weights)
         if name is None:
             continue
         resolved.append((name, skill_base(name, context)))

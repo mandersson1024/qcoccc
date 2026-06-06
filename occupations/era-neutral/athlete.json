@@ -7,6 +7,20 @@
     "CON": { "min": 50 },
     "DEX": { "min": 50 }
   },
+  "skill_weights": {
+    "Fighting": 3,
+    "First Aid": 3,
+    "Survival": 2,
+    "Track": 2,
+    "Navigate": 2,
+    "Stealth": 2,
+    "Science": 0.4,
+    "Art/Craft": 0.3,
+    "Library Use": 0.4,
+    "Accounting": 0.4,
+    "Law": 0.3,
+    "Other Language": 0.5
+  },
   "skills": [
     "Climb",
     "Jump",

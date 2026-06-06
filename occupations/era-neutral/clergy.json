@@ -6,6 +6,21 @@
     "POW": { "min": 40 },
     "EDU": { "min": 50 }
   },
+  "skill_weights": {
+    "Occult": 4,
+    "Anthropology": 3,
+    "Natural World": 2,
+    "Other Language": 2,
+    "Art/Craft": 2,
+    "First Aid": 2,
+    "Medicine": 1.5,
+    "Fighting": 0.3,
+    "Firearms": 0.2,
+    "Survival": 0.4,
+    "Pilot": 0.2,
+    "Electrical Repair": 0.3,
+    "Mechanical Repair": 0.4
+  },
   "skills": [
     "Accounting",
     "History",
