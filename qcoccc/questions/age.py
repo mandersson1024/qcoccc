@@ -1,6 +1,6 @@
 import random
 import questionary
-from engine.question import Question
+from ..engine.question import Question
 
 _MAX_AGE_OPEN_BRACKET = 90
 

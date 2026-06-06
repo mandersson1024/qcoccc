@@ -1,5 +1,5 @@
 import questionary
-from engine.question import Question
+from ..engine.question import Question
 
 
 class OutputQuestion(Question):

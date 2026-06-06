@@ -1,4 +1,4 @@
-from skills_data import SCHEMA_KEY, ARRAY_GROUPS
+from .skills_data import SCHEMA_KEY, ARRAY_GROUPS
 
 
 def _build_skills(skills: dict) -> dict:

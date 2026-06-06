@@ -1,11 +1,7 @@
-import sys
-import os
 import pytest
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-
-from skills_data import BASE_VALUES, SPECIALIZATIONS
-from skill_resolver import _skill_base, evaluate_formula, allocate_skills
+from qcoccc.skills_data import BASE_VALUES, SPECIALIZATIONS
+from qcoccc.skill_resolver import _skill_base, evaluate_formula, allocate_skills
 
 
 CTX = {"EDU": 70, "DEX": 60, "INT": 65, "STR": 55, "POW": 50, "APP": 45}
@@ -130,7 +126,7 @@ def test_formula_or_takes_higher_value():
 
 # ── Allocation ────────────────────────────────────────────────────────────────
 
-def _allocate(resolved, mode="Linear (generalist)", occ=OCC_DATA, ctx=CTX):
+def _allocate(resolved, mode="Generalist", occ=OCC_DATA, ctx=CTX):
     return allocate_skills(occ, resolved, ctx, mode)
 
 
@@ -153,28 +149,28 @@ def test_allocation_adds_on_top_of_base():
 def test_skill_capped_at_75():
     # Single skill in the pool guarantees all points go to it — must be exactly 75
     occ = {"skill_points": "EDU * 4", "credit_rating_range": {"min": 0, "max": 0}}
-    result = allocate_skills(occ, [("First Aid", 30)], CTX, "Linear (generalist)")
+    result = allocate_skills(occ, [("First Aid", 30)], CTX, "Generalist")
     assert result["First Aid"] == 75
 
 
 def test_skill_above_75_base_receives_no_points():
     # If base already at or above cap, no points should be added
     occ = {"skill_points": "EDU * 4", "credit_rating_range": {"min": 0, "max": 0}}
-    result = allocate_skills(occ, [("Own Language", 80)], CTX, "Linear (generalist)")
+    result = allocate_skills(occ, [("Own Language", 80)], CTX, "Generalist")
     assert result["Own Language"] == 80
 
 
 def test_credit_rating_within_occupation_range():
     occ = {"skill_points": "EDU * 4", "credit_rating_range": {"min": 20, "max": 70}}
     for _ in range(30):
-        result = allocate_skills(occ, [("History", 5)], CTX, "Linear (generalist)")
+        result = allocate_skills(occ, [("History", 5)], CTX, "Generalist")
         assert 20 <= result["Credit Rating"] <= 70
 
 
 def test_credit_rating_min_zero():
     occ = {"skill_points": "EDU * 4", "credit_rating_range": {"min": 0, "max": 15}}
     for _ in range(20):
-        result = allocate_skills(occ, [("History", 5)], CTX, "Linear (generalist)")
+        result = allocate_skills(occ, [("History", 5)], CTX, "Generalist")
         assert 0 <= result["Credit Rating"] <= 15
 
 
@@ -185,7 +181,7 @@ def test_excess_points_redistributed_when_skill_hits_cap():
     occ = {"skill_points": "EDU * 2", "credit_rating_range": {"min": 0, "max": 0}}
     ctx = {**CTX, "EDU": 10}  # EDU * 2 = 20 points
     resolved = [("First Aid", 70), ("Psychology", 10)]
-    result = allocate_skills(occ, resolved, ctx, "Linear (generalist)")
+    result = allocate_skills(occ, resolved, ctx, "Generalist")
     assert result["First Aid"] == 75
     # All 20 points must be accounted for across both skills (none wasted)
     assert (result["First Aid"] - 70) + (result["Psychology"] - 10) == 20

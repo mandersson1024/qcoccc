@@ -1,7 +1,7 @@
 import random
 import sys
 import questionary
-from skills_data import BASE_VALUES, SPECIALIZATIONS, COMMON_LANGUAGES, ARRAY_GROUPS
+from .skills_data import BASE_VALUES, SPECIALIZATIONS, COMMON_LANGUAGES, ARRAY_GROUPS
 
 
 def evaluate_formula(formula: str, context: dict) -> int:

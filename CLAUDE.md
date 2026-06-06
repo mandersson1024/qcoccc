@@ -44,33 +44,34 @@ The developer owns all decisions about how the project works. Work in small step
 
 **Schema validation is permissive at runtime:** After building the sheet, `qcoccc.py` validates it against `character_sheet.schema.json` and prints any error, but continues to render and write the sheet regardless.
 
-**`-p` / `--pretty-print` flag:** `python qcoccc.py -p <file.json>` loads a character sheet JSON, validates it against the schema, and prints the formatted sheet. If validation fails, it prints the error and exits without printing the sheet.
+**`-p` / `--pretty-print` flag:** `python -m qcoccc -p <file.json>` loads a character sheet JSON, validates it against the schema, and prints the formatted sheet. If validation fails, it prints the error and exits without printing the sheet.
 
 **`QuestionFlow.run()` accepts an initial context:** The second `QuestionFlow` call (for skill distribution and output questions) is seeded with the accumulated context so that `OutputQuestion` can read `occupation`, `era`, and `age` when generating the default filename.
 
 ## Project structure
 
 ```
-qcoccc.py                    — main entry point; -p/--pretty-print flag to render an existing JSON sheet
-character_sheet_builder.py   — assembles the character sheet dict from context
-characteristics.py           — rolls all 8 characteristics, applies age modifiers, derives attributes
-skills_data.py               — base values, specialization lists, display→schema key mappings
-skill_resolver.py            — resolves occupation skill entries interactively, evaluates formulas, distributes points
-pretty_print.py              — formats the character sheet as human-readable text for terminal output
-requirements.txt
+qcoccc/                      — Python package; run with: python -m qcoccc
+    __main__.py              — entry point for python -m qcoccc
+    main.py                  — main() function; -p/--pretty-print flag to render an existing JSON sheet
+    character_sheet_builder.py — assembles the character sheet dict from context
+    characteristics.py       — rolls all 8 characteristics, applies age modifiers, derives attributes
+    skills_data.py           — base values, specialization lists, display→schema key mappings
+    skill_resolver.py        — resolves occupation skill entries interactively, evaluates formulas, distributes points
+    pretty_print.py          — formats the character sheet as human-readable text for terminal output
+    engine/
+        question.py          — abstract Question base class (allow_any flag)
+        flow.py              — QuestionFlow runner; run() accepts an optional seed context
+    questions/
+        era.py
+        occupation.py        — also exposes load_occupation_data(name, era)
+        age_bracket.py
+        age.py
+        skill_distribution.py
+        output.py
 json-schemas/
     character_sheet.schema.json  — JSON Schema for the investigator sheet
     occupation.schema.json       — JSON Schema for occupation files
-engine/
-    question.py              — abstract Question base class (allow_any flag)
-    flow.py                  — QuestionFlow runner; run() accepts an optional seed context
-questions/
-    era.py
-    occupation.py            — also exposes load_occupation_data(name, era)
-    age_bracket.py
-    age.py
-    skill_distribution.py
-    output.py
 occupations/
     era-neutral/             — occupation JSON files available in all eras
     1920s/                   — occupation JSON files exclusive to the 1920s era
@@ -79,6 +80,7 @@ tests/
     test_occupations.py      — validates all occupation JSON files against json-schemas/occupation.schema.json
     test_skills.py           — unit tests for skill base values, formula evaluation, and point allocation
     test_character_sheet.py  — generates a random character for each occupation and validates against character_sheet.schema.json
+requirements.txt
 ```
 
 ## Current status

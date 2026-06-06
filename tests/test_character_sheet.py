@@ -1,19 +1,16 @@
 import json
 import os
 import random
-import sys
 
 import jsonschema
 import pytest
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-
-from character_sheet_builder import build
-from characteristics import roll_characteristics
-from questions.age_bracket import BRACKETS
-from questions.occupation import load_occupation_data
-from skill_resolver import _get_full_skill_list, _skill_base, allocate_personal_interest, allocate_skills
-from skills_data import COMMON_LANGUAGES, SPECIALIZATIONS
+from qcoccc.character_sheet_builder import build
+from qcoccc.characteristics import roll_characteristics
+from qcoccc.questions.age_bracket import BRACKETS
+from qcoccc.questions.occupation import load_occupation_data
+from qcoccc.skill_resolver import _get_full_skill_list, _skill_base, allocate_personal_interest, allocate_skills
+from qcoccc.skills_data import COMMON_LANGUAGES, SPECIALIZATIONS
 
 SCHEMA_PATH = os.path.join(os.path.dirname(__file__), "..", "json-schemas", "character_sheet.schema.json")
 OCCUPATIONS_DIR = os.path.join(os.path.dirname(__file__), "..", "occupations")
@@ -88,7 +85,7 @@ def test_character_validates_against_schema(occupation_name, era):
     context.update(roll_characteristics(era, occupation_name, bracket, age))
 
     resolved = _resolve_randomly(occ_data["skills"], context)
-    mode = random.choice(["Linear (generalist)", "Bell curve (specialist)"])
+    mode = random.choice(["Generalist", "Specialist"])
     context["skills"] = allocate_skills(occ_data, resolved, context, mode)
     context["skills"].update(allocate_personal_interest(context["skills"], context, mode))
 

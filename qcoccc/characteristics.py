@@ -1,5 +1,5 @@
 import random
-from questions.occupation import load_occupation_data
+from .questions.occupation import load_occupation_data
 
 
 def _d(sides):

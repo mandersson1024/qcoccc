@@ -1,4 +1,4 @@
-from skills_data import SCHEMA_KEY, ARRAY_GROUPS
+from .skills_data import SCHEMA_KEY, ARRAY_GROUPS
 
 _DISPLAY = {v: k for k, v in SCHEMA_KEY.items()}
 _GROUP_DISPLAY = {v: k for k, v in ARRAY_GROUPS.items()}

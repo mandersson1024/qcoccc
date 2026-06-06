@@ -2,9 +2,9 @@ import json
 import os
 import random
 import questionary
-from engine.question import Question
+from ..engine.question import Question
 
-OCCUPATIONS_DIR = os.path.join(os.path.dirname(__file__), "..", "occupations")
+OCCUPATIONS_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "occupations")
 
 
 def _era_folders(era: str) -> list[str]:

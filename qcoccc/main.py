@@ -3,19 +3,19 @@ import json
 import os
 import sys
 import jsonschema
-from engine.flow import QuestionFlow
-from questions.era import EraQuestion
-from questions.occupation import OccupationQuestion, load_occupation_data
-from questions.age_bracket import AgeBracketQuestion
-from questions.age import AgeQuestion
-from questions.skill_distribution import SkillDistributionQuestion
-from questions.output import OutputQuestion
-from character_sheet_builder import build
-from pretty_print import format_sheet
-from characteristics import roll_characteristics
-from skill_resolver import resolve_occupation_skills, allocate_skills, allocate_personal_interest
+from .engine.flow import QuestionFlow
+from .questions.era import EraQuestion
+from .questions.occupation import OccupationQuestion, load_occupation_data
+from .questions.age_bracket import AgeBracketQuestion
+from .questions.age import AgeQuestion
+from .questions.skill_distribution import SkillDistributionQuestion
+from .questions.output import OutputQuestion
+from .character_sheet_builder import build
+from .pretty_print import format_sheet
+from .characteristics import roll_characteristics
+from .skill_resolver import resolve_occupation_skills, allocate_skills, allocate_personal_interest
 
-SCHEMA_PATH = os.path.join(os.path.dirname(__file__), "json-schemas", "character_sheet.schema.json")
+SCHEMA_PATH = os.path.join(os.path.dirname(__file__), "..", "json-schemas", "character_sheet.schema.json")
 
 
 def load_schema():
@@ -98,7 +98,3 @@ def main():
         with open(filename, "w") as f:
             f.write(formatted)
         print(f"Written to {filename}")
-
-
-if __name__ == "__main__":
-    main()

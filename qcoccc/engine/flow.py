@@ -1,5 +1,5 @@
 import sys
-from engine.question import Question
+from .question import Question
 
 
 class QuestionFlow:
