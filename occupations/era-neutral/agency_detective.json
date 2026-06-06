@@ -1,9 +1,28 @@
 {
   "name": "Agency Detective",
   "skill_points": "EDU * 2 + STR * 2 or DEX * 2",
-  "credit_rating_range": { "min": 20, "max": 45 },
+  "credit_rating_range": {
+    "min": 20,
+    "max": 45
+  },
+  "personal_interest_weights": {
+    "Firearms": 3,
+    "Spot Hidden": 2,
+    "Art/Craft": 0.4,
+    "Science": 0.3,
+    "Pilot": 0.3,
+    "Medicine": 0.4
+  },
   "skills": [
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Fighting (Brawl)",
     "Firearms (any)",
     "Law",

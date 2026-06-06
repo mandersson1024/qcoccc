@@ -1,7 +1,19 @@
 {
   "name": "Outdoorsman/woman",
   "skill_points": "EDU * 2 + DEX * 2 or STR * 2",
-  "credit_rating_range": { "min": 5, "max": 20 },
+  "credit_rating_range": {
+    "min": 5,
+    "max": 20
+  },
+  "personal_interest_weights": {
+    "Firearms": 4,
+    "Survival": 4,
+    "Library Use": 0.3,
+    "Science": 0.3,
+    "Law": 0.2,
+    "Art/Craft": 0.3,
+    "Medicine": 0.4
+  },
   "skills": [
     "Firearms (any)",
     "First Aid",

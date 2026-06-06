@@ -1,16 +1,41 @@
 {
   "name": "Laboratory Assistant",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 10, "max": 30 },
+  "credit_rating_range": {
+    "min": 10,
+    "max": 30
+  },
+  "personal_interest_weights": {
+    "Science": 5,
+    "Library Use": 3,
+    "Other Language": 2,
+    "Fighting": 0.2,
+    "Firearms": 0.2,
+    "Survival": 0.3,
+    "Navigate": 0.3,
+    "Art/Craft": 0.4
+  },
   "skills": [
-    { "choice": ["Computer Use", "Library Use"], "label": "research" },
+    {
+      "choice": [
+        "Computer Use",
+        "Library Use"
+      ],
+      "label": "research"
+    },
     "Electrical Repair",
     "Other Language (any)",
     "Science (Chemistry)",
     "Spot Hidden",
-    { "choice": "any" },
-    { "choice": "any" },
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

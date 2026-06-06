@@ -1,12 +1,31 @@
 {
   "name": "Nurse",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 9, "max": 30 },
+  "credit_rating_range": {
+    "min": 9,
+    "max": 30
+  },
+  "personal_interest_weights": {
+    "Science": 2,
+    "Art/Craft": 2,
+    "Fighting": 0.2,
+    "Firearms": 0.2,
+    "Survival": 0.3,
+    "Navigate": 0.3
+  },
   "skills": [
     "First Aid",
     "Listen",
     "Medicine",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Psychology",
     "Science (Biology)",
     "Science (Chemistry)",

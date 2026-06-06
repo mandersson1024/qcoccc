@@ -1,7 +1,21 @@
 {
   "name": "Accountant",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 30, "max": 70 },
+  "credit_rating_range": {
+    "min": 30,
+    "max": 70
+  },
+  "personal_interest_weights": {
+    "History": 3,
+    "Art/Craft": 2,
+    "Other Language": 2,
+    "Science": 1.5,
+    "Fighting": 0.3,
+    "Firearms": 0.3,
+    "Survival": 0.3,
+    "Navigate": 0.3,
+    "Stealth": 0.3
+  },
   "skills": [
     "Accounting",
     "Law",
@@ -9,8 +23,12 @@
     "Listen",
     "Persuade",
     "Spot Hidden",
-    { "choice": "any" },
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

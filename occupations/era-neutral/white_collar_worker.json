@@ -1,16 +1,53 @@
 {
   "name": "White-Collar Worker",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 9, "max": 20 },
+  "credit_rating_range": {
+    "min": 9,
+    "max": 20
+  },
+  "personal_interest_weights": {
+    "Library Use": 3,
+    "History": 3,
+    "Art/Craft": 2,
+    "Other Language": 2,
+    "Fighting": 0.2,
+    "Firearms": 0.2,
+    "Survival": 0.3,
+    "Navigate": 0.3
+  },
   "skills": [
     "Accounting",
-    { "choice": ["Own Language", "Other Language (any)"], "label": "language" },
+    {
+      "choice": [
+        "Own Language",
+        "Other Language (any)"
+      ],
+      "label": "language"
+    },
     "Law",
-    { "choice": ["Computer Use", "Library Use"], "label": "research" },
+    {
+      "choice": [
+        "Computer Use",
+        "Library Use"
+      ],
+      "label": "research"
+    },
     "Listen",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
-    { "choice": "any" },
-    { "choice": "any" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

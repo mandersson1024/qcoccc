@@ -1,7 +1,19 @@
 {
   "name": "Archaeologist",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 10, "max": 40 },
+  "credit_rating_range": {
+    "min": 10,
+    "max": 40
+  },
+  "personal_interest_weights": {
+    "Other Language": 3,
+    "Science": 2,
+    "Occult": 2,
+    "Fighting": 0.2,
+    "Firearms": 0.2,
+    "Stealth": 0.3,
+    "Navigate": 0.4
+  },
   "skills": [
     "Appraise",
     "Archaeology",
@@ -10,7 +22,13 @@
     "Library Use",
     "Spot Hidden",
     "Mechanical Repair",
-    { "choice": ["Navigate", "Science (any)"], "label": "field" },
+    {
+      "choice": [
+        "Navigate",
+        "Science (any)"
+      ],
+      "label": "field"
+    },
     "Credit Rating"
   ]
 }

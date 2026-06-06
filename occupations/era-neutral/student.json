@@ -1,16 +1,45 @@
 {
   "name": "Student/Intern",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 5, "max": 10 },
+  "credit_rating_range": {
+    "min": 5,
+    "max": 10
+  },
+  "personal_interest_weights": {
+    "Other Language": 3,
+    "Art/Craft": 3,
+    "Science": 2,
+    "History": 2,
+    "Fighting": 0.4,
+    "Firearms": 0.3,
+    "Survival": 0.4,
+    "Navigate": 0.4
+  },
   "skills": [
-    { "choice": ["Own Language", "Other Language (any)"], "label": "language" },
+    {
+      "choice": [
+        "Own Language",
+        "Other Language (any)"
+      ],
+      "label": "language"
+    },
     "Library Use",
     "Listen",
-    { "choice": "any" },
-    { "choice": "any" },
-    { "choice": "any" },
-    { "choice": "any" },
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

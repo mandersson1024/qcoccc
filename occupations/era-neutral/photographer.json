@@ -1,16 +1,41 @@
 {
   "name": "Photographer",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 9, "max": 30 },
+  "credit_rating_range": {
+    "min": 9,
+    "max": 30
+  },
+  "personal_interest_weights": {
+    "Art/Craft": 5,
+    "History": 2,
+    "Science": 2,
+    "Fighting": 0.2,
+    "Firearms": 0.3,
+    "Survival": 0.3,
+    "Navigate": 0.3,
+    "Law": 0.4
+  },
   "skills": [
     "Art/Craft (Photography)",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Psychology",
     "Science (Chemistry)",
     "Spot Hidden",
     "Stealth",
-    { "choice": "any" },
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

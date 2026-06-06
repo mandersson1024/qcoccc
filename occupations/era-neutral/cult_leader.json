@@ -1,16 +1,48 @@
 {
   "name": "Cult Leader",
   "skill_points": "EDU * 2 + APP * 2",
-  "credit_rating_range": { "min": 30, "max": 60 },
+  "credit_rating_range": {
+    "min": 30,
+    "max": 60
+  },
+  "personal_interest_weights": {
+    "History": 3,
+    "Other Language": 2,
+    "Art/Craft": 2,
+    "Fighting": 0.3,
+    "Firearms": 0.3,
+    "Survival": 0.4,
+    "Navigate": 0.4
+  },
   "skills": [
     "Accounting",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Occult",
     "Psychology",
     "Spot Hidden",
-    { "choice": "any" },
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

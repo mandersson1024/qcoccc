@@ -1,15 +1,21 @@
 {
   "name": "Antiquarian",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 30, "max": 70 },
+  "credit_rating_range": {
+    "min": 30,
+    "max": 70
+  },
   "characteristic_ranges": {
-    "INT": { "min": 50 },
-    "EDU": { "min": 60 }
+    "INT": {
+      "min": 50
+    },
+    "EDU": {
+      "min": 60
+    }
   },
   "personal_interest_weights": {
     "Occult": 3,
     "Anthropology": 3,
-    "History": 3,
     "Other Language": 2,
     "Natural World": 2,
     "Art/Craft": 2,
@@ -25,9 +31,19 @@
     "History",
     "Library Use",
     "Other Language (any)",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Spot Hidden",
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

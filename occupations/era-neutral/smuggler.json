@@ -1,13 +1,40 @@
 {
   "name": "Smuggler",
   "skill_points": "EDU * 2 + APP * 2 or DEX * 2",
-  "credit_rating_range": { "min": 20, "max": 60 },
+  "credit_rating_range": {
+    "min": 20,
+    "max": 60
+  },
+  "personal_interest_weights": {
+    "Stealth": 3,
+    "Firearms": 3,
+    "Pilot": 3,
+    "Library Use": 0.3,
+    "History": 0.3,
+    "Science": 0.3,
+    "Art/Craft": 0.4
+  },
   "skills": [
     "Firearms (any)",
     "Listen",
     "Navigate",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
-    { "choice": ["Drive Auto", "Pilot (Aircraft)", "Pilot (Boat)"], "label": "transport" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
+    {
+      "choice": [
+        "Drive Auto",
+        "Pilot (Aircraft)",
+        "Pilot (Boat)"
+      ],
+      "label": "transport"
+    },
     "Psychology",
     "Sleight of Hand",
     "Spot Hidden",

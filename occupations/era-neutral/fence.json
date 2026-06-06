@@ -1,16 +1,38 @@
 {
   "name": "Fence",
   "skill_points": "EDU * 2 + APP * 2",
-  "credit_rating_range": { "min": 20, "max": 40 },
+  "credit_rating_range": {
+    "min": 20,
+    "max": 40
+  },
+  "personal_interest_weights": {
+    "Art/Craft": 3,
+    "Sleight of Hand": 2,
+    "Fighting": 0.3,
+    "Firearms": 0.3,
+    "Survival": 0.3,
+    "Navigate": 0.3,
+    "Science": 0.3
+  },
   "skills": [
     "Accounting",
     "Appraise",
     "Art/Craft (Forgery)",
     "History",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Library Use",
     "Spot Hidden",
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

@@ -1,11 +1,27 @@
 {
   "name": "Burglar",
   "skill_points": "EDU * 2 + DEX * 2",
-  "credit_rating_range": { "min": 5, "max": 40 },
+  "credit_rating_range": {
+    "min": 5,
+    "max": 40
+  },
+  "personal_interest_weights": {
+    "Library Use": 0.3,
+    "Science": 0.3,
+    "Art/Craft": 0.4,
+    "Law": 0.3,
+    "Other Language": 0.3
+  },
   "skills": [
     "Appraise",
     "Climb",
-    { "choice": ["Electrical Repair", "Mechanical Repair"], "label": "technical" },
+    {
+      "choice": [
+        "Electrical Repair",
+        "Mechanical Repair"
+      ],
+      "label": "technical"
+    },
     "Listen",
     "Locksmith",
     "Sleight of Hand",

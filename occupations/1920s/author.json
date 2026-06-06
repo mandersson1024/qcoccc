@@ -1,10 +1,17 @@
 {
   "name": "Author",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 9, "max": 30 },
+  "credit_rating_range": {
+    "min": 9,
+    "max": 30
+  },
   "characteristic_ranges": {
-    "INT": { "min": 50 },
-    "EDU": { "min": 50 }
+    "INT": {
+      "min": 50
+    },
+    "EDU": {
+      "min": 50
+    }
   },
   "personal_interest_weights": {
     "Occult": 3,
@@ -12,7 +19,6 @@
     "Natural World": 2,
     "Other Language": 2,
     "Art/Craft": 2,
-    "History": 2,
     "Fighting": 0.3,
     "Firearms": 0.2,
     "Navigate": 0.4,
@@ -24,11 +30,19 @@
     "Art/Craft (Literature)",
     "History",
     "Library Use",
-    { "choice": ["Natural World", "Occult"], "label": "specialism" },
+    {
+      "choice": [
+        "Natural World",
+        "Occult"
+      ],
+      "label": "specialism"
+    },
     "Other Language (any)",
     "Own Language",
     "Psychology",
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

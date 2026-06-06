@@ -1,16 +1,40 @@
 {
   "name": "Stuntman/woman",
   "skill_points": "EDU * 2 + DEX * 2 or STR * 2",
-  "credit_rating_range": { "min": 10, "max": 50 },
+  "credit_rating_range": {
+    "min": 10,
+    "max": 50
+  },
+  "personal_interest_weights": {
+    "Fighting": 4,
+    "Drive Auto": 3,
+    "Library Use": 0.3,
+    "Science": 0.3,
+    "Law": 0.2,
+    "Art/Craft": 0.4
+  },
   "skills": [
     "Climb",
     "Dodge",
-    { "choice": ["Electrical Repair", "Mechanical Repair"], "label": "technical" },
+    {
+      "choice": [
+        "Electrical Repair",
+        "Mechanical Repair"
+      ],
+      "label": "technical"
+    },
     "Fighting (any)",
     "First Aid",
     "Jump",
     "Swim",
-    { "choice": ["Drive Auto", "Pilot (any)", "Ride"], "label": "specialty" },
+    {
+      "choice": [
+        "Drive Auto",
+        "Pilot (any)",
+        "Ride"
+      ],
+      "label": "specialty"
+    },
     "Credit Rating"
   ]
 }

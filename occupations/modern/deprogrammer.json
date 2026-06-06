@@ -1,12 +1,44 @@
 {
   "name": "Deprogrammer",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 20, "max": 50 },
+  "credit_rating_range": {
+    "min": 20,
+    "max": 50
+  },
+  "personal_interest_weights": {
+    "Fighting": 2,
+    "Science": 0.4,
+    "Art/Craft": 0.4,
+    "Navigate": 0.3,
+    "Pilot": 0.2
+  },
   "skills": [
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Drive Auto",
-    { "choice": ["Fighting (Brawl)", "Firearms (any)"], "label": "combat" },
+    {
+      "choice": [
+        "Fighting (Brawl)",
+        "Firearms (any)"
+      ],
+      "label": "combat"
+    },
     "History",
     "Occult",
     "Psychology",

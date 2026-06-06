@@ -1,16 +1,38 @@
 {
   "name": "Hobo",
   "skill_points": "EDU * 2 + APP * 2 or DEX * 2",
-  "credit_rating_range": { "min": 0, "max": 5 },
+  "credit_rating_range": {
+    "min": 0,
+    "max": 5
+  },
+  "personal_interest_weights": {
+    "Survival": 4,
+    "Art/Craft": 3,
+    "Natural World": 2,
+    "Track": 2,
+    "Science": 0.3,
+    "Law": 0.2,
+    "Accounting": 0.2,
+    "Medicine": 0.4,
+    "Pilot": 0.2
+  },
   "skills": [
     "Art/Craft (any)",
     "Climb",
     "Jump",
     "Listen",
-    { "choice": ["Locksmith", "Sleight of Hand"], "label": "skill" },
+    {
+      "choice": [
+        "Locksmith",
+        "Sleight of Hand"
+      ],
+      "label": "skill"
+    },
     "Navigate",
     "Stealth",
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

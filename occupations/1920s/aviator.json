@@ -1,7 +1,18 @@
 {
   "name": "Aviator",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 30, "max": 60 },
+  "credit_rating_range": {
+    "min": 30,
+    "max": 60
+  },
+  "personal_interest_weights": {
+    "Pilot": 5,
+    "Library Use": 0.3,
+    "History": 0.4,
+    "Law": 0.2,
+    "Art/Craft": 0.4,
+    "Medicine": 0.3
+  },
   "skills": [
     "Accounting",
     "Electrical Repair",
@@ -10,7 +21,9 @@
     "Navigate",
     "Pilot (Aircraft)",
     "Spot Hidden",
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

@@ -1,7 +1,17 @@
 {
   "name": "Forger/Counterfeiter",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 20, "max": 60 },
+  "credit_rating_range": {
+    "min": 20,
+    "max": 60
+  },
+  "personal_interest_weights": {
+    "Art/Craft": 5,
+    "Fighting": 0.2,
+    "Firearms": 0.2,
+    "Survival": 0.3,
+    "Navigate": 0.3
+  },
   "skills": [
     "Accounting",
     "Appraise",
@@ -10,7 +20,9 @@
     "Library Use",
     "Sleight of Hand",
     "Spot Hidden",
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

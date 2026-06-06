@@ -1,16 +1,52 @@
 {
   "name": "Salesperson",
   "skill_points": "EDU * 2 + APP * 2",
-  "credit_rating_range": { "min": 9, "max": 40 },
+  "credit_rating_range": {
+    "min": 9,
+    "max": 40
+  },
+  "personal_interest_weights": {
+    "Charm": 4,
+    "Fast Talk": 4,
+    "Art/Craft": 2,
+    "Science": 0.3,
+    "Library Use": 0.4,
+    "Navigate": 0.3,
+    "Survival": 0.3
+  },
   "skills": [
     "Accounting",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Drive Auto",
     "Listen",
     "Psychology",
-    { "choice": ["Sleight of Hand", "Stealth"], "label": "skill" },
-    { "choice": "any" },
+    {
+      "choice": [
+        "Sleight of Hand",
+        "Stealth"
+      ],
+      "label": "skill"
+    },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

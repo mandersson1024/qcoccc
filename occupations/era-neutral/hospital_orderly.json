@@ -1,10 +1,30 @@
 {
   "name": "Hospital Orderly",
   "skill_points": "EDU * 2 + STR * 2",
-  "credit_rating_range": { "min": 6, "max": 15 },
+  "credit_rating_range": {
+    "min": 6,
+    "max": 15
+  },
+  "personal_interest_weights": {
+    "Fighting": 2,
+    "Charm": 2,
+    "Science": 0.4,
+    "Library Use": 0.4,
+    "History": 0.4,
+    "Art/Craft": 0.5,
+    "Pilot": 0.2
+  },
   "skills": [
     "Electrical Repair",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Fighting (Brawl)",
     "First Aid",
     "Listen",

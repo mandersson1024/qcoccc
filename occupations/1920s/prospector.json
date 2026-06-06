@@ -1,7 +1,20 @@
 {
   "name": "Prospector",
   "skill_points": "EDU * 2 + DEX * 2 or STR * 2",
-  "credit_rating_range": { "min": 0, "max": 10 },
+  "credit_rating_range": {
+    "min": 0,
+    "max": 10
+  },
+  "personal_interest_weights": {
+    "Science": 3,
+    "Natural World": 3,
+    "Survival": 3,
+    "Art/Craft": 0.3,
+    "Library Use": 0.3,
+    "Law": 0.2,
+    "Accounting": 0.2,
+    "Medicine": 0.3
+  },
   "skills": [
     "Climb",
     "First Aid",
@@ -10,7 +23,9 @@
     "Navigate",
     "Science (Geology)",
     "Spot Hidden",
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

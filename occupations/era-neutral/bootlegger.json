@@ -1,13 +1,41 @@
 {
   "name": "Bootlegger/Thug",
   "skill_points": "EDU * 2 + STR * 2",
-  "credit_rating_range": { "min": 5, "max": 30 },
+  "credit_rating_range": {
+    "min": 5,
+    "max": 30
+  },
+  "personal_interest_weights": {
+    "Firearms": 3,
+    "Fighting": 3,
+    "Fast Talk": 2,
+    "Art/Craft": 0.3,
+    "Library Use": 0.3,
+    "Science": 0.3,
+    "Other Language": 0.4
+  },
   "skills": [
     "Drive Auto",
     "Fighting (any)",
     "Firearms (any)",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Psychology",
     "Spot Hidden",
     "Stealth",

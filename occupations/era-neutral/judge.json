@@ -1,7 +1,18 @@
 {
   "name": "Judge",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 50, "max": 80 },
+  "credit_rating_range": {
+    "min": 50,
+    "max": 80
+  },
+  "personal_interest_weights": {
+    "Art/Craft": 2,
+    "Other Language": 2,
+    "Fighting": 0.2,
+    "Firearms": 0.2,
+    "Survival": 0.3,
+    "Navigate": 0.3
+  },
   "skills": [
     "History",
     "Intimidate",

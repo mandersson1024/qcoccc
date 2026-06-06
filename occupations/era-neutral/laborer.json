@@ -1,7 +1,20 @@
 {
   "name": "Laborer",
   "skill_points": "EDU * 2 + DEX * 2 or STR * 2",
-  "credit_rating_range": { "min": 9, "max": 30 },
+  "credit_rating_range": {
+    "min": 9,
+    "max": 30
+  },
+  "personal_interest_weights": {
+    "Fighting": 3,
+    "Climb": 2,
+    "Natural World": 2,
+    "Library Use": 0.3,
+    "Science": 0.3,
+    "Law": 0.2,
+    "Art/Craft": 0.4,
+    "Other Language": 0.3
+  },
   "skills": [
     "Drive Auto",
     "Electrical Repair",
@@ -10,7 +23,9 @@
     "Mechanical Repair",
     "Operate Heavy Machinery",
     "Throw",
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

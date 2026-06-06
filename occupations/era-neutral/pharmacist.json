@@ -1,13 +1,34 @@
 {
   "name": "Pharmacist",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 35, "max": 75 },
+  "credit_rating_range": {
+    "min": 35,
+    "max": 75
+  },
+  "personal_interest_weights": {
+    "Science": 4,
+    "Medicine": 3,
+    "History": 2,
+    "Fighting": 0.2,
+    "Firearms": 0.2,
+    "Survival": 0.3,
+    "Navigate": 0.3,
+    "Art/Craft": 0.4
+  },
   "skills": [
     "Accounting",
     "First Aid",
     "Library Use",
     "Other Language (Latin)",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Psychology",
     "Science (Chemistry)",
     "Science (Pharmacy)",

@@ -1,7 +1,18 @@
 {
   "name": "Elected Official",
   "skill_points": "EDU * 2 + APP * 2",
-  "credit_rating_range": { "min": 50, "max": 90 },
+  "credit_rating_range": {
+    "min": 50,
+    "max": 90
+  },
+  "personal_interest_weights": {
+    "Library Use": 2,
+    "Law": 2,
+    "Fighting": 0.2,
+    "Firearms": 0.3,
+    "Survival": 0.3,
+    "Science": 0.4
+  },
   "skills": [
     "Charm",
     "Fast Talk",

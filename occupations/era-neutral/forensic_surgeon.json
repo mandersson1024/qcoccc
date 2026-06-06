@@ -1,7 +1,19 @@
 {
   "name": "Forensic Surgeon",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 40, "max": 60 },
+  "credit_rating_range": {
+    "min": 40,
+    "max": 60
+  },
+  "personal_interest_weights": {
+    "Science": 4,
+    "History": 2,
+    "Fighting": 0.2,
+    "Firearms": 0.2,
+    "Survival": 0.3,
+    "Navigate": 0.3,
+    "Art/Craft": 0.4
+  },
   "skills": [
     "Other Language (Latin)",
     "Library Use",

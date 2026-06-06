@@ -1,9 +1,27 @@
 {
   "name": "Sailor, Naval",
   "skill_points": "EDU * 2 + DEX * 2 or STR * 2",
-  "credit_rating_range": { "min": 9, "max": 30 },
+  "credit_rating_range": {
+    "min": 9,
+    "max": 30
+  },
+  "personal_interest_weights": {
+    "Firearms": 3,
+    "Fighting": 3,
+    "Survival": 2,
+    "Library Use": 0.4,
+    "Science": 0.4,
+    "Law": 0.3,
+    "Art/Craft": 0.4
+  },
   "skills": [
-    { "choice": ["Electrical Repair", "Mechanical Repair"], "label": "technical" },
+    {
+      "choice": [
+        "Electrical Repair",
+        "Mechanical Repair"
+      ],
+      "label": "technical"
+    },
     "Fighting (any)",
     "Firearms (any)",
     "First Aid",

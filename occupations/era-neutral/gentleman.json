@@ -1,11 +1,38 @@
 {
   "name": "Gentleman/Lady",
   "skill_points": "EDU * 2 + APP * 2",
-  "credit_rating_range": { "min": 40, "max": 90 },
+  "credit_rating_range": {
+    "min": 40,
+    "max": 90
+  },
+  "personal_interest_weights": {
+    "Art/Craft": 4,
+    "Other Language": 3,
+    "Firearms": 2,
+    "Fighting": 0.3,
+    "Stealth": 0.3,
+    "Survival": 0.4
+  },
   "skills": [
     "Art/Craft (any)",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Firearms (Rifle/Shotgun)",
     "History",
     "Navigate",

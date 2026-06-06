@@ -1,11 +1,41 @@
 {
   "name": "Union Activist",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 5, "max": 30 },
+  "credit_rating_range": {
+    "min": 5,
+    "max": 30
+  },
+  "personal_interest_weights": {
+    "History": 4,
+    "Charm": 3,
+    "Persuade": 3,
+    "Fighting": 2,
+    "Science": 0.3,
+    "Library Use": 0.4,
+    "Art/Craft": 0.4,
+    "Navigate": 0.3,
+    "Pilot": 0.2
+  },
   "skills": [
     "Accounting",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Fighting (Brawl)",
     "Law",
     "Listen",

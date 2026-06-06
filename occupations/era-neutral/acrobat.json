@@ -1,9 +1,23 @@
 {
   "name": "Acrobat",
   "skill_points": "EDU * 2 + DEX * 2",
-  "credit_rating_range": { "min": 9, "max": 20 },
+  "credit_rating_range": {
+    "min": 9,
+    "max": 20
+  },
   "characteristic_ranges": {
-    "DEX": { "min": 50 }
+    "DEX": {
+      "min": 50
+    }
+  },
+  "personal_interest_weights": {
+    "Art/Craft": 3,
+    "Natural World": 2,
+    "Fighting": 2,
+    "Library Use": 0.4,
+    "Science": 0.4,
+    "Law": 0.3,
+    "Accounting": 0.3
   },
   "skills": [
     "Climb",
@@ -12,8 +26,12 @@
     "Throw",
     "Spot Hidden",
     "Swim",
-    { "choice": "any" },
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

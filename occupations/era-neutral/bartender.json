@@ -1,16 +1,48 @@
 {
   "name": "Bartender",
   "skill_points": "EDU * 2 + APP * 2",
-  "credit_rating_range": { "min": 8, "max": 25 },
+  "credit_rating_range": {
+    "min": 8,
+    "max": 25
+  },
+  "personal_interest_weights": {
+    "Art/Craft": 3,
+    "Charm": 3,
+    "Fast Talk": 3,
+    "Sleight of Hand": 2,
+    "Library Use": 0.4,
+    "Science": 0.3,
+    "Navigate": 0.3,
+    "Survival": 0.3,
+    "Pilot": 0.2
+  },
   "skills": [
     "Accounting",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Fighting (Brawl)",
     "Listen",
     "Psychology",
     "Spot Hidden",
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

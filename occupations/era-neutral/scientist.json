@@ -1,16 +1,50 @@
 {
   "name": "Scientist",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 9, "max": 50 },
+  "credit_rating_range": {
+    "min": 9,
+    "max": 50
+  },
+  "personal_interest_weights": {
+    "Science": 5,
+    "Library Use": 3,
+    "Other Language": 3,
+    "History": 2,
+    "Fighting": 0.2,
+    "Firearms": 0.2,
+    "Survival": 0.3,
+    "Navigate": 0.3,
+    "Art/Craft": 0.4
+  },
   "skills": [
-    { "choice": ["Computer Use", "Library Use"], "label": "research" },
+    {
+      "choice": [
+        "Computer Use",
+        "Library Use"
+      ],
+      "label": "research"
+    },
     "Other Language (any)",
     "Own Language",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Spot Hidden",
-    { "choice": "any" },
-    { "choice": "any" },
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

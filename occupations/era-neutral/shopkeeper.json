@@ -1,11 +1,39 @@
 {
   "name": "Shopkeeper",
   "skill_points": "EDU * 2 + APP * 2 or DEX * 2",
-  "credit_rating_range": { "min": 20, "max": 40 },
+  "credit_rating_range": {
+    "min": 20,
+    "max": 40
+  },
+  "personal_interest_weights": {
+    "Art/Craft": 3,
+    "Charm": 3,
+    "Fighting": 0.3,
+    "Firearms": 0.3,
+    "Survival": 0.3,
+    "Navigate": 0.3,
+    "Science": 0.4
+  },
   "skills": [
     "Accounting",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Electrical Repair",
     "Listen",
     "Mechanical Repair",

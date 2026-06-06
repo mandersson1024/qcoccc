@@ -1,13 +1,33 @@
 {
   "name": "Sailor, Commercial",
   "skill_points": "EDU * 2 + DEX * 2 or STR * 2",
-  "credit_rating_range": { "min": 20, "max": 40 },
+  "credit_rating_range": {
+    "min": 20,
+    "max": 40
+  },
+  "personal_interest_weights": {
+    "Pilot": 3,
+    "Art/Craft": 2,
+    "Library Use": 0.4,
+    "Science": 0.3,
+    "Law": 0.3,
+    "Fighting": 0.4,
+    "Firearms": 0.4
+  },
   "skills": [
     "First Aid",
     "Mechanical Repair",
     "Natural World",
     "Navigate",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Pilot (Boat)",
     "Spot Hidden",
     "Swim",

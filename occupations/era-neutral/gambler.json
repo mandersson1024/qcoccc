@@ -1,12 +1,40 @@
 {
   "name": "Gambler",
   "skill_points": "EDU * 2 + APP * 2 or DEX * 2",
-  "credit_rating_range": { "min": 8, "max": 50 },
+  "credit_rating_range": {
+    "min": 8,
+    "max": 50
+  },
+  "personal_interest_weights": {
+    "Art/Craft": 3,
+    "Charm": 3,
+    "Fast Talk": 3,
+    "Science": 0.3,
+    "Navigate": 0.3,
+    "Survival": 0.3,
+    "Track": 0.3
+  },
   "skills": [
     "Accounting",
     "Art/Craft (Acting)",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Listen",
     "Psychology",
     "Sleight of Hand",

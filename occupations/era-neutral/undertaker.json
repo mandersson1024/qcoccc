@@ -1,11 +1,30 @@
 {
   "name": "Undertaker",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 20, "max": 40 },
+  "credit_rating_range": {
+    "min": 20,
+    "max": 40
+  },
+  "personal_interest_weights": {
+    "Art/Craft": 3,
+    "Science": 2,
+    "Fighting": 0.3,
+    "Firearms": 0.3,
+    "Survival": 0.3,
+    "Navigate": 0.3
+  },
   "skills": [
     "Accounting",
     "Drive Auto",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "History",
     "Occult",
     "Psychology",

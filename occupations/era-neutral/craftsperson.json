@@ -1,7 +1,18 @@
 {
   "name": "Craftsperson",
   "skill_points": "EDU * 2 + DEX * 2",
-  "credit_rating_range": { "min": 10, "max": 40 },
+  "credit_rating_range": {
+    "min": 10,
+    "max": 40
+  },
+  "personal_interest_weights": {
+    "Art/Craft": 4,
+    "Science": 2,
+    "Library Use": 0.4,
+    "Law": 0.3,
+    "Firearms": 0.4,
+    "Stealth": 0.3
+  },
   "skills": [
     "Accounting",
     "Art/Craft (any)",
@@ -9,8 +20,12 @@
     "Mechanical Repair",
     "Natural World",
     "Spot Hidden",
-    { "choice": "any" },
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

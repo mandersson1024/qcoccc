@@ -1,13 +1,32 @@
 {
   "name": "Architect",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 30, "max": 70 },
+  "credit_rating_range": {
+    "min": 30,
+    "max": 70
+  },
+  "personal_interest_weights": {
+    "Art/Craft": 4,
+    "History": 3,
+    "Library Use": 2,
+    "Science": 2,
+    "Fighting": 0.2,
+    "Firearms": 0.2,
+    "Survival": 0.3,
+    "Stealth": 0.3
+  },
   "skills": [
     "Accounting",
     "Art/Craft (Technical Drawing)",
     "Law",
     "Own Language",
-    { "choice": ["Computer Use", "Library Use"], "label": "research" },
+    {
+      "choice": [
+        "Computer Use",
+        "Library Use"
+      ],
+      "label": "research"
+    },
     "Persuade",
     "Psychology",
     "Science (Mathematics)",

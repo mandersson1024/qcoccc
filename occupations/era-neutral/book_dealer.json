@@ -1,7 +1,19 @@
 {
   "name": "Book Dealer",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 20, "max": 40 },
+  "credit_rating_range": {
+    "min": 20,
+    "max": 40
+  },
+  "personal_interest_weights": {
+    "Other Language": 3,
+    "Art/Craft": 2,
+    "Occult": 2,
+    "Fighting": 0.2,
+    "Firearms": 0.2,
+    "Survival": 0.3,
+    "Navigate": 0.3
+  },
   "skills": [
     "Accounting",
     "Appraise",
@@ -10,7 +22,15 @@
     "Library Use",
     "Own Language",
     "Other Language (any)",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Credit Rating"
   ]
 }
