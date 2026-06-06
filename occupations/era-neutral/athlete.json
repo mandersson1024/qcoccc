@@ -7,7 +7,7 @@
     "CON": { "min": 50 },
     "DEX": { "min": 50 }
   },
-  "skill_weights": {
+  "personal_interest_weights": {
     "Fighting": 3,
     "First Aid": 3,
     "Survival": 2,

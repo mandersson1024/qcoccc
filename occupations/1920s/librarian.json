@@ -6,7 +6,7 @@
     "INT": { "min": 50 },
     "EDU": { "min": 60 }
   },
-  "skill_weights": {
+  "personal_interest_weights": {
     "History": 3,
     "Science": 3,
     "Anthropology": 3,

@@ -6,7 +6,7 @@
     "DEX": { "min": 40 },
     "POW": { "min": 40 }
   },
-  "skill_weights": {
+  "personal_interest_weights": {
     "Art/Craft": 5,
     "Other Language": 3,
     "Charm": 3,

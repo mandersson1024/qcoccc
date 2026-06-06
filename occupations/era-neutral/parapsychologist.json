@@ -6,7 +6,7 @@
     "INT": { "min": 50 },
     "POW": { "min": 40 }
   },
-  "skill_weights": {
+  "personal_interest_weights": {
     "Science": 4,
     "Spot Hidden": 3,
     "Stealth": 2,

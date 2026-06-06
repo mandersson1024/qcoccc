@@ -6,7 +6,7 @@
     "POW": { "min": 40 },
     "EDU": { "min": 50 }
   },
-  "skill_weights": {
+  "personal_interest_weights": {
     "Occult": 4,
     "Anthropology": 3,
     "Natural World": 2,

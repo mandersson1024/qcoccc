@@ -5,7 +5,7 @@
   "characteristic_ranges": {
     "APP": { "min": 50 }
   },
-  "skill_weights": {
+  "personal_interest_weights": {
     "Art/Craft": 4,
     "Sleight of Hand": 3,
     "Other Language": 2,

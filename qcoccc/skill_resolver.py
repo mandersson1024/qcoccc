@@ -111,7 +111,7 @@ def _skill_weight(skill_name: str, weights: dict) -> float:
     return weights.get(key, 1.0)
 
 
-def _resolve_entry(entry, context: dict, counters: dict, chosen: set, skill_weights: dict) -> str | None:
+def _resolve_entry(entry, context: dict, counters: dict, chosen: set) -> str | None:
     if isinstance(entry, str):
         if entry == "Credit Rating":
             return None
@@ -130,8 +130,7 @@ def _resolve_entry(entry, context: dict, counters: dict, chosen: set, skill_weig
             label, choices=["ANY"] + available
         ).ask())
         if skill == "ANY":
-            w = [_skill_weight(s, skill_weights) for s in available]
-            skill = random.choices(available, weights=w)[0]
+            skill = random.choice(available)
             print(f"  → {skill}")
         if skill.endswith("(any)"):
             skill = _resolve_any_suffix(skill, context)
@@ -155,13 +154,12 @@ def _resolve_entry(entry, context: dict, counters: dict, chosen: set, skill_weig
     return skill
 
 
-def resolve_occupation_skills(skills_list: list, context: dict, skill_weights: dict | None = None) -> list[tuple[str, int]]:
+def resolve_occupation_skills(skills_list: list, context: dict) -> list[tuple[str, int]]:
     resolved = []
     chosen = set()
     counters = {"any": 0, "choice": 0}
-    _weights = skill_weights or {}
     for entry in skills_list:
-        name = _resolve_entry(entry, context, counters, chosen, _weights)
+        name = _resolve_entry(entry, context, counters, chosen)
         if name is None:
             continue
         resolved.append((name, skill_base(name, context)))
@@ -201,8 +199,8 @@ def allocate_skills(
     return result
 
 
-def resolve_personal_interest_skills(context: dict, exclude: set, n_skills: int = 4) -> list[str]:
-    full_list = _get_full_skill_list()
+def resolve_personal_interest_skills(context: dict, exclude: set, n_skills: int = 4, personal_interest_weights: dict | None = None) -> list[str]:
+    _weights = personal_interest_weights or {}
     chosen = []
     chosen_set = set(exclude)
     for i in range(n_skills):
@@ -210,7 +208,8 @@ def resolve_personal_interest_skills(context: dict, exclude: set, n_skills: int 
         available = _available_from_full_list(chosen_set)
         skill = _ask(lambda: questionary.select(label, choices=["ANY"] + available).ask())
         if skill == "ANY":
-            skill = random.choice(available)
+            w = [_skill_weight(s, _weights) for s in available]
+            skill = random.choices(available, weights=w)[0]
             print(f"  → {skill}")
         if skill.endswith("(any)"):
             skill = _resolve_any_suffix(skill, context)

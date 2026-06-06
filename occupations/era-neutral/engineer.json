@@ -6,7 +6,7 @@
     "INT": { "min": 60 },
     "EDU": { "min": 60 }
   },
-  "skill_weights": {
+  "personal_interest_weights": {
     "Science": 5,
     "Navigate": 3,
     "Pilot": 2,
