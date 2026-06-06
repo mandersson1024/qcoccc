@@ -48,6 +48,8 @@ The developer owns all decisions about how the project works. Work in small step
 
 **`QuestionFlow.run()` accepts an initial context:** The second `QuestionFlow` call (for skill distribution and output questions) is seeded with the accumulated context so that `OutputQuestion` can read `occupation`, `era`, and `age` when generating the default filename.
 
+**No duplicate skills across any question:** A skill already chosen (whether fixed, occupation choice, or personal interest) is excluded from all subsequent skill selection lists. `skill_resolver.py` maintains a `chosen` set throughout occupation skill resolution and seeds personal interest resolution with it. The filtering is implemented in two pure functions — `_available_from_full_list(chosen)` and `_available_from_choices(choices_val, chosen)` — which are unit-tested directly.
+
 ## Project structure
 
 ```
@@ -78,7 +80,7 @@ occupations/
     modern/                  — occupation JSON files exclusive to the modern era
 tests/
     test_occupations.py      — validates all occupation JSON files against json-schemas/occupation.schema.json
-    test_skills.py           — unit tests for skill base values, formula evaluation, and point allocation
+    test_skills.py           — unit tests for skill base values, formula evaluation, point allocation, and skill availability filtering
     test_character_sheet.py  — generates a random character for each occupation and validates against character_sheet.schema.json
 requirements.txt
 ```

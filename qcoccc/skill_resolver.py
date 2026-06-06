@@ -97,7 +97,16 @@ def _get_full_skill_list() -> list[str]:
     return _FULL_SKILL_LIST
 
 
-def _resolve_entry(entry, context: dict, counters: dict) -> str | None:
+def _available_from_full_list(chosen: set) -> list[str]:
+    return [s for s in _get_full_skill_list() if s not in chosen]
+
+
+def _available_from_choices(choices_val: list, chosen: set) -> list[str]:
+    available = [s for s in choices_val if s not in chosen]
+    return available if available else list(choices_val)
+
+
+def _resolve_entry(entry, context: dict, counters: dict, chosen: set) -> str | None:
     if isinstance(entry, str):
         if entry == "Credit Rating":
             return None
@@ -111,39 +120,42 @@ def _resolve_entry(entry, context: dict, counters: dict) -> str | None:
         counters["any"] += 1
         n = counters["any"]
         label = f"Any occupation skill {n}"
-        all_skills = _get_full_skill_list()
-        chosen = _ask(lambda: questionary.select(
-            label, choices=["ANY"] + all_skills
+        available = _available_from_full_list(chosen)
+        skill = _ask(lambda: questionary.select(
+            label, choices=["ANY"] + available
         ).ask())
-        if chosen == "ANY":
-            chosen = random.choice(all_skills)
-            print(f"  → {chosen}")
-        if chosen.endswith("(any)"):
-            chosen = _resolve_any_suffix(chosen, context)
-        return chosen
+        if skill == "ANY":
+            skill = random.choice(available)
+            print(f"  → {skill}")
+        if skill.endswith("(any)"):
+            skill = _resolve_any_suffix(skill, context)
+        return skill
 
     counters["choice"] += 1
     n = counters["choice"]
     label = f"Occupation skill {n}"
-    chosen = _ask(lambda: questionary.select(
-        label, choices=["ANY"] + choices_val
+    available = _available_from_choices(choices_val, chosen)
+    skill = _ask(lambda: questionary.select(
+        label, choices=["ANY"] + available
     ).ask())
-    if chosen == "ANY":
-        chosen = random.choice(choices_val)
-        print(f"  → {chosen}")
-    if chosen.endswith("(any)"):
-        chosen = _resolve_any_suffix(chosen, context)
-    return chosen
+    if skill == "ANY":
+        skill = random.choice(available)
+        print(f"  → {skill}")
+    if skill.endswith("(any)"):
+        skill = _resolve_any_suffix(skill, context)
+    return skill
 
 
 def resolve_occupation_skills(skills_list: list, context: dict) -> list[tuple[str, int]]:
     resolved = []
+    chosen = set()
     counters = {"any": 0, "choice": 0}
     for entry in skills_list:
-        name = _resolve_entry(entry, context, counters)
+        name = _resolve_entry(entry, context, counters, chosen)
         if name is None:
             continue
         resolved.append((name, _skill_base(name, context)))
+        chosen.add(name)
     return resolved
 
 
@@ -179,18 +191,21 @@ def allocate_skills(
     return result
 
 
-def resolve_personal_interest_skills(context: dict, n_skills: int = 4) -> list[str]:
+def resolve_personal_interest_skills(context: dict, exclude: set, n_skills: int = 4) -> list[str]:
     full_list = _get_full_skill_list()
     chosen = []
+    chosen_set = set(exclude)
     for i in range(n_skills):
         label = f"Personal interest {i + 1}"
-        skill = _ask(lambda: questionary.select(label, choices=["ANY"] + full_list).ask())
+        available = _available_from_full_list(chosen_set)
+        skill = _ask(lambda: questionary.select(label, choices=["ANY"] + available).ask())
         if skill == "ANY":
-            skill = random.choice(full_list)
+            skill = random.choice(available)
             print(f"  → {skill}")
         if skill.endswith("(any)"):
             skill = _resolve_any_suffix(skill, context)
         chosen.append(skill)
+        chosen_set.add(skill)
     return chosen
 
 

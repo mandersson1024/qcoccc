@@ -1,7 +1,7 @@
 import pytest
 
 from qcoccc.skills_data import BASE_VALUES, SPECIALIZATIONS
-from qcoccc.skill_resolver import _skill_base, evaluate_formula, allocate_skills
+from qcoccc.skill_resolver import _skill_base, evaluate_formula, allocate_skills, _available_from_full_list, _available_from_choices, _get_full_skill_list
 
 
 CTX = {"EDU": 70, "DEX": 60, "INT": 65, "STR": 55, "POW": 50, "APP": 45}
@@ -193,3 +193,56 @@ def test_duplicate_skill_entries_merged():
     result = _allocate(resolved)
     assert list(result.keys()).count("Psychology") == 1
     assert result["Psychology"] >= 10
+
+
+# ── Skill availability filtering ──────────────────────────────────────────────
+
+def test_available_from_full_list_excludes_chosen():
+    chosen = {"History", "Psychology", "Charm"}
+    available = _available_from_full_list(chosen)
+    for skill in chosen:
+        assert skill not in available
+
+
+def test_available_from_full_list_empty_chosen_returns_full_list():
+    assert _available_from_full_list(set()) == _get_full_skill_list()
+
+
+def test_available_from_full_list_excludes_specialization():
+    chosen = {"Fighting (Brawl)"}
+    available = _available_from_full_list(chosen)
+    assert "Fighting (Brawl)" not in available
+    assert "Fighting (Axe)" in available
+
+
+def test_available_from_choices_excludes_chosen():
+    choices = ["Charm", "Fast Talk", "Intimidate", "Persuade"]
+    available = _available_from_choices(choices, {"Charm", "Fast Talk"})
+    assert "Charm" not in available
+    assert "Fast Talk" not in available
+    assert "Intimidate" in available
+    assert "Persuade" in available
+
+
+def test_available_from_choices_falls_back_when_all_taken():
+    choices = ["Charm", "Fast Talk"]
+    available = _available_from_choices(choices, {"Charm", "Fast Talk"})
+    assert available == ["Charm", "Fast Talk"]
+
+
+def test_personal_interest_excludes_occupation_skills():
+    occupation_skills = {"History", "Psychology", "Library Use", "Spot Hidden"}
+    available = _available_from_full_list(occupation_skills)
+    for skill in occupation_skills:
+        assert skill not in available
+
+
+def test_personal_interest_excludes_previous_personal_interest_picks():
+    first_pick = "Charm"
+    available_after_first = _available_from_full_list({first_pick})
+    assert first_pick not in available_after_first
+
+    second_pick = "History"
+    available_after_second = _available_from_full_list({first_pick, second_pick})
+    assert first_pick not in available_after_second
+    assert second_pick not in available_after_second
