@@ -1,0 +1,16 @@
+{
+  "name": "Federal Agent",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 20, "max": 40 },
+  "skills": [
+    "Drive Auto",
+    "Fighting (Brawl)",
+    "Firearms (any)",
+    "Law",
+    "Persuade",
+    "Spot Hidden",
+    "Stealth",
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Agency Detective",
+  "skill_points": "EDU * 2 + STR * 2 or DEX * 2",
+  "credit_rating_range": { "min": 20, "max": 45 },
+  "skills": [
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    "Fighting (Brawl)",
+    "Firearms (any)",
+    "Law",
+    "Library Use",
+    "Psychology",
+    "Stealth",
+    "Track",
+    "Credit Rating"
+  ]
+}

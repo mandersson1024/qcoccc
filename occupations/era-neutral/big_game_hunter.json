@@ -1,0 +1,16 @@
+{
+  "name": "Big Game Hunter",
+  "skill_points": "EDU * 2 + DEX * 2 or STR * 2",
+  "credit_rating_range": { "min": 20, "max": 50 },
+  "skills": [
+    "Firearms (any)",
+    { "choice": ["Listen", "Spot Hidden"] },
+    "Natural World",
+    "Navigate",
+    { "choice": ["Other Language (any)", "Survival (any)"], "label": "field" },
+    { "choice": ["Science (Biology)", "Science (Botany)", "Science (Zoology)"], "label": "biology" },
+    "Stealth",
+    "Track",
+    "Credit Rating"
+  ]
+}

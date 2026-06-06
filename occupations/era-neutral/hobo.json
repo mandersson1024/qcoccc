@@ -1,0 +1,16 @@
+{
+  "name": "Hobo",
+  "skill_points": "EDU * 2 + APP * 2 or DEX * 2",
+  "credit_rating_range": { "min": 0, "max": 5 },
+  "skills": [
+    "Art/Craft (any)",
+    "Climb",
+    "Jump",
+    "Listen",
+    { "choice": ["Locksmith", "Sleight of Hand"], "label": "skill" },
+    "Navigate",
+    "Stealth",
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

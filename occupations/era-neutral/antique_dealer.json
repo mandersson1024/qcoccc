@@ -1,0 +1,16 @@
+{
+  "name": "Antique Dealer",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 30, "max": 50 },
+  "skills": [
+    "Accounting",
+    "Appraise",
+    "Drive Auto",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    "History",
+    "Library Use",
+    "Navigate",
+    "Credit Rating"
+  ]
+}

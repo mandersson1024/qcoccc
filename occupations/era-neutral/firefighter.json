@@ -1,0 +1,20 @@
+{
+  "name": "Firefighter",
+  "skill_points": "EDU * 2 + DEX * 2 or STR * 2",
+  "credit_rating_range": { "min": 9, "max": 30 },
+  "characteristic_ranges": {
+    "STR": { "min": 40 },
+    "CON": { "min": 40 }
+  },
+  "skills": [
+    "Climb",
+    "Dodge",
+    "Drive Auto",
+    "First Aid",
+    "Jump",
+    "Mechanical Repair",
+    "Operate Heavy Machinery",
+    "Throw",
+    "Credit Rating"
+  ]
+}

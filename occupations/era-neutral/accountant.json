@@ -1,0 +1,16 @@
+{
+  "name": "Accountant",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 30, "max": 70 },
+  "skills": [
+    "Accounting",
+    "Law",
+    "Library Use",
+    "Listen",
+    "Persuade",
+    "Spot Hidden",
+    { "choice": "any" },
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

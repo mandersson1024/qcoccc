@@ -1,0 +1,16 @@
+{
+  "name": "Stuntman/woman",
+  "skill_points": "EDU * 2 + DEX * 2 or STR * 2",
+  "credit_rating_range": { "min": 10, "max": 50 },
+  "skills": [
+    "Climb",
+    "Dodge",
+    { "choice": ["Electrical Repair", "Mechanical Repair"], "label": "technical" },
+    "Fighting (any)",
+    "First Aid",
+    "Jump",
+    "Swim",
+    { "choice": ["Drive Auto", "Pilot (any)", "Ride"], "label": "specialty" },
+    "Credit Rating"
+  ]
+}

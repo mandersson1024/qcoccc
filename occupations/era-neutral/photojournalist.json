@@ -1,0 +1,16 @@
+{
+  "name": "Photojournalist",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 10, "max": 30 },
+  "skills": [
+    "Art/Craft (Photography)",
+    "Climb",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    "Other Language (any)",
+    "Psychology",
+    "Science (Chemistry)",
+    { "choice": "any" },
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

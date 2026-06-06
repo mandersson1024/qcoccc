@@ -1,0 +1,16 @@
+{
+  "name": "Cowboy/Girl",
+  "skill_points": "EDU * 2 + DEX * 2 or STR * 2",
+  "credit_rating_range": { "min": 9, "max": 20 },
+  "skills": [
+    "Dodge",
+    { "choice": ["Fighting (any)", "Firearms (any)"], "label": "combat" },
+    { "choice": ["First Aid", "Natural World"], "label": "wilderness" },
+    "Jump",
+    "Ride",
+    "Survival (any)",
+    "Throw",
+    "Track",
+    "Credit Rating"
+  ]
+}

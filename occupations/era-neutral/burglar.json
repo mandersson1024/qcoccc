@@ -1,0 +1,16 @@
+{
+  "name": "Burglar",
+  "skill_points": "EDU * 2 + DEX * 2",
+  "credit_rating_range": { "min": 5, "max": 40 },
+  "skills": [
+    "Appraise",
+    "Climb",
+    { "choice": ["Electrical Repair", "Mechanical Repair"], "label": "technical" },
+    "Listen",
+    "Locksmith",
+    "Sleight of Hand",
+    "Spot Hidden",
+    "Stealth",
+    "Credit Rating"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Computer Programmer",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 10, "max": 70 },
+  "skills": [
+    "Computer Use",
+    "Electrical Repair",
+    "Electronics",
+    "Library Use",
+    "Science (Mathematics)",
+    "Spot Hidden",
+    { "choice": "any" },
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Pharmacist",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 35, "max": 75 },
+  "skills": [
+    "Accounting",
+    "First Aid",
+    "Library Use",
+    "Other Language (Latin)",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    "Psychology",
+    "Science (Chemistry)",
+    "Science (Pharmacy)",
+    "Credit Rating"
+  ]
+}

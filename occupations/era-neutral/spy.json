@@ -1,0 +1,16 @@
+{
+  "name": "Spy",
+  "skill_points": "EDU * 2 + APP * 2 or DEX * 2",
+  "credit_rating_range": { "min": 20, "max": 60 },
+  "skills": [
+    { "choice": ["Art/Craft (Acting)", "Disguise"], "label": "cover" },
+    "Firearms (any)",
+    "Listen",
+    "Other Language (any)",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    "Psychology",
+    "Sleight of Hand",
+    "Stealth",
+    "Credit Rating"
+  ]
+}

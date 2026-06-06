@@ -1,0 +1,16 @@
+{
+  "name": "Archaeologist",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 10, "max": 40 },
+  "skills": [
+    "Appraise",
+    "Archaeology",
+    "History",
+    "Other Language (any)",
+    "Library Use",
+    "Spot Hidden",
+    "Mechanical Repair",
+    { "choice": ["Navigate", "Science (any)"], "label": "field" },
+    "Credit Rating"
+  ]
+}

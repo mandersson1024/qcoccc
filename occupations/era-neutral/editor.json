@@ -1,0 +1,16 @@
+{
+  "name": "Editor",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 10, "max": 30 },
+  "skills": [
+    "Accounting",
+    "History",
+    "Own Language",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    "Psychology",
+    "Spot Hidden",
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Diver",
+  "skill_points": "EDU * 2 + DEX * 2",
+  "credit_rating_range": { "min": 9, "max": 30 },
+  "skills": [
+    "Diving",
+    "First Aid",
+    "Mechanical Repair",
+    "Pilot (Boat)",
+    "Science (Biology)",
+    "Spot Hidden",
+    "Swim",
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Foreign Correspondent",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 10, "max": 40 },
+  "skills": [
+    "History",
+    "Listen",
+    "Other Language (any)",
+    "Own Language",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    "Psychology",
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

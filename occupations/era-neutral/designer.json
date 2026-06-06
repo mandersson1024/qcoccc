@@ -1,0 +1,16 @@
+{
+  "name": "Designer",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 20, "max": 60 },
+  "skills": [
+    "Accounting",
+    "Art/Craft (Photography)",
+    "Art/Craft (any)",
+    { "choice": ["Computer Use", "Library Use"], "label": "research" },
+    "Mechanical Repair",
+    "Psychology",
+    "Spot Hidden",
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

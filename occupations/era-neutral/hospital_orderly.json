@@ -1,0 +1,16 @@
+{
+  "name": "Hospital Orderly",
+  "skill_points": "EDU * 2 + STR * 2",
+  "credit_rating_range": { "min": 6, "max": 15 },
+  "skills": [
+    "Electrical Repair",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    "Fighting (Brawl)",
+    "First Aid",
+    "Listen",
+    "Mechanical Repair",
+    "Psychology",
+    "Stealth",
+    "Credit Rating"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Bounty Hunter",
+  "skill_points": "EDU * 2 + DEX * 2 or STR * 2",
+  "credit_rating_range": { "min": 9, "max": 30 },
+  "skills": [
+    "Drive Auto",
+    { "choice": ["Electronics", "Electrical Repair"], "label": "technical" },
+    { "choice": ["Fighting (any)", "Firearms (any)"], "label": "combat" },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    "Law",
+    "Psychology",
+    "Stealth",
+    "Track",
+    "Credit Rating"
+  ]
+}

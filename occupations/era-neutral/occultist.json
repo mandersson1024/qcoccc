@@ -1,0 +1,16 @@
+{
+  "name": "Occultist",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 9, "max": 65 },
+  "skills": [
+    "Anthropology",
+    "History",
+    "Library Use",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    "Occult",
+    "Other Language (any)",
+    "Science (Astronomy)",
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

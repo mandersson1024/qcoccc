@@ -1,0 +1,16 @@
+{
+  "name": "Bank Robber",
+  "skill_points": "EDU * 2 + STR * 2 or DEX * 2",
+  "credit_rating_range": { "min": 5, "max": 75 },
+  "skills": [
+    "Drive Auto",
+    { "choice": ["Electrical Repair", "Mechanical Repair"], "label": "technical" },
+    "Fighting (any)",
+    "Firearms (any)",
+    "Intimidate",
+    "Locksmith",
+    "Operate Heavy Machinery",
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Forensic Surgeon",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 40, "max": 60 },
+  "skills": [
+    "Other Language (Latin)",
+    "Library Use",
+    "Medicine",
+    "Persuade",
+    "Science (Biology)",
+    "Science (Forensics)",
+    "Science (Pharmacy)",
+    "Spot Hidden",
+    "Credit Rating"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Chauffeur",
+  "skill_points": "EDU * 2 + DEX * 2",
+  "credit_rating_range": { "min": 10, "max": 40 },
+  "skills": [
+    "Drive Auto",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    "Listen",
+    "Mechanical Repair",
+    "Navigate",
+    "Spot Hidden",
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

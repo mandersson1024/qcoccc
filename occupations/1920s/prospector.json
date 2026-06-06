@@ -1,0 +1,16 @@
+{
+  "name": "Prospector",
+  "skill_points": "EDU * 2 + DEX * 2 or STR * 2",
+  "credit_rating_range": { "min": 0, "max": 10 },
+  "skills": [
+    "Climb",
+    "First Aid",
+    "History",
+    "Mechanical Repair",
+    "Navigate",
+    "Science (Geology)",
+    "Spot Hidden",
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

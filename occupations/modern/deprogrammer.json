@@ -1,0 +1,16 @@
+{
+  "name": "Deprogrammer",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 20, "max": 50 },
+  "skills": [
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    "Drive Auto",
+    { "choice": ["Fighting (Brawl)", "Firearms (any)"], "label": "combat" },
+    "History",
+    "Occult",
+    "Psychology",
+    "Stealth",
+    "Credit Rating"
+  ]
+}

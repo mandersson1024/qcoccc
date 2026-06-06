@@ -1,0 +1,16 @@
+{
+  "name": "Mountain Climber",
+  "skill_points": "EDU * 2 + DEX * 2 or STR * 2",
+  "credit_rating_range": { "min": 30, "max": 60 },
+  "skills": [
+    "Climb",
+    "First Aid",
+    "Jump",
+    "Listen",
+    "Navigate",
+    "Other Language (any)",
+    "Survival (any)",
+    "Track",
+    "Credit Rating"
+  ]
+}

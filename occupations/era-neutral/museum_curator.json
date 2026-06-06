@@ -1,0 +1,16 @@
+{
+  "name": "Museum Curator",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 10, "max": 30 },
+  "skills": [
+    "Accounting",
+    "Appraise",
+    "Archaeology",
+    "History",
+    "Library Use",
+    "Occult",
+    "Other Language (any)",
+    "Spot Hidden",
+    "Credit Rating"
+  ]
+}

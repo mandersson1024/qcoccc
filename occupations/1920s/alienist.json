@@ -1,0 +1,20 @@
+{
+  "name": "Alienist",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 10, "max": 60 },
+  "characteristic_ranges": {
+    "INT": { "min": 60 },
+    "EDU": { "min": 70 }
+  },
+  "skills": [
+    "Law",
+    "Listen",
+    "Medicine",
+    "Other Language (any)",
+    "Psychoanalysis",
+    "Psychology",
+    "Science (Biology)",
+    "Science (Chemistry)",
+    "Credit Rating"
+  ]
+}

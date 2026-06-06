@@ -1,0 +1,16 @@
+{
+  "name": "Film Star",
+  "skill_points": "EDU * 2 + APP * 2",
+  "credit_rating_range": { "min": 20, "max": 90 },
+  "skills": [
+    "Art/Craft (Acting)",
+    "Disguise",
+    "Drive Auto",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    "Psychology",
+    { "choice": "any" },
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

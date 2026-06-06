@@ -1,0 +1,16 @@
+{
+  "name": "Manager",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 20, "max": 80 },
+  "skills": [
+    "Accounting",
+    "Law",
+    "Other Language (any)",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    "Psychology",
+    { "choice": "any" },
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Craftsperson",
+  "skill_points": "EDU * 2 + DEX * 2",
+  "credit_rating_range": { "min": 10, "max": 40 },
+  "skills": [
+    "Accounting",
+    "Art/Craft (any)",
+    "Art/Craft (any)",
+    "Mechanical Repair",
+    "Natural World",
+    "Spot Hidden",
+    { "choice": "any" },
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

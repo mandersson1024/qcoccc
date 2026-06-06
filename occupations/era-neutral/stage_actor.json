@@ -1,0 +1,16 @@
+{
+  "name": "Stage Actor",
+  "skill_points": "EDU * 2 + APP * 2",
+  "credit_rating_range": { "min": 9, "max": 40 },
+  "skills": [
+    "Art/Craft (Acting)",
+    "Disguise",
+    "Fighting (any)",
+    "History",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    "Psychology",
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

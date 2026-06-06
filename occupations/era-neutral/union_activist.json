@@ -1,0 +1,16 @@
+{
+  "name": "Union Activist",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 5, "max": 30 },
+  "skills": [
+    "Accounting",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    "Fighting (Brawl)",
+    "Law",
+    "Listen",
+    "Operate Heavy Machinery",
+    "Psychology",
+    "Credit Rating"
+  ]
+}

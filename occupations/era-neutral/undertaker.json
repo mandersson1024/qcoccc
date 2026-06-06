@@ -1,0 +1,16 @@
+{
+  "name": "Undertaker",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 20, "max": 40 },
+  "skills": [
+    "Accounting",
+    "Drive Auto",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    "History",
+    "Occult",
+    "Psychology",
+    "Science (Biology)",
+    "Science (Chemistry)",
+    "Credit Rating"
+  ]
+}

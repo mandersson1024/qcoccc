@@ -1,0 +1,16 @@
+{
+  "name": "Judge",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 50, "max": 80 },
+  "skills": [
+    "History",
+    "Intimidate",
+    "Law",
+    "Library Use",
+    "Listen",
+    "Own Language",
+    "Persuade",
+    "Psychology",
+    "Credit Rating"
+  ]
+}

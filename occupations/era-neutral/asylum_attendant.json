@@ -1,0 +1,16 @@
+{
+  "name": "Asylum Attendant",
+  "skill_points": "EDU * 2 + STR * 2 or DEX * 2",
+  "credit_rating_range": { "min": 8, "max": 20 },
+  "skills": [
+    "Dodge",
+    "Fighting (Brawl)",
+    "First Aid",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    "Listen",
+    "Psychology",
+    "Stealth",
+    "Credit Rating"
+  ]
+}

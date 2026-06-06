@@ -1,0 +1,16 @@
+{
+  "name": "Outdoorsman/woman",
+  "skill_points": "EDU * 2 + DEX * 2 or STR * 2",
+  "credit_rating_range": { "min": 5, "max": 20 },
+  "skills": [
+    "Firearms (any)",
+    "First Aid",
+    "Listen",
+    "Natural World",
+    "Navigate",
+    "Spot Hidden",
+    "Survival (any)",
+    "Track",
+    "Credit Rating"
+  ]
+}

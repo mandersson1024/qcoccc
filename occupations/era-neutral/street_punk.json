@@ -1,0 +1,16 @@
+{
+  "name": "Street Punk",
+  "skill_points": "EDU * 2 + DEX * 2 or STR * 2",
+  "credit_rating_range": { "min": 3, "max": 10 },
+  "skills": [
+    "Climb",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    "Fighting (any)",
+    "Firearms (any)",
+    "Jump",
+    "Sleight of Hand",
+    "Stealth",
+    "Throw",
+    "Credit Rating"
+  ]
+}

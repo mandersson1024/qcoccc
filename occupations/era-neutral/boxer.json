@@ -1,0 +1,19 @@
+{
+  "name": "Boxer/Wrestler",
+  "skill_points": "EDU * 2 + STR * 2",
+  "credit_rating_range": { "min": 9, "max": 60 },
+  "characteristic_ranges": {
+    "STR": { "min": 50 }
+  },
+  "skills": [
+    "Dodge",
+    "Fighting (Brawl)",
+    "Intimidate",
+    "Jump",
+    "Psychology",
+    "Spot Hidden",
+    { "choice": "any" },
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

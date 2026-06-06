@@ -1,0 +1,16 @@
+{
+  "name": "Book Dealer",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 20, "max": 40 },
+  "skills": [
+    "Accounting",
+    "Appraise",
+    "Drive Auto",
+    "History",
+    "Library Use",
+    "Own Language",
+    "Other Language (any)",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    "Credit Rating"
+  ]
+}

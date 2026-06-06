@@ -1,0 +1,16 @@
+{
+  "name": "Laboratory Assistant",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 10, "max": 30 },
+  "skills": [
+    { "choice": ["Computer Use", "Library Use"], "label": "research" },
+    "Electrical Repair",
+    "Other Language (any)",
+    "Science (Chemistry)",
+    "Spot Hidden",
+    { "choice": "any" },
+    { "choice": "any" },
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

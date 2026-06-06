@@ -1,0 +1,16 @@
+{
+  "name": "Elected Official",
+  "skill_points": "EDU * 2 + APP * 2",
+  "credit_rating_range": { "min": 50, "max": 90 },
+  "skills": [
+    "Charm",
+    "Fast Talk",
+    "History",
+    "Intimidate",
+    "Listen",
+    "Own Language",
+    "Persuade",
+    "Psychology",
+    "Credit Rating"
+  ]
+}

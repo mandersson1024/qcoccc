@@ -1,0 +1,16 @@
+{
+  "name": "Explorer",
+  "skill_points": "EDU * 2 + APP * 2 or DEX * 2 or STR * 2",
+  "credit_rating_range": { "min": 55, "max": 80 },
+  "skills": [
+    { "choice": ["Climb", "Swim"], "label": "athletic" },
+    "Firearms (any)",
+    "History",
+    "Jump",
+    "Natural World",
+    "Navigate",
+    "Other Language (any)",
+    "Survival (any)",
+    "Credit Rating"
+  ]
+}

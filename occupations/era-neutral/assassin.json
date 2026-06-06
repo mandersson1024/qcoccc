@@ -1,0 +1,16 @@
+{
+  "name": "Assassin",
+  "skill_points": "EDU * 2 + DEX * 2 or STR * 2",
+  "credit_rating_range": { "min": 30, "max": 60 },
+  "skills": [
+    "Disguise",
+    "Electrical Repair",
+    "Fighting (any)",
+    "Firearms (any)",
+    "Locksmith",
+    "Mechanical Repair",
+    "Psychology",
+    "Stealth",
+    "Credit Rating"
+  ]
+}

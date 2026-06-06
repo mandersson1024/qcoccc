@@ -1,0 +1,16 @@
+{
+  "name": "Sailor, Commercial",
+  "skill_points": "EDU * 2 + DEX * 2 or STR * 2",
+  "credit_rating_range": { "min": 20, "max": 40 },
+  "skills": [
+    "First Aid",
+    "Mechanical Repair",
+    "Natural World",
+    "Navigate",
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    "Pilot (Boat)",
+    "Spot Hidden",
+    "Swim",
+    "Credit Rating"
+  ]
+}

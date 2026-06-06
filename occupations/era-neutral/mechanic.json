@@ -1,0 +1,16 @@
+{
+  "name": "Mechanic",
+  "skill_points": "EDU * 4",
+  "credit_rating_range": { "min": 9, "max": 40 },
+  "skills": [
+    "Art/Craft (any)",
+    "Climb",
+    "Drive Auto",
+    "Electrical Repair",
+    "Mechanical Repair",
+    "Operate Heavy Machinery",
+    { "choice": "any" },
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}

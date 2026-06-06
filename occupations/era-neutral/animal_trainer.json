@@ -1,0 +1,16 @@
+{
+  "name": "Animal Trainer",
+  "skill_points": "EDU * 2 + APP * 2 or POW * 2",
+  "credit_rating_range": { "min": 10, "max": 40 },
+  "skills": [
+    "Animal Handling",
+    "Jump",
+    "Listen",
+    "Natural World",
+    "Science (Zoology)",
+    "Stealth",
+    "Track",
+    { "choice": "any" },
+    "Credit Rating"
+  ]
+}
