@@ -110,7 +110,7 @@ def _resolve_entry(entry, context: dict, counters: dict) -> str | None:
     if choices_val == "any":
         counters["any"] += 1
         n = counters["any"]
-        label = f"Free skill choice {n}"
+        label = f"Any occupation skill {n}"
         all_skills = _get_full_skill_list()
         chosen = _ask(lambda: questionary.select(
             label, choices=["ANY"] + all_skills
@@ -124,7 +124,7 @@ def _resolve_entry(entry, context: dict, counters: dict) -> str | None:
 
     counters["choice"] += 1
     n = counters["choice"]
-    label = f"Skill choice {n}"
+    label = f"Occupation skill {n}"
     chosen = _ask(lambda: questionary.select(
         label, choices=["ANY"] + choices_val
     ).ask())
@@ -183,7 +183,7 @@ def resolve_personal_interest_skills(context: dict, n_skills: int = 4) -> list[s
     full_list = _get_full_skill_list()
     chosen = []
     for i in range(n_skills):
-        label = f"Personal interest skill {i + 1}"
+        label = f"Personal interest {i + 1}"
         skill = _ask(lambda: questionary.select(label, choices=["ANY"] + full_list).ask())
         if skill == "ANY":
             skill = random.choice(full_list)

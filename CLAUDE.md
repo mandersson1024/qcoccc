@@ -136,7 +136,7 @@ Out of scope: backstory generation, partial sheet saving/loading, re-rolling ind
 2. **Occupation** — loaded from era subfolder(s), sorted alphabetically
 3. **Age bracket** — rulebook brackets: 15–19, 20s, 30s, 40s, 50s, 60s, 70s, 80s+
 4. **Age** — free-text integer, validated against the chosen bracket
-5. **Skill choices** — one question per `{"choice": [...]}` or `{"choice": "any"}` entry in the occupation; `(any)` suffixes trigger a specialization sub-question
-6. **Personal interest skills** — 4 questions, one per skill, full skill list available; ANY supported; `(any)` suffixes trigger a specialization sub-question
+5. **Occupation skills** — one question per `{"choice": [...]}` entry (labelled "Occupation skill N") or `{"choice": "any"}` entry (labelled "Any occupation skill N"); `(any)` suffixes trigger a specialization sub-question
+6. **Personal interests** — 4 questions (labelled "Personal interest N"), full skill list available; ANY supported; `(any)` suffixes trigger a specialization sub-question
 7. **Skill distribution** — Generalist / Specialist
 8. **Output** — To Terminal / To File / Both (no ANY)
