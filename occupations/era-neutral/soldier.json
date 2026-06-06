@@ -7,14 +7,14 @@
     "CON": { "min": 50 }
   },
   "skills": [
-    { "choice": ["Climb", "Swim"] },
+    { "choice": ["Climb", "Swim"], "label": "athletic" },
     "Dodge",
     "Fighting (any)",
     "Firearms (any)",
     "Stealth",
     "Survival (any)",
-    { "choice": ["First Aid", "Mechanical Repair", "Other Language (any)"] },
-    { "choice": ["First Aid", "Mechanical Repair", "Other Language (any)"] },
+    { "choice": ["First Aid", "Mechanical Repair", "Other Language (any)"], "label": "support" },
+    { "choice": ["First Aid", "Mechanical Repair", "Other Language (any)"], "label": "support" },
     "Credit Rating"
   ]
 }

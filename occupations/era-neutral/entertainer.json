@@ -8,8 +8,8 @@
   "skills": [
     "Art/Craft (Acting)",
     "Disguise",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
     "Listen",
     "Psychology",
     { "choice": "any" },

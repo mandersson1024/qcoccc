@@ -8,11 +8,11 @@
     "INT": { "min": 50 }
   },
   "skills": [
-    { "choice": ["Art/Craft (Acting)", "Disguise"] },
+    { "choice": ["Art/Craft (Acting)", "Disguise"], "label": "undercover" },
     "Firearms (any)",
     "Law",
     "Listen",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
     "Psychology",
     "Spot Hidden",
     { "choice": "any" },

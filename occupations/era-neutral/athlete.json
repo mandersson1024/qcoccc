@@ -12,7 +12,7 @@
     "Jump",
     "Fighting (Brawl)",
     "Ride",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
     "Swim",
     "Throw",
     { "choice": "any" },

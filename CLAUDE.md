@@ -134,6 +134,10 @@ Planned order of implementation:
 
 Out of scope: backstory generation, partial sheet saving/loading, re-rolling individual values.
 
+**Backlog:**
+
+- **Weighted ANY for free occupation skill choices** — when resolving `{"choice": "any"}` via ANY, skills should be weighted by occupation relevance rather than chosen uniformly at random. Each occupation JSON would carry a `skill_weights` map (skill name → weight multiplier) so that e.g. a Musician is more likely to draw Art/Craft skills and less likely to draw Fighting skills. Skills not listed in the map default to weight 1.
+
 ## Question flow
 
 1. **Era** — 1920s / Modern / Other

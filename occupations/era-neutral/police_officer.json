@@ -10,11 +10,11 @@
     "Fighting (Brawl)",
     "Firearms (any)",
     "First Aid",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
     "Law",
     "Psychology",
     "Spot Hidden",
-    { "choice": ["Drive Auto", "Ride"] },
+    { "choice": ["Drive Auto", "Ride"], "label": "transport" },
     "Credit Rating"
   ]
 }

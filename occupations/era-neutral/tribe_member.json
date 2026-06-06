@@ -7,7 +7,7 @@
   },
   "skills": [
     "Climb",
-    { "choice": ["Fighting (any)", "Throw"] },
+    { "choice": ["Fighting (any)", "Throw"], "label": "combat" },
     "Natural World",
     "Listen",
     "Occult",

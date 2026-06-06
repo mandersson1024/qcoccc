@@ -11,7 +11,7 @@
     "History",
     "Library Use",
     "Own Language",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
     "Psychology",
     { "choice": "any" },
     { "choice": "any" },

@@ -8,8 +8,8 @@
   },
   "skills": [
     "Art/Craft (any)",
-    { "choice": ["History", "Natural World"] },
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
+    { "choice": ["History", "Natural World"], "label": "specialism" },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
     "Other Language (any)",
     "Psychology",
     "Spot Hidden",

@@ -11,7 +11,7 @@
     "Mechanical Repair",
     "Medicine",
     "Natural World",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
     { "choice": "any" },
     { "choice": "any" },
     "Credit Rating"

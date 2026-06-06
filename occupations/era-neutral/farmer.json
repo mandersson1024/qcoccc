@@ -9,7 +9,7 @@
   "skills": [
     "Art/Craft (Farming)",
     "Drive Auto",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
     "Mechanical Repair",
     "Natural World",
     "Operate Heavy Machinery",

@@ -10,7 +10,7 @@
     "Art/Craft (Literature)",
     "History",
     "Library Use",
-    { "choice": ["Natural World", "Occult"] },
+    { "choice": ["Natural World", "Occult"], "label": "specialism" },
     "Other Language (any)",
     "Own Language",
     "Psychology",

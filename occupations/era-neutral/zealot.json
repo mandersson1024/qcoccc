@@ -7,8 +7,8 @@
   },
   "skills": [
     "History",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
     "Psychology",
     "Stealth",
     { "choice": "any" },

@@ -10,7 +10,7 @@
     "Disguise",
     "Law",
     "Library Use",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
     "Psychology",
     "Spot Hidden",
     { "choice": "any" },

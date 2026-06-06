@@ -131,9 +131,12 @@ def _resolve_entry(entry, context: dict, counters: dict, chosen: set) -> str | N
             skill = _resolve_any_suffix(skill, context)
         return skill
 
-    counters["choice"] += 1
-    n = counters["choice"]
-    label = f"Occupation skill {n}"
+    if "label" in entry:
+        label = f"Occupation skill ({entry['label']})"
+    else:
+        counters["choice"] += 1
+        n = counters["choice"]
+        label = f"Occupation skill {n}"
     available = _available_from_choices(choices_val, chosen)
     skill = _ask(lambda: questionary.select(
         label, choices=["ANY"] + available

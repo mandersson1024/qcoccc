@@ -12,7 +12,7 @@
     "History",
     "Library Use",
     "Other Language (any)",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
     "Spot Hidden",
     { "choice": "any" },
     "Credit Rating"

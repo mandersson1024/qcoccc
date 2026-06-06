@@ -8,7 +8,7 @@
     "Jump",
     "Listen",
     "Navigate",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"] },
+    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
     "Stealth",
     { "choice": "any" },
     { "choice": "any" },
