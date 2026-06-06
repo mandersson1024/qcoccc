@@ -35,74 +35,74 @@ python -m qcoccc -p character.json
 % python -m qcoccc
 ? Era 1920s
 ? Occupation ANY
-  → Military Officer
+  → Musician
 ? Age bracket ANY
-  → 70s
+  → 80s+
 ? Age ANY
-  → 78
-? Firearms specialization ANY
-  → Handgun
+  → 90
 ? Occupation skill 1 ANY
   → Persuade
-? Occupation skill 2 ANY
-  → Charm
-? Survival specialization ANY
-  → Arctic
 ? Any occupation skill 1 ANY
-  → Science (Engineering)
-? Personal interest 1 ANY
+  → Fighting (Spear)
+? Any occupation skill 2 ANY
   → Climb
+? Any occupation skill 3 ANY
+  → Sleight of Hand
+? Any occupation skill 4 ANY
+  → Intimidate
+? Personal interest 1 ANY
+  → Accounting
 ? Personal interest 2 ANY
-  → Science (Astronomy)
+  → Firearms (Heavy Weapons)
 ? Personal interest 3 ANY
-  → Throw
+  → Firearms (Machine Gun)
 ? Personal interest 4 ANY
-  → Art/Craft (Carpentry)
+  → Art/Craft (Pottery)
 ? Skill distribution Generalist
-  → Credit Rating          51
-  → Accounting             16
-  → Firearms (Handgun)     29
-  → Navigate               21
-  → Persuade               29
-  → Charm                  23
-  → Psychology             20
-  → Survival (Arctic)      26
-  → Science (Engineering)  15
-  → Climb                  24
-  → Science (Astronomy)    27
-  → Throw                  34
-  → Art/Craft (Carpentry)  35
+  → Credit Rating             23
+  → Art/Craft (instrument)    23
+  → Persuade                  28
+  → Listen                    31
+  → Psychology                32
+  → Fighting (Spear)          29
+  → Climb                     30
+  → Sleight of Hand           29
+  → Intimidate                41
+  → Accounting                42
+  → Firearms (Heavy Weapons)  32
+  → Firearms (Machine Gun)    30
+  → Art/Craft (Pottery)       26
 ? Output To Terminal
 ════════════════════════════════════════════════
   CALL OF CTHULHU INVESTIGATOR  ·  1920s
 ════════════════════════════════════════════════
 
-  Military Officer  ·  Age 78
+  Musician  ·  Age 90
 
   CHARACTERISTICS ──────────────────────────────
-  STR 52   CON 46   SIZ 85   DEX 37
-  APP 10   INT 60   POW 60   EDU 63
+  STR 28   CON 22   SIZ 70   DEX 20
+  APP 35   INT 65   POW 60   EDU 73
 
   DERIVED ──────────────────────────────────────
-  Hit Points    13     Sanity    60 / 99
-  Magic Points  12     Luck      45
-  Move Rate     3      Build     1
-  Damage Bonus  +1D4
+  Hit Points    9      Sanity    60 / 99
+  Magic Points  12     Luck      50
+  Move Rate     2      Build     0
+  Damage Bonus  None
 
   SKILLS ───────────────────────────────────────
-  Accounting .............................  21
-  Art/Craft (Carpentry) ..................  40
-  Charm ..................................  38
-  Climb ..................................  44
-  Credit Rating ..........................  51
-  Firearms (Handgun) .....................  49
-  Navigate ...............................  31
-  Persuade ...............................  39
-  Psychology .............................  30
-  Science (Astronomy) ....................  28
-  Science (Engineering) ..................  16
-  Survival (Arctic) ......................  36
-  Throw ..................................  54
+  Accounting .............................  47
+  Art/Craft (Pottery) ....................  31
+  Art/Craft (instrument) .................  24
+  Climb ..................................  50
+  Credit Rating ..........................  23
+  Fighting (Spear) .......................  49
+  Firearms (Heavy Weapons) ...............  42
+  Firearms (Machine Gun) .................  40
+  Intimidate .............................  56
+  Listen .................................  51
+  Persuade ...............................  38
+  Psychology .............................  42
+  Sleight of Hand ........................  39
 
 ════════════════════════════════════════════════
 ```
