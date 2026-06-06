@@ -4,7 +4,6 @@ from ..engine.question import Question
 
 
 BRACKETS = [
-    ("15–19", 15, 19),
     ("20s",   20, 29),
     ("30s",   30, 39),
     ("40s",   40, 49),

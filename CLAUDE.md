@@ -38,7 +38,7 @@ The developer owns all decisions about how the project works. Work in small step
 
 **Credit Rating starts at zero and costs points:** Credit Rating has no base value — it starts at 0. The occupation's `credit_rating_range` defines the allowed range (e.g. 20–70 for Military Officer). The value chosen is spent from the occupation skill point pool, just like any other skill. The minimum of the range is a lower bound on the roll, not a free baseline. Confirmed by: rulebook p. 39 ("Your investigator's Credit Rating skill begins at zero... Any number of skill points can be invested in Credit Rating within the recommended limits for that profession") and community consensus on BRP Central forums and Roll20 compendium (web search performed June 2026).
 
-**Age range:** The rules explicitly state investigators must be between 15 and 90 years old (rulebook p. 32). The 80s+ bracket covers 80–90. Ages outside this range require Keeper approval and are not supported by the tool.
+**Age range:** The rules explicitly state investigators must be between 15 and 90 years old (rulebook p. 32). The 80s+ bracket covers 80–90. Ages outside this range require Keeper approval and are not supported by the tool. The 15–19 bracket has been intentionally removed — it is incompatible with most occupations and is not supported by the tool.
 
 **Characteristic rolling — standard method only:** STR/CON/DEX/APP/POW roll 3D6×5; SIZ/INT/EDU roll 2D6+6×5. Occupation `characteristic_ranges.min` values are enforced (stat bumped up if below minimum). `max` values are soft guidance — not enforced. Age deductions to STR/CON/DEX are distributed randomly across the three stats. Other rolling methods (Quick Fire, point buy, allocate-freely) are not implemented yet.
 
