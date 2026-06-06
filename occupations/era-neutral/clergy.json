@@ -1,35 +1,39 @@
 {
   "name": "Clergy",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 9, "max": 60 },
-  "characteristic_ranges": {
-    "POW": { "min": 40 },
-    "EDU": { "min": 50 }
+  "credit_rating_range": {
+    "min": 9,
+    "max": 60
   },
-  "personal_interest_weights": {
-    "Occult": 4,
-    "Anthropology": 3,
-    "Natural World": 2,
-    "Other Language": 2,
-    "Art/Craft": 2,
-    "First Aid": 2,
-    "Medicine": 1.5,
-    "Fighting": 0.3,
-    "Firearms": 0.2,
-    "Survival": 0.4,
-    "Pilot": 0.2,
-    "Electrical Repair": 0.3,
-    "Mechanical Repair": 0.4
+  "characteristic_ranges": {
+    "POW": {
+      "min": 40
+    },
+    "EDU": {
+      "min": 50
+    }
   },
   "skills": [
     "Accounting",
     "History",
     "Library Use",
     "Other Language (any)",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Psychology",
-    { "choice": "any" },
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

@@ -5,13 +5,6 @@
     "min": 30,
     "max": 50
   },
-  "personal_interest_weights": {
-    "Art/Craft": 3,
-    "Occult": 2,
-    "Fighting": 0.2,
-    "Firearms": 0.2,
-    "Survival": 0.3
-  },
   "skills": [
     "Accounting",
     "Appraise",

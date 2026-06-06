@@ -13,19 +13,6 @@
       "min": 50
     }
   },
-  "personal_interest_weights": {
-    "Occult": 3,
-    "Anthropology": 3,
-    "Natural World": 2,
-    "Other Language": 2,
-    "Art/Craft": 2,
-    "Fighting": 0.3,
-    "Firearms": 0.2,
-    "Navigate": 0.4,
-    "Survival": 0.3,
-    "Pilot": 0.2,
-    "Science": 0.5
-  },
   "skills": [
     "Art/Craft (Literature)",
     "History",

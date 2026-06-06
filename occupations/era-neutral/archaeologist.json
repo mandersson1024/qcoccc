@@ -5,15 +5,6 @@
     "min": 10,
     "max": 40
   },
-  "personal_interest_weights": {
-    "Other Language": 3,
-    "Science": 2,
-    "Occult": 2,
-    "Fighting": 0.2,
-    "Firearms": 0.2,
-    "Stealth": 0.3,
-    "Navigate": 0.4
-  },
   "skills": [
     "Appraise",
     "Archaeology",

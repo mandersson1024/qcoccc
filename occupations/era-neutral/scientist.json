@@ -5,17 +5,6 @@
     "min": 9,
     "max": 50
   },
-  "personal_interest_weights": {
-    "Science": 5,
-    "Library Use": 3,
-    "Other Language": 3,
-    "History": 2,
-    "Fighting": 0.2,
-    "Firearms": 0.2,
-    "Survival": 0.3,
-    "Navigate": 0.3,
-    "Art/Craft": 0.4
-  },
   "skills": [
     {
       "choice": [

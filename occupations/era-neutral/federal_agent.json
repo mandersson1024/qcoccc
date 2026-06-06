@@ -5,14 +5,6 @@
     "min": 20,
     "max": 40
   },
-  "personal_interest_weights": {
-    "Firearms": 4,
-    "Track": 3,
-    "Art/Craft": 0.3,
-    "Science": 0.3,
-    "Medicine": 0.3,
-    "Other Language": 0.4
-  },
   "skills": [
     "Drive Auto",
     "Fighting (Brawl)",

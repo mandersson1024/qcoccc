@@ -106,10 +106,6 @@ def _available_from_choices(choices_val: list, chosen: set) -> list[str]:
     return available if available else list(choices_val)
 
 
-def _skill_weight(skill_name: str, weights: dict) -> float:
-    key = skill_name[:skill_name.index("(")].strip() if "(" in skill_name else skill_name
-    return weights.get(key, 1.0)
-
 
 def _resolve_entry(entry, context: dict, counters: dict, chosen: set) -> str | None:
     if isinstance(entry, str):
@@ -199,8 +195,7 @@ def allocate_skills(
     return result
 
 
-def resolve_personal_interest_skills(context: dict, exclude: set, n_skills: int = 4, personal_interest_weights: dict | None = None) -> list[str]:
-    _weights = personal_interest_weights or {}
+def resolve_personal_interest_skills(context: dict, exclude: set, n_skills: int = 4) -> list[str]:
     chosen = []
     chosen_set = set(exclude)
     for i in range(n_skills):
@@ -208,8 +203,7 @@ def resolve_personal_interest_skills(context: dict, exclude: set, n_skills: int 
         available = _available_from_full_list(chosen_set)
         skill = _ask(lambda: questionary.select(label, choices=["ANY"] + available).ask())
         if skill == "ANY":
-            w = [_skill_weight(s, _weights) for s in available]
-            skill = random.choices(available, weights=w)[0]
+            skill = random.choice(available)
             print(f"  → {skill}")
         if skill.endswith("(any)"):
             skill = _resolve_any_suffix(skill, context)

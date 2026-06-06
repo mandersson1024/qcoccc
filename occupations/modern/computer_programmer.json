@@ -5,16 +5,6 @@
     "min": 10,
     "max": 70
   },
-  "personal_interest_weights": {
-    "Science": 4,
-    "Art/Craft": 2,
-    "Other Language": 2,
-    "Fighting": 0.2,
-    "Firearms": 0.2,
-    "Survival": 0.3,
-    "Navigate": 0.3,
-    "Ride": 0.2
-  },
   "skills": [
     "Computer Use",
     "Electrical Repair",

@@ -5,15 +5,6 @@
     "min": 10,
     "max": 80
   },
-  "personal_interest_weights": {
-    "Art/Craft": 4,
-    "Charm": 4,
-    "Firearms": 3,
-    "Science": 0.3,
-    "Library Use": 0.4,
-    "History": 0.3,
-    "Navigate": 0.3
-  },
   "skills": [
     "Art/Craft (any)",
     {

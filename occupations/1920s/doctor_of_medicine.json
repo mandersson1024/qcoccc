@@ -1,24 +1,17 @@
 {
   "name": "Doctor of Medicine",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 30, "max": 80 },
-  "characteristic_ranges": {
-    "INT": { "min": 60 },
-    "EDU": { "min": 70 }
+  "credit_rating_range": {
+    "min": 30,
+    "max": 80
   },
-  "personal_interest_weights": {
-    "Science": 4,
-    "Other Language": 3,
-    "Anthropology": 2,
-    "Occult": 2,
-    "Law": 2,
-    "Library Use": 2,
-    "Fighting": 0.3,
-    "Firearms": 0.3,
-    "Navigate": 0.4,
-    "Pilot": 0.2,
-    "Art/Craft": 0.4,
-    "Survival": 0.4
+  "characteristic_ranges": {
+    "INT": {
+      "min": 60
+    },
+    "EDU": {
+      "min": 70
+    }
   },
   "skills": [
     "First Aid",
@@ -27,8 +20,12 @@
     "Psychology",
     "Science (Biology)",
     "Science (Pharmacy)",
-    { "choice": "any" },
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

@@ -1,25 +1,17 @@
 {
   "name": "Engineer",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 30, "max": 60 },
-  "characteristic_ranges": {
-    "INT": { "min": 60 },
-    "EDU": { "min": 60 }
+  "credit_rating_range": {
+    "min": 30,
+    "max": 60
   },
-  "personal_interest_weights": {
-    "Science": 5,
-    "Navigate": 3,
-    "Pilot": 2,
-    "Drive Auto": 2,
-    "Art/Craft": 2,
-    "Fighting": 0.3,
-    "Firearms": 0.3,
-    "Occult": 0.3,
-    "Charm": 0.5,
-    "Fast Talk": 0.5,
-    "Intimidate": 0.5,
-    "Persuade": 0.5,
-    "Survival": 0.4
+  "characteristic_ranges": {
+    "INT": {
+      "min": 60
+    },
+    "EDU": {
+      "min": 60
+    }
   },
   "skills": [
     "Art/Craft (Technical Drawing)",
@@ -29,7 +21,9 @@
     "Operate Heavy Machinery",
     "Science (Engineering)",
     "Science (Physics)",
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

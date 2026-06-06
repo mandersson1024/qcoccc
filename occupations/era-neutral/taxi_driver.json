@@ -5,13 +5,6 @@
     "min": 9,
     "max": 30
   },
-  "personal_interest_weights": {
-    "Art/Craft": 2,
-    "Library Use": 0.3,
-    "Science": 0.3,
-    "Law": 0.3,
-    "Other Language": 0.4
-  },
   "skills": [
     "Accounting",
     "Drive Auto",

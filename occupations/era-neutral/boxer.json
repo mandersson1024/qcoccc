@@ -10,17 +10,6 @@
       "min": 50
     }
   },
-  "personal_interest_weights": {
-    "Fighting": 5,
-    "Climb": 2,
-    "Swim": 2,
-    "Track": 2,
-    "Library Use": 0.3,
-    "Science": 0.3,
-    "Art/Craft": 0.4,
-    "Law": 0.3,
-    "Other Language": 0.3
-  },
   "skills": [
     "Dodge",
     "Fighting (Brawl)",

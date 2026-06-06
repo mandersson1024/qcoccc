@@ -5,17 +5,6 @@
     "min": 0,
     "max": 5
   },
-  "personal_interest_weights": {
-    "Survival": 4,
-    "Art/Craft": 3,
-    "Natural World": 2,
-    "Track": 2,
-    "Science": 0.3,
-    "Law": 0.2,
-    "Accounting": 0.2,
-    "Medicine": 0.4,
-    "Pilot": 0.2
-  },
   "skills": [
     "Art/Craft (any)",
     "Climb",

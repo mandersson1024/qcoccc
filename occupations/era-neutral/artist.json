@@ -1,32 +1,45 @@
 {
   "name": "Artist",
   "skill_points": "EDU * 2 + POW * 2 or DEX * 2",
-  "credit_rating_range": { "min": 9, "max": 50 },
-  "characteristic_ranges": {
-    "DEX": { "min": 40 },
-    "POW": { "min": 40 }
+  "credit_rating_range": {
+    "min": 9,
+    "max": 50
   },
-  "personal_interest_weights": {
-    "Art/Craft": 4,
-    "Other Language": 3,
-    "Library Use": 3,
-    "Appraise": 2,
-    "History": 2,
-    "Fighting": 0.3,
-    "Firearms": 0.2,
-    "Navigate": 0.4,
-    "Survival": 0.3,
-    "Pilot": 0.2
+  "characteristic_ranges": {
+    "DEX": {
+      "min": 40
+    },
+    "POW": {
+      "min": 40
+    }
   },
   "skills": [
     "Art/Craft (any)",
-    { "choice": ["History", "Natural World"], "label": "specialism" },
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "History",
+        "Natural World"
+      ],
+      "label": "specialism"
+    },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Other Language (any)",
     "Psychology",
     "Spot Hidden",
-    { "choice": "any" },
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

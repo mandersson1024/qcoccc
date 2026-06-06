@@ -5,15 +5,6 @@
     "min": 55,
     "max": 80
   },
-  "personal_interest_weights": {
-    "Survival": 4,
-    "Firearms": 3,
-    "Other Language": 2,
-    "Law": 0.3,
-    "Accounting": 0.2,
-    "Art/Craft": 0.4,
-    "Medicine": 0.4
-  },
   "skills": [
     {
       "choice": [

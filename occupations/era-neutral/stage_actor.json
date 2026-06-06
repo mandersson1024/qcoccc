@@ -5,15 +5,6 @@
     "min": 9,
     "max": 40
   },
-  "personal_interest_weights": {
-    "Art/Craft": 4,
-    "Other Language": 3,
-    "Occult": 2,
-    "Firearms": 0.2,
-    "Navigate": 0.3,
-    "Survival": 0.3,
-    "Science": 0.4
-  },
   "skills": [
     "Art/Craft (Acting)",
     "Disguise",

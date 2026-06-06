@@ -1,35 +1,39 @@
 {
   "name": "Journalist",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 9, "max": 30 },
-  "characteristic_ranges": {
-    "INT": { "min": 50 },
-    "EDU": { "min": 50 }
+  "credit_rating_range": {
+    "min": 9,
+    "max": 30
   },
-  "personal_interest_weights": {
-    "Spot Hidden": 3,
-    "Disguise": 3,
-    "Other Language": 3,
-    "Stealth": 2,
-    "Occult": 2,
-    "Drive Auto": 2,
-    "Law": 2,
-    "Fighting": 0.3,
-    "Firearms": 0.4,
-    "Navigate": 0.4,
-    "Survival": 0.4,
-    "Pilot": 0.2,
-    "Science": 0.5
+  "characteristic_ranges": {
+    "INT": {
+      "min": 50
+    },
+    "EDU": {
+      "min": 50
+    }
   },
   "skills": [
     "Art/Craft (Photography)",
     "History",
     "Library Use",
     "Own Language",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Psychology",
-    { "choice": "any" },
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

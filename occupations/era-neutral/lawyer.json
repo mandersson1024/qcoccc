@@ -1,35 +1,47 @@
 {
   "name": "Lawyer",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 30, "max": 80 },
-  "characteristic_ranges": {
-    "INT": { "min": 60 },
-    "EDU": { "min": 65 }
+  "credit_rating_range": {
+    "min": 30,
+    "max": 80
   },
-  "personal_interest_weights": {
-    "History": 3,
-    "Other Language": 3,
-    "Anthropology": 2,
-    "Occult": 1.5,
-    "Art/Craft": 1.5,
-    "Spot Hidden": 2,
-    "Fighting": 0.3,
-    "Firearms": 0.3,
-    "Navigate": 0.4,
-    "Survival": 0.3,
-    "Pilot": 0.2,
-    "Mechanical Repair": 0.3,
-    "Electrical Repair": 0.3
+  "characteristic_ranges": {
+    "INT": {
+      "min": 60
+    },
+    "EDU": {
+      "min": 65
+    }
   },
   "skills": [
     "Accounting",
     "Law",
     "Library Use",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
     "Psychology",
-    { "choice": "any" },
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

@@ -5,15 +5,6 @@
     "min": 20,
     "max": 60
   },
-  "personal_interest_weights": {
-    "Stealth": 3,
-    "Firearms": 3,
-    "Pilot": 3,
-    "Library Use": 0.3,
-    "History": 0.3,
-    "Science": 0.3,
-    "Art/Craft": 0.4
-  },
   "skills": [
     "Firearms (any)",
     "Listen",

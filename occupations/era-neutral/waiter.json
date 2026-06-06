@@ -5,16 +5,6 @@
     "min": 9,
     "max": 20
   },
-  "personal_interest_weights": {
-    "Art/Craft": 3,
-    "Charm": 3,
-    "Fast Talk": 2,
-    "Fighting": 0.3,
-    "Firearms": 0.3,
-    "Science": 0.3,
-    "Navigate": 0.3,
-    "Pilot": 0.2
-  },
   "skills": [
     "Accounting",
     "Art/Craft (any)",

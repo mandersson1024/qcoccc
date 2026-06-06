@@ -1,23 +1,14 @@
 {
   "name": "Missionary",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 0, "max": 30 },
-  "characteristic_ranges": {
-    "POW": { "min": 40 }
+  "credit_rating_range": {
+    "min": 0,
+    "max": 30
   },
-  "personal_interest_weights": {
-    "Other Language": 4,
-    "Anthropology": 4,
-    "Navigate": 3,
-    "Survival": 3,
-    "Occult": 2,
-    "History": 2,
-    "Track": 2,
-    "Fighting": 0.3,
-    "Firearms": 0.3,
-    "Pilot": 0.5,
-    "Science": 0.5,
-    "Electrical Repair": 0.3
+  "characteristic_ranges": {
+    "POW": {
+      "min": 40
+    }
   },
   "skills": [
     "Art/Craft (any)",
@@ -25,9 +16,21 @@
     "Mechanical Repair",
     "Medicine",
     "Natural World",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
-    { "choice": "any" },
-    { "choice": "any" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

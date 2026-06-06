@@ -5,17 +5,6 @@
     "min": 8,
     "max": 25
   },
-  "personal_interest_weights": {
-    "Art/Craft": 3,
-    "Charm": 3,
-    "Fast Talk": 3,
-    "Sleight of Hand": 2,
-    "Library Use": 0.4,
-    "Science": 0.3,
-    "Navigate": 0.3,
-    "Survival": 0.3,
-    "Pilot": 0.2
-  },
   "skills": [
     "Accounting",
     {

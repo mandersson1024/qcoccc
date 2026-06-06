@@ -5,16 +5,6 @@
     "min": 10,
     "max": 40
   },
-  "personal_interest_weights": {
-    "Ride": 3,
-    "Science": 2,
-    "Survival": 2,
-    "First Aid": 2,
-    "Law": 0.3,
-    "Accounting": 0.3,
-    "Library Use": 0.4,
-    "Firearms": 0.5
-  },
   "skills": [
     "Animal Handling",
     "Jump",

@@ -1,36 +1,35 @@
 {
   "name": "Professor",
   "skill_points": "EDU * 4",
-  "credit_rating_range": { "min": 20, "max": 70 },
-  "characteristic_ranges": {
-    "INT": { "min": 60 },
-    "EDU": { "min": 70 }
+  "credit_rating_range": {
+    "min": 20,
+    "max": 70
   },
-  "personal_interest_weights": {
-    "Science": 4,
-    "History": 3,
-    "Anthropology": 3,
-    "Occult": 2,
-    "Natural World": 2,
-    "Other Language": 3,
-    "Art/Craft": 2,
-    "Appraise": 2,
-    "Fighting": 0.3,
-    "Firearms": 0.2,
-    "Navigate": 0.4,
-    "Survival": 0.3,
-    "Pilot": 0.2,
-    "Operate Heavy Machinery": 0.2
+  "characteristic_ranges": {
+    "INT": {
+      "min": 60
+    },
+    "EDU": {
+      "min": 70
+    }
   },
   "skills": [
     "Library Use",
     "Other Language (any)",
     "Own Language",
     "Psychology",
-    { "choice": "any" },
-    { "choice": "any" },
-    { "choice": "any" },
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

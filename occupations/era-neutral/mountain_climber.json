@@ -5,15 +5,6 @@
     "min": 30,
     "max": 60
   },
-  "personal_interest_weights": {
-    "Survival": 4,
-    "Natural World": 2,
-    "Library Use": 0.3,
-    "Science": 0.4,
-    "Law": 0.2,
-    "Art/Craft": 0.4,
-    "Accounting": 0.3
-  },
   "skills": [
     "Climb",
     "First Aid",

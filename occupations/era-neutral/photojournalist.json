@@ -5,17 +5,6 @@
     "min": 10,
     "max": 30
   },
-  "personal_interest_weights": {
-    "Art/Craft": 4,
-    "History": 3,
-    "Other Language": 2,
-    "Stealth": 2,
-    "Spot Hidden": 2,
-    "Fighting": 0.2,
-    "Firearms": 0.3,
-    "Survival": 0.3,
-    "Law": 0.3
-  },
   "skills": [
     "Art/Craft (Photography)",
     "Climb",

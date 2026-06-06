@@ -5,14 +5,6 @@
     "min": 9,
     "max": 40
   },
-  "personal_interest_weights": {
-    "Science": 3,
-    "Art/Craft": 2,
-    "Fighting": 0.2,
-    "Firearms": 0.3,
-    "Law": 0.3,
-    "Stealth": 0.3
-  },
   "skills": [
     "Accounting",
     "Animal Handling",

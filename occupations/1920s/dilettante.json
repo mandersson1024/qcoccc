@@ -1,32 +1,38 @@
 {
   "name": "Dilettante",
   "skill_points": "EDU * 2 + APP * 2",
-  "credit_rating_range": { "min": 50, "max": 99 },
-  "characteristic_ranges": {
-    "APP": { "min": 40 }
+  "credit_rating_range": {
+    "min": 50,
+    "max": 99
   },
-  "personal_interest_weights": {
-    "Art/Craft": 3,
-    "Other Language": 3,
-    "Appraise": 3,
-    "Navigate": 2,
-    "Pilot": 2,
-    "History": 2,
-    "Occult": 1.5,
-    "Mechanical Repair": 0.5,
-    "Electrical Repair": 0.5,
-    "Operate Heavy Machinery": 0.2,
-    "Survival": 0.5
+  "characteristic_ranges": {
+    "APP": {
+      "min": 40
+    }
   },
   "skills": [
     "Art/Craft (any)",
     "Firearms (any)",
     "Other Language (any)",
     "Ride",
-    { "choice": ["Charm", "Fast Talk", "Intimidate", "Persuade"], "label": "interpersonal" },
-    { "choice": "any" },
-    { "choice": "any" },
-    { "choice": "any" },
+    {
+      "choice": [
+        "Charm",
+        "Fast Talk",
+        "Intimidate",
+        "Persuade"
+      ],
+      "label": "interpersonal"
+    },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }

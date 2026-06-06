@@ -63,7 +63,7 @@ def main():
 
     occ_data = load_occupation_data(context["occupation"], context["era"])
     resolved = resolve_occupation_skills(occ_data["skills"], context)
-    personal = resolve_personal_interest_skills(context, exclude={name for name, _ in resolved}, personal_interest_weights=occ_data.get("personal_interest_weights"))
+    personal = resolve_personal_interest_skills(context, exclude={name for name, _ in resolved})
 
     context.update(QuestionFlow([
         SkillDistributionQuestion(),

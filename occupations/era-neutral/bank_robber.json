@@ -5,15 +5,6 @@
     "min": 5,
     "max": 75
   },
-  "personal_interest_weights": {
-    "Firearms": 4,
-    "Fighting": 3,
-    "Art/Craft": 0.3,
-    "Library Use": 0.3,
-    "Science": 0.3,
-    "History": 0.4,
-    "Pilot": 0.2
-  },
   "skills": [
     "Drive Auto",
     {

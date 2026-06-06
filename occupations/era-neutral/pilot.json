@@ -1,24 +1,17 @@
 {
   "name": "Pilot",
   "skill_points": "EDU * 2 + DEX * 2",
-  "credit_rating_range": { "min": 20, "max": 70 },
-  "characteristic_ranges": {
-    "DEX": { "min": 50 },
-    "INT": { "min": 50 }
+  "credit_rating_range": {
+    "min": 20,
+    "max": 70
   },
-  "personal_interest_weights": {
-    "Pilot": 5,
-    "Survival": 3,
-    "Firearms": 3,
-    "Spot Hidden": 3,
-    "Drive Auto": 2,
-    "Fighting": 2,
-    "Science": 2,
-    "Other Language": 1.5,
-    "Occult": 0.3,
-    "Art/Craft": 0.3,
-    "Library Use": 0.5,
-    "History": 0.5
+  "characteristic_ranges": {
+    "DEX": {
+      "min": 50
+    },
+    "INT": {
+      "min": 50
+    }
   },
   "skills": [
     "Electrical Repair",
@@ -27,8 +20,12 @@
     "Operate Heavy Machinery",
     "Pilot (Aircraft)",
     "Science (Astronomy)",
-    { "choice": "any" },
-    { "choice": "any" },
+    {
+      "choice": "any"
+    },
+    {
+      "choice": "any"
+    },
     "Credit Rating"
   ]
 }
